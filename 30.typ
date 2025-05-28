@@ -1,9 +1,6 @@
-// Вектор-функции векторного переменного. Предел и непрерывность функции в точке. Непрерывность функции 
-// на множестве. Равномерная непрерывность функции на множестве и теорема Кантора
+= №30. Вект.-функ. вект. перем. Предел и непр. функ. в т. Непр. функ. на множ. Равн. непр. функ. на множ., т. Кантора 
 
-#heading(level: 1)[30]
-
-Отображение вида $overline(f) : X -> RR^k$, где $X subset RR^m$, $m > 1$, $k > 1$, называют вект. функ. вект. арг.
+*Опр.*: Отображение вида $overline(f) : X -> RR^k$, где $X subset RR^m$, $m > 1$, $k > 1$, называют вект. функ. вект. арг.
 
 *Опред. пред. по Коши*:
 Пусть т. $overline(x)_0$ --- пред. т. обл. опред. функ. $overline(f) : X -> RR^k$, $overline(A) in RR^k$.
@@ -13,9 +10,9 @@ $forall epsilon > 0$ $exists delta > 0$ $forall overline(x) in D(overline(f))$ $
 *Опред. непр-ти. функ. по Коши*: Функ. $overline(f)$ называется непр. в т. $overline(x)_0$, если 
 $forall overline(x) in D(overline(f))$ $(abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon$
 
-Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$ 
+*Опр.*: Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$ 
 
-Функ. $f$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
+*Опр.*: Функ. $f$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
 $(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$sswap.img
 
 *Т. (Кантора)*
