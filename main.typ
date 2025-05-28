@@ -2,4 +2,6 @@
 #set text(size: 10pt)
 #text(size: 0.8em)[
   #include "questions/1.typ"
+  #include "questions/2.typ"
+  #include "questions/3.typ"
 ]
