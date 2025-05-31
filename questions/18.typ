@@ -17,3 +17,5 @@ $(a_n)$ монотонна $==> limits(sum)^(n+p)_(k=n+1) abs(a_(k+1) - a_k) = a
 По преобр. Абеля $limits(sum)^(n+p)_(k=n+1) a_k b_k = a_(n+p) B^n_p - limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k) B^n_p$.\
 При $n >= n_0 #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) = abs(a_(n+p)) abs(B^n_p) - limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k)) abs(B^n_p) < M epsilon + epsilon limits(sum)^(n+p-1)_(k=n+1) abs(a_(k+1) - a_k) stretch(=>)^"мон."_("и огр." a_n) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) < M epsilon + epsilon 2 M = 3 M epsilon stretch(=>)^"кр."_"Коши" sum a_n b_n$ сх-ся.
 
+*Т. (признак Лейбница)*: $(a_n)$ --- монотонна, и беск. малая $==> sum (-1)^(n-1) a_n$ сх-ся. \
+*Док-во*: Из признака Дирихле при $b_n = (-1)^(n-1)$.
