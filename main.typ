@@ -11,4 +11,5 @@
   #include "questions/17.typ"
   #include "questions/18.typ"
   #include "questions/19.typ"
+  #include "questions/20.typ"
 ]
