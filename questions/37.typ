@@ -24,5 +24,4 @@ $g_i (overline(t)) - g_i (overline(t)_0) = limits(sum)_(j=1)^k psi_(i j) (overli
 limits(sum)_(j=1)^k (limits(sum)_(i=1)^m phi_i (overline(g) (overline(t)) psi_(i j) (overline(t)))) (t_j - t_j^0)$
 Функции $phi_i (overline(g) (overline(t))) psi_(i j) (overline(t))$ непр. в т. $overline(t)_0$ и последнее равенство означает усл. дифф-ти функ. $f compose overline(g)$ в т. $overline(t)_0$.
 При всех $j = 1, dots, k$ $(diff (f compose overline(g)))/(diff t_j) (overline(t)_0) = limits(sum)_(i=1)^m phi_i (overline(g) (overline(t)_0)) psi_(i j) (overline(t)_0) = 
-limits(sum)_(i=1)^m phi_i (overline(x)_0) psi_(i j) (overline(t)_0) = limits(sum)_(i=1)^m (diff f)/(diff x_i) (overline(x)_0) (diff g_i)/(diff t_j) (overline(t)_0)$
-
+limits(sum)_(i=1)^m phi_i (overline(x)_0) psi_(i j) (overline(t)_0) = limits(sum)_(i=1)^m (diff f)/(diff x_i) (overline(x)_0) (diff g_i)/(diff t_j) (overline(t)_0)$. #qed

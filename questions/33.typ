@@ -14,4 +14,4 @@
 limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x$.
 В силу нер-ва Коши-Буянковского-Шварца $abs(y_1 f_1 (x) + dots + y_k f_k (x)) <= abs(overline(y)) dot abs(overline(f) (x))$
 Поэтому $limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$, т. е.
-$abs(overline(y))^2 <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$. Остальное очевидно
+$abs(overline(y))^2 <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$. Остальное очевидно. #qed

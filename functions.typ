@@ -22,7 +22,7 @@
   }
 }
 
-#let lemma(name) = {
+#let lemma(name: none) = {
   if name != none {
     [*Лемма (#name)*:]
   } else {

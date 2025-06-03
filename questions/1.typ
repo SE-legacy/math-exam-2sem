@@ -13,4 +13,4 @@ $forall epsilon>0 #h(4pt) exists delta>0 #h(4pt) forall(P, xi_P) #h(4pt) (d(P)<d
 
 #theorem(name: "необх. усл. интегрируемости") $f$ интегр. на $[a,b] ==> f$ ограничена \
 #proof От противного. Пусть $f$ не огр. на $[a,b]$, $P$ --- произв. разб $==> exists delta_i: f$ не огр. на нем. $sigma(P) = f(xi_i)Delta x_i + A$, где $A = limits(sum)^(i_n)_(k=1, i!= k) f(xi_k)Delta x_k$. #h(4pt) $abs(sigma(P)) = abs(f(xi_i)Delta x_i + A) >= abs(f(xi_i))Delta x_i - A$.\
-$forall M>0 #h(4pt) exists xi_i in Delta_i:abs(f(xi_i))> (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M ==>$ инт. сумма не имеет предела ($f$ не интегр. --- противоречие).
+$forall M>0 #h(4pt) exists xi_i in Delta_i:abs(f(xi_i))> (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M ==>$ инт. сумма не имеет предела ($f$ не интегр. --- противоречие). #qed

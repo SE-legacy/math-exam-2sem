@@ -5,7 +5,7 @@
 #def т. $overline(x)_0$ наз. т. лок. макс. (мин.), если $exists O(overline(x)_0)$, что $f(overline(x)) <= f(overline(x)_0) (f(overline(x)) >= f(overline(x)_0))$
 
 #theorem(name: "Необ. усл. лок. экстрем.") Пусть т. $overline(x)_0$ - т. лок. экстрем. $f$ и в этой т. у функ. сущ. все част. произ. первого порядка $f'_x_i (overline(x)_0), i = 1,...,m$. Тогда $f'_x_i (overline(x)_0) = 0, i = 1,...,m$ \
-#proof Рассмотрим функ. $phi(x_1) = f(x_1, x_1^0, ... , x_m^0)$. Она имеет лок. экс. в т. $x_1^0$ и ее произ $phi'(x_1^0) = f'_x_i (overline(x)_0)$. По Т. Ферма $f'_x_i (overline(x)_0) = 0$ \
+#proof Рассмотрим функ. $phi(x_1) = f(x_1, x_1^0, ... , x_m^0)$. Она имеет лок. экс. в т. $x_1^0$ и ее произ $phi'(x_1^0) = f'_x_i (overline(x)_0)$. По Т. Ферма $f'_x_i (overline(x)_0) = 0$. #qed
 
 #theorem(name: "Достат. усл. лок. экс.") Пусть $f$ опр. в нек. окр. $O(overline(x)_0), f in C^((2)) (O(overline(x)_0))$ и т. $overline(x)_0$ является стационар. т. этой функ. Если квадратичная форма $d^2 f(overline(x)_0)(overline(h)) = limits(sum)_(i,j=1)^m (diff^2 f)/(diff x_j diff x_i) (overline(x)_0)h_i h_j$
 

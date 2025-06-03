@@ -6,7 +6,7 @@
 #proof $limits(sum)^infinity_(n=1) (a_n+b_n) = limits(lim)_(n->infinity)limits(sum)^n_(k=1)(a_k+b_k) = limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k + limits(lim)_(n->infinity) limits(sum)^n_(k=1) b_k = A+B$. \
 $limits(sum)^infinity_(k=1) lambda a_k = limits(lim)_(n->infinity)limits(sum)^n_(k=1)lambda a_k = lambda limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k = lambda A$
 
-$sum a_n$ абс. сх-ся $<==> sum abs(a_n)$ сх-ся.
+$sum a_n$ абс. сх-ся $<==> sum abs(a_n)$ сх-ся. #qed
 
 #theorem(name: "о сх-ти абс. сх-ся ряда") $sum a_n$ абс. сх-ся $==> sum a_n$ сх-ся. \
-#proof $abs(limits(sum)^(n+p)_(k=n+1) a_k) <= limits(sum)^(n+p)_(k=n+1) abs(a_k) stretch(=>)^"кр. Коши"_"cх-ти ряда"$ $sum a_n$ сх-ся. 
+#proof $abs(limits(sum)^(n+p)_(k=n+1) a_k) <= limits(sum)^(n+p)_(k=n+1) abs(a_k) stretch(=>)^"кр. Коши"_"cх-ти ряда"$ $sum a_n$ сх-ся. #qed

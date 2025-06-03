@@ -22,10 +22,10 @@ $L = overline(limits(lim)_(n -> infinity)) root(n, abs(a_n))$
 #proof 
 + При любом $x != 0$ посл. $(abs(x) root(n, abs(a_n))) = (root(n, abs(a_n x^n)))$ неогр., а значит $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
 + Пусть $abs(x) < 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) =  abs(x) dot overline(limits(lim)_(n -> infinity)) root(n, abs(a_n)) < 1/L dot L = 1$, в силу признака Коши ряд сх. абс. Пусть $abs(x) > 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) > 1/L dot L = 1$ и послед. $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
-+ $forall x in RR$ $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) = abs(x) dot L = 0$, в силу признака Коши ряд сх. абс.
++ $forall x in RR$ $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) = abs(x) dot L = 0$, в силу признака Коши ряд сх. абс. #qed
 
 #theorem(name: "Абеля") 
 Если степ. ряд $limits(sum)_(n=0)^(infinity) a_n x^n$ сх. в некоторой т. $x_1 != 0$, то ряд сх. в инт. $(-abs(x_1), abs(x_1))$
 
 #proof 
-Т. $x_1$ лежит внутри инт. сх., либо является граничной т. инт. сх., а значит $(-abs(x_1), abs(x_1)) subset (-R, R)$
+Т. $x_1$ лежит внутри инт. сх., либо является граничной т. инт. сх., а значит $(-abs(x_1), abs(x_1)) subset (-R, R)$ #qed

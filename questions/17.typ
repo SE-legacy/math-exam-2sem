@@ -12,4 +12,4 @@ $sum a_n = sum a_n^+ - sum a_n^-, #h(4pt) sum abs(a_n) = sum a_n^+ + sum a_n^-$
 
 #theorem(name: "об условно сх-ся рядах") $sum a_n$ сх-ся условно $==> sum a_n^+$ и $sum a_n^-$ рас-ся.\
 #proof $sum a_n^+$ и $sum a_n^-$ сх-ся $==>$ ряд $sum abs(a_n) = sum a_n^+ + sum a_n^-$ сх-ся, $==> sum a_n$ сх-ся условно.\
-Пусть один из рядов $sum a_n^+$ и $sum a_n^-$, например $sum a_n^+$, сх-ся $==>$ ряд $sum a_n^- = sum a_n^+ - sum a_n$ сх-ся $==> sum a_n$ сх-ся абсолютно.
+Пусть один из рядов $sum a_n^+$ и $sum a_n^-$, например $sum a_n^+$, сх-ся $==>$ ряд $sum a_n^- = sum a_n^+ - sum a_n$ сх-ся $==> sum a_n$ сх-ся абсолютно. #qed
