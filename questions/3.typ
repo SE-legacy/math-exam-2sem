@@ -1,10 +1,12 @@
+#import "../functions.typ": *
+
 = №3. Критерий интегрируемости
 
-*Т. (крит. интегрируемости)*: $f$ опр. и огр. на $[a,b] ==>$ След-ие условия эквивалентны:
-+ $f$ интегрируема
-+ $forall epsilon > 0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$
-+ $underline(I) = overline(I)$, при этом $underline(I) = overline(I) = limits(integral)^b_a f(x) d x$
-*Док-во*: $1==>2$. $f$ интегрируема $==> forall epsilon>0 #h(4pt) exists delta >0 #h(4pt) forall(P, xi_p) #h(4pt)$ \ $(d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4) stretch(=>)^"св-во 4"_("сумм Дарбу")$ для $P #h(4pt) exists xi'_P, xi''_P:$ \ $S(P)-sigma(P,xi'_P) < epsilon/4, #h(4pt) sigma(P,xi''_P) - s(P) < epsilon/4$, но $abs(sigma(P,xi'_P)- I) < epsilon/4, #h(4pt) abs(I-sigma(P,xi''_P)) <epsilon/4 $ $==> abs(S(P)-s(P))=abs((S(P)-sigma(P,xi'_P)) + (sigma(P,xi'_P) - I) + (I-sigma(P,xi''_P)) + (sigma(P,xi''_P) - s(P))) < 4 dot epsilon/4 = epsilon$.
+#theorem(name: "крит. интегрируемости") $f$ опр. и огр. на $[a,b] ==>$ След-ие условия эквивалентны:
++ $f$ интегрируема;
++ $forall epsilon > 0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$;
++ $underline(I) = overline(I)$, при этом $underline(I) = overline(I) = limits(integral)^b_a f(x) d x$;
+#proof $1==>2$. $f$ интегрируема $==> forall epsilon>0 #h(4pt) exists delta >0 #h(4pt) forall(P, xi_p) #h(4pt)$ \ $(d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4) stretch(=>)^"св-во 4"_("сумм Дарбу")$ для $P #h(4pt) exists xi'_P, xi''_P:$ \ $S(P)-sigma(P,xi'_P) < epsilon/4, #h(4pt) sigma(P,xi''_P) - s(P) < epsilon/4$, но $abs(sigma(P,xi'_P)- I) < epsilon/4, #h(4pt) abs(I-sigma(P,xi''_P)) <epsilon/4 $ $==> abs(S(P)-s(P))=abs((S(P)-sigma(P,xi'_P)) + (sigma(P,xi'_P) - I) + (I-sigma(P,xi''_P)) + (sigma(P,xi''_P) - s(P))) < 4 dot epsilon/4 = epsilon$.
 
 $2==>3$.  $forall epsilon>0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$. $s(P)<=underline(I) <= overline(I) <= S(P) ==> 0 <= underline(I) - overline(I) <= S(P) - s(P) < epsilon$. Т. к. $epsilon$ --- произв., то $underline(I) - overline(I) = 0 <==> underline(I) = overline(I)$
 

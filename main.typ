@@ -16,8 +16,10 @@
 	pagebreak()
 }
 
-#generate_title()
 #set page(numbering: "1")
+#set heading(numbering: "Вопрос 1", hanging-indent: 0em)
+
+#generate_title()
 #outline(title: "Программа экзамена")
 #pagebreak()
 
