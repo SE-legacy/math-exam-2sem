@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №33. Интегрирование вектор функций. Оценка модуля интеграла
+= Интегрирование вектор функций. Оценка модуля интеграла
 
 #def Пусть вект.-функ. $overline(f) = (f_1, dots, f_k)$ опр. на отр. $[a, b]$. Функ. $overline(f)$ называется инт-мой на отр. $[a, b]$, если ее коорд. функ. $f_1, dots, f_k$ инт-мы 
 на этом отрезке. При этом полагают $limits(integral)_a^b overline(f) (x) d x = (limits(integral)_a^b f_1 (x) d x, dots, limits(integral)_a^b f_k (x) d x)$

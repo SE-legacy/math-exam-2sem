@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №16. Признак Коши. Признак Даламбера
+= Признак Коши. Признак Даламбера
 
 #theorem(name: "пр. Коши") $forall n in NN #h(4pt) a_n >= 0, #h(4pt) overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha$.
 + $alpha < 1 ==> sum a_n$ сх-ся;

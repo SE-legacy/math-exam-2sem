@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №7. Дифференцируемость интеграла по верхнему пределу интегрирования. Формула Ньютона-Лейбница
+= Дифференцируемость интеграла по верхнему пределу интегрирования. Формула Ньютона-Лейбница
 
 #theorem(name: "о дифф-сти инт-а по верх. пределу инт-я") $f in Re[a, b]$ и непр. в т. $x_(0) in [a, b] ==> F(x) = limits(integral)_(a)^(x) f(t) d t$ дифф. в т. $x_(0)$ и $F'(x_(0)) = f(x_(0))$.\
 #proof По св-ву инт-а $(F(x_(0) + h) - F(x_(0))) / h = 1/h limits(integral)_(x_(0))^(x_(0) + h) f(t) d t = 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(x_(0)) + (f(t) - f(x_(0)))) d t = 1/h limits(integral)_(x_(0))^(x_(0) + h) f(x_(0)) d t + 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t = f(x_(0)) + 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t$. Пусть $epsilon > 0$. $f$ непр. в т. $x_(0) ==> exists delta > 0$ такое, что $forall t in [a, b]: |t - x_(0)| < delta$ вып. усл. $|f(t) - f(x_(0))| < epsilon$. Тогда, если $|h| < delta$, то $abs(1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t) <= 1/abs(h) dot abs(h) dot epsilon = epsilon ==> limits(lim)_(h -> 0) 1/h limits(integral)_(x_(0))^(x_(0)+h) (f(t) - f(x_(0))) d t = 0 ==>$ существует предел $limits(lim)_(h -> 0) (F(x_(0) + h) - F(x_(0))) / h = f(x_(0))$, т.е. $F'(x_(0)) = f(x_(0))$.\

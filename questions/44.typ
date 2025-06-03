@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №44. Неявные функции. Теорема о неявной функции (без док-ва)
+= Неявные функции. Теорема о неявной функции (без док-ва)
 
 #def Пусть даны функ. $F: RR^(m+1) -> RR$, мн. $X in RR^m, Y in RR$ и ур-ие $F(overline(x), y) = 0$.\ Если $forall overline(x) in X $ $exists! y = f(overline(x)) in Y$, что $F(overline(x), f(overline(x))) = 0$, то ур-ие выше на мн. $X times Y$ опр. неяв. функ. $f: X -> Y$
 

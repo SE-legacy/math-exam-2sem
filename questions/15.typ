@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №15. Признак мажорации и признак сравнения
+= Признак мажорации и признак сравнения
 
 #def $a_n = O(b_n) <==> exists C>0 #h(4pt) forall n in NN #h(4pt) abs(a_n) = C abs(b_n).$
 

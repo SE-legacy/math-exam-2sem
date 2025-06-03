@@ -1,6 +1,6 @@
 #import "../functions.typ": *
 
-= №13. Теорема об арифметических действиях над сходящимися рядами. Абсолютная сходимость числовых рядов, связь со сходимостью
+= Теорема об арифметических действиях над сходящимися рядами. Абсолютная сходимость числовых рядов, связь со сходимостью
 
 #theorem(name: "об арифм. действиях над сх-ся рядами") $sum a_n, sum b_n$ сх-ся, и $limits(sum)^infinity_(n=1) a_n = A, limits(sum)^infinity_(n=1) b_n = B, lambda in RR ==> sum(a_n + b_n), sum lambda a_n$ сх-ся $limits(sum)^infinity_(n=1)(a_n + b_n) = A+B, limits(sum)^infinity_(n=1) lambda a_n = lambda A$ \
 #proof $limits(sum)^infinity_(n=1) (a_n+b_n) = limits(lim)_(n->infinity)limits(sum)^n_(k=1)(a_k+b_k) = limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k + limits(lim)_(n->infinity) limits(sum)^n_(k=1) b_k = A+B$. \
