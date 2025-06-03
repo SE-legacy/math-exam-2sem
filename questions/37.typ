@@ -1,4 +1,4 @@
-=  №37. Дифф. слож. функ.
+= №37. Дифференцирование сложной функции
 
 Пусть функ. $f: RR^m -> RR$, функ. $overline(g): RR^k -> RR^m$, т.е. 
 $(f compose overline(g)) (overline(t)) = f(g_1 (overline(t)), dots, g_m (overline(t))) = f(g_1 (t_1, dots, t_k), dots, g_m (t_1, dots, t_k))$

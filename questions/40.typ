@@ -1,4 +1,4 @@
-= №40. Дифференциалы первого и высших порядков.
+= №40. Дифференциалы первого и высших порядков
 
 *Опр.* Пусть $f$ 2-дифф. в т. $overline(x)_0$. $forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифференциал первого порядка
 
