@@ -3,7 +3,7 @@
 = Условная сходимость несобственных интегралов. Признак Дирихле и признак Абеля сходимости несобственных интегралов
 
 #def несобст. инт. $limits(integral)_(a)^(omega) f(x) d x$ наз. условно сходящимся, если он сход., а $limits(integral)_(a)^(omega) |f(x)| d x$ расход.\ 
-Пусть f, g, g' непр. на $[a, omega)$, $F(b) = limits(integral)_(a)^(b) f(x) d x$. Тогда по ф–ле инт-я по частям: $limits(integral)_(a)^(b) f(x)g(x) d x = g(b)F(b) - g(a)F(a) - limits(integral)_(a)^(b) g'(x)F(x) d x$.
+Пусть $f$, $g$, $g'$ непр. на $[a, omega)$, $F(b) = limits(integral)_(a)^(b) f(x) d x$. Тогда по ф–ле инт-я по частям: $limits(integral)_(a)^(b) f(x)g(x) d x = g(b)F(b) - g(a)F(a) - limits(integral)_(a)^(b) g'(x)F(x) d x$.
 
 *Утверждение*: Если сущ. $limits(integral)_(a)^(omega) g'(x)F(x) d x = A$ и сущ. конечный предел $limits(lim)_(b -> omega) g(b)F(b) = B$, то сущ. несобст. инт. $limits(integral)_(a)^(omega) f(x)g(x) d x = B - g(a)F(a) - A$.
 
