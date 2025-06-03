@@ -20,11 +20,18 @@
 #theorem(name: "достат. усл. интег. 2") Пусть ф. $f$ и $g$ опр., огр. на квадрируемом мн.$D$ и отличаются друг от друга на нек. мн. меры нуль. Тогда интег. одной ф.равносильна интег. другой, причем $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D g(x,y) d x d y$.
 
 #properties
-+ Аддитивность интеграла. Если ф. $f$ интег. на мн. $D$, то она интег. и на любом квадрируемом подмн. $D'subset D$. \ Если ф. $f$ интег. на мн. $D_1$ и $D_2$, то она интег. на мн. $D = D_1 union D_2$.\ Если $D = D_1 union D_2$, и квадрируемые мн. $D_1$ и $D_2$ не имеют общих внутренних точек, то $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D_1 f(x,y) d x d y + limits(integral integral)_D_2 f(x,y) d x d y$. 
-+ Линейность интеграла. Пусть ф. $f$ и $g$ интег. на мн. $D$, $alpha, beta in RR$. Тогда ф. $alpha f + beta g$ также интег. на $D$ и справ. рав. $limits(integral integral)_D (alpha f(x,y) + beta g(x,y)) d x d y = alpha limits(integral integral)_D f(x,y) d x d y + \beta limits(integral integral)_D g(x,y) d x d y$.
-+ Монотон. интеграла. Если ф. $f$ и $g$ интег. на мн. $D$ и всюду на этом множестве $f(x, y) <= g(x, y)$, то $limits(integral integral)_D f(x, y) d x d y <= limits(integral integral)_D g(x, y) d x d y$.
++ *Аддитивность интеграла*. Если ф. $f$ интег. на мн. $D$, то она интег. и на любом квадрируемом подмн. $D'subset D$. \ Если ф. $f$ интег. на мн. $D_1$ и $D_2$, то она интег. на мн. $D = D_1 union D_2$. \ Если $D = D_1 union D_2$, и квадрируемые мн. $D_1$ и $D_2$ не имеют общих внутренних точек, то $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D_1 f(x,y) d x d y + limits(integral integral)_D_2 f(x,y) d x d y$.
+
++ *Линейность интеграла*. Пусть ф. $f$ и $g$ интег. на мн. $D$, $alpha, beta in RR$. Тогда ф. $alpha f + beta g$ также интег. на $D$ и справ. рав. $limits(integral integral)_D (alpha f(x,y) + beta g(x,y)) d x d y = alpha limits(integral integral)_D f(x,y) d x d y + \beta limits(integral integral)_D g(x,y) d x d y$.
+
++ *Монотон. интеграла*. Если ф. $f$ и $g$ интег. на мн. $D$ и всюду на этом множестве $f(x, y) <= g(x, y)$, то $limits(integral integral)_D f(x, y) d x d y <= limits(integral integral)_D g(x, y) d x d y$.
+
 + Если ф. $f$ и $g$ интег. на мн. $D$, то ф. $f g$ также интег. на $D$.
+
 + Если функция $f$ интегрируема на $D$ и удовлетворяет условию $abs(f(x, y)) >= c > 0$, $(x, y) in D$, то ф. $1/f$ также интег. на $D$.
-+ Оценка модуля интеграла. Если ф. $f$ интег. на мн. $D$, то ф. $abs(f)$ также интег. на $D$, причем $abs(limits(integral integral)_D f(x, y) d x d y) <= limits(integral integral)_D abs(f(x, y)) d x d y$.
+
++ *Оценка модуля интеграла*. Если ф. $f$ интег. на мн. $D$, то ф. $abs(f)$ также интег. на $D$, причем $abs(limits(integral integral)_D f(x, y) d x d y) <= limits(integral integral)_D abs(f(x, y)) d x d y$.
+
 + $limits(integral integral)_D 1 d x d y = mu(D)$.
-+ Т. о ср. знач.. Если ф. $f$ и $g$ интег. на мн. $D$, ф. $g$ неотр.(непол.) всюду на $D$, $M = sup_D f(x, y)$, $m = inf_D f(x, y)$, то найдется число $mu in [m, M]$ такое, что  $limits(integral integral)_D f(x, y) g(x, y) d x d y = mu limits(integral integral)_D g(x, y) d x d y$. Если при этом ф. $f$ непр. на $D$, а мн. $D$ связно, то $exists (xi, eta) in D$, что $mu = f(xi, eta)$.
+
++ #theorem(name: "о ср. знач") Если ф. $f$ и $g$ интег. на мн. $D$, ф. $g$ неотр.(непол.) всюду на $D$, $M = sup_D f(x, y)$, $m = inf_D f(x, y)$, то найдется число $mu in [m, M]$ такое, что  $limits(integral integral)_D f(x, y) g(x, y) d x d y = mu limits(integral integral)_D g(x, y) d x d y$. Если при этом ф. $f$ непр. на $D$, а мн. $D$ связно, то $exists (xi, eta) in D$, что $mu = f(xi, eta)$.
