@@ -1,27 +1,31 @@
 #let generate_title() = {
-	set align(center)
-	v(3cm)
-	text(weight: "bold", upper("Математический анализ") + "\n")
-	[*2 семестр*]
-	par("Материалы для подготовки к экзамену")
-	v(1.5cm)
-	set align(left)
-	text("Архипов Иван" + "\n")
-	text("Железко Александр" + "\n")
-	text("Леонтьев Михаил" + "\n")
-	text("Тюменцев Радомир" + "\n")
-	v(1fr)
-	set align(center)
-	text("г. Саратов" + " " + str(datetime.today().year()))
-	pagebreak()
+  set align(center)
+  v(3cm)
+  text(weight: "bold", upper("Математический анализ") + "\n")
+  [*2 семестр*]
+  par("Материалы для подготовки к экзамену")
+  v(1.5cm)
+  set align(left)
+  text("Архипов Иван" + "\n")
+  text("Железко Александр" + "\n")
+  text("Леонтьев Михаил" + "\n")
+  text("Тюменцев Радомир" + "\n")
+  v(1fr)
+  set align(center)
+  text("г. Саратов" + " " + str(datetime.today().year()))
+  pagebreak()
 }
-
-#set page(numbering: "1")
-#set heading(numbering: "Вопрос 1", hanging-indent: 0em)
 
 #generate_title()
 #outline(title: "Программа экзамена")
 #pagebreak()
+
+#set page(numbering: "1")
+#set heading(numbering: "Вопрос 1.", hanging-indent: 0em)
+#show heading: it => {
+	it
+	v(0.5em)
+}
 
 #include "questions/1.typ"
 #include "questions/2.typ"
