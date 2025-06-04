@@ -17,10 +17,10 @@
 }
 
 #generate_title()
+#set page(numbering: "1")
 #outline(title: "Программа экзамена")
 #pagebreak()
 
-#set page(numbering: "1")
 #set heading(numbering: "Вопрос 1.", hanging-indent: 0em)
 #show heading: it => {
 	it
