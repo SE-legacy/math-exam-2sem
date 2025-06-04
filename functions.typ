@@ -14,11 +14,17 @@
 
 #let conseq(name: none, number: none) = {
   if name != none {
-    if number != none [*След-е #number (#name)*:]
-    else [*След-е (#name)*:]
+    if number != none {
+      [*След-е #number (#name)*:]
+    } else {
+      [*След-е (#name)*:]
+    }
   } else {
-    if number != none [*След-е #number*:]
-    else [*След-е*:]
+    if number != none {
+      [*След-е #number*:]
+    } else {
+      [*След-е*:]
+    }
   }
 }
 
