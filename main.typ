@@ -26,6 +26,7 @@
 	it
 	v(0.5em)
 }
+#show math.equation.where(block: true): set block(above: 0.7em, below: 0.4em)
 
 #include "questions/1.typ"
 #include "questions/2.typ"

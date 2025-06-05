@@ -2,7 +2,7 @@
 
 = Дифференцируемые вектор-функции, матрица Якоби и якобиан
 
-#def Вектор-функцию $overline(f) = (f_1, ..., f_n) : RR^m → RR^n$ назовем дифф. в т. $overline(x)_0$, если все функ. $f_k$, $k = 1, ..., n$, дифф. в т. $overline(x)_0$.
+#def Вектор-функцию $overline(f) = (f_1, ..., f_n) : RR^m → RR^n$ назовем дифф. в т. $overline(x)_0$, если все функ. $f_k quad k = 1, ..., n$, дифф. в т. $overline(x)_0$.
 Вектор-столбец $d overline(f)(overline(x)_0) = mat(d f_1(overline(x)_0); dots.v; d f_ n (overline(x)_0))$ - дифф. $overline(f)$. \
 Матрица $D overline(f)(overline(x)_0) = mat(
       (diff f_1(overline(x)_0))/(diff x_1), dots.h, (diff f_1(overline(x)_0))/(diff x_m);

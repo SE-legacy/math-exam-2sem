@@ -2,9 +2,9 @@
 
 = Несобственные интегралы Римана двух типов и их простейшие свойства. Критерий Коши сходимости несобственного интеграла
 
-#def Пусть $f$ опр. на $[a, +infinity), forall b in [a, +infinity) f in Re[a, b]$. $limits(lim)_(b -> +infinity) limits(integral)_(a)^(b) f(x) d x$ наз. несобственным инт-ом 1–го рода, если он сущ. и конечен. Обозн.: $limits(integral)_(a)^(+infinity) f(x) d x$. При этом несобств. инт. сходится. Аналогично определяют $limits(integral)_(-infinity)^(b) f(x) d x$.\ 
-#def Пусть $f$ опр. на $[a, B)$, неогр. в $O(B)$ и $forall b in [a, B) f in Re [a, b]$. $limits(lim)_(b -> B-0) limits(integral)_(a)^(b) f(x) d x$, наз. несобственным инт-ом 2–го рода, если он сущ. и конечен. Обозн.: $limits(integral)_(a)^(B) f(x) d x$. При этом несобств. инт. сход.\ 
-#def Пусть $f$ опр. на $[a, omega)$ и $forall [a, b] subset [a, omega) f in Re [a, b]$. Тогда: $limits(integral)_(a)^(omega) f(x) d x := limits(lim)_(b -> omega) limits(integral)_(a)^(b) f(x) d x$. 
+#def Пусть $f$ опр. на $[a, +infinity), forall b in [a, +infinity) f in Re_([a, b]) quad limits(lim)_(b -> +infinity) limits(integral)_(a)^(b) f(x) d x$ наз. несобственным инт-ом 1–го рода, если он сущ. и конечен. Обозн.: $limits(integral)_(a)^(+infinity) f(x) d x$. При этом несобств. инт. сходится. Аналогично определяют $limits(integral)_(-infinity)^(b) f(x) d x$.\ 
+#def Пусть $f$ опр. на $[a, B)$, неогр. в $O(B)$ и $forall b in [a, B) f in Re_([a, b]) quad limits(lim)_(b -> B-0) limits(integral)_(a)^(b) f(x) d x$, наз. несобственным инт-ом 2–го рода, если он сущ. и конечен. Обозн.: $limits(integral)_(a)^(B) f(x) d x$. При этом несобств. инт. сход.\ 
+#def Пусть $f$ опр. на $[a, omega)$ и $forall [a, b] subset [a, omega) f in Re_([a, b])$. Тогда: $limits(integral)_(a)^(omega) f(x) d x := limits(lim)_(b -> omega) limits(integral)_(a)^(b) f(x) d x$. 
 
 #theorem(name: "св-ва несобст. инт-а Римана.") $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ сход., тогда:
 
@@ -14,8 +14,7 @@
 
 + $c in [a, omega) ==> limits(integral)_(a)^(omega) f(x) d x = limits(integral)_(a)^(c) f(x) d x + limits(integral)_(c)^(omega) f(x) d x$.
 
-+ $phi$ непр. дифф. и строго монотонна на $[alpha, gamma)$, $phi(alpha) = a$ и $phi(beta) -> omega$ при $beta -> gamma, beta in [alpha, gamma) ==>$ несобств. инт. от ф-ции $(f compose phi)phi'$ на $[alpha, gamma)$ сущ. и $limits(integral)_(a)^(omega) f(x) d x = limits(integral)_(alpha)^(gamma) f(phi(t))phi'(t) d t$.
-
++ $phi$ непр. дифф. и строго монотонна на $[alpha, gamma) quad phi(alpha) = a$ и $phi(beta) -> omega$ при $beta -> gamma, beta in [alpha, gamma) ==>$ несобств. инт. от ф-ции $(f compose phi)phi'$ на $[alpha, gamma)$ сущ. и $limits(integral)_(a)^(omega) f(x) d x = limits(integral)_(alpha)^(gamma) f(phi(t))phi'(t) d t$. \ 
 #proof
 + Следует из непр-сти ф-ции $F(b) = limits(integral)_(a)^(b) f(x) d x$ на $[a, omega]$ при $f in Re[a, omega]$.
 
@@ -26,4 +25,4 @@
 + Следует из того, что $limits(integral)_(a = phi(alpha))^(b = phi(beta)) f(x) d x = limits(integral)_(alpha)^(beta) f(phi(t))phi'(t) d t$. #qed
 
 #theorem(name: "Крит. Коши сход-ти несобст. инт-а") $limits(integral)_(a)^(omega) f(x)d x$ сход. $<==> forall epsilon > 0 exists B in [a, omega) forall b_(1), b_(2) in (B, omega) abs(limits(integral)_(b_(1))^(b_(2)) f(x) d x) < epsilon$.\ 
-#proof По опр. несобст. инт-а он сход. $<==>$ сущ. и конечен $limits(lim)_(b -> infinity) F(b) = limits(integral)_(a)^(b) f(x) d x$, $b in [a, omega)$, а $limits(integral)_(b_(1))^(b_(2)) f(x) d x = limits(integral)_(a)^(b_(2)) f(x) d x - limits(integral)_(a)^(b_(1)) f(x) d x = F(b_(2)) - F(b_(1))$. Тогда ф-ция $F$ имеет предел при $b -> omega$ по Крит. Коши сущ-я предела ф-ции. #qed
+#proof По опр. несобст. инт-а он сход. $<==>$ сущ. и конечен $limits(lim)_(b -> infinity) F(b) = limits(integral)_(a)^(b) f(x) d x quad b in [a, omega)$, а $limits(integral)_(b_(1))^(b_(2)) f(x) d x = limits(integral)_(a)^(b_(2)) f(x) d x - limits(integral)_(a)^(b_(1)) f(x) d x = F(b_(2)) - F(b_(1))$. Тогда ф-ция $F$ имеет предел при $b -> omega$ по Крит. Коши сущ-я предела ф-ции. #qed

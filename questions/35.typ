@@ -17,15 +17,13 @@ $f(overline(x)) - f(overline(x)_0) = phi_1 (overline(x))(x_1 - x_1^0) + phi_2(ov
 alpha_1 (overline(x)) (x_1 - x_1^0) + alpha_2 (overline(x)) (x_2 - x_2^0) + dots + alpha_m (overline(x)) (x_m - x_m^0) (*)$ 
 
 #theorem(name: "о непр. дифф. функ.")
-Если функ. $f$ дифф-ма в т. $overline(x)_0$, то $f$ непр. в этой т.
-
+Если функ. $f$ дифф-ма в т. $overline(x)_0$, то $f$ непр. в этой т. \ 
 #proof
 Следует из равенства выше. #qed
 
 #theorem(name: "о сущ. част. произв. у дифф. функ.")
 Если функция $f$ дифф. в т. $overline(x)_0$, то в этой т. у неё сущ. все част. произв. и при всех $k = 1, dots, m$
-$(diff f)/(diff x_k) (overline(x)_0) = A_k$, где $A_k$ --- числа из равенства $(*)$
-
+$(diff f)/(diff x_k) (overline(x)_0) = A_k$, где $A_k$ --- числа из равенства $(*)$ \ 
 #proof
 Из равенства $(*)$ имеем $f(x_1, x_2^0, dots, x_m^0) - f(x_1^0, x_2^0, dots, x_m^0) = A_1 (x_1 - x_1^0) + alpha_1 (x_1, x_2^0, dots, x_m^0) (x_1-x_1^0)$
 Поделив обе части на $x_1 - x_1^0$ и перейдя к пределу при $x_1 -> x_1^0$, получим $(diff f)/(diff x_1) (overline(x)_0) = A_1$.

@@ -9,8 +9,7 @@ $(f compose overline(g)) (overline(t)) = f(g_1 (overline(t)), dots, g_m (overlin
 Пусть $f$ дифф-ма в т. $overline(x)_0$, а функции $g_i$ при всех $i = 1, dots, m$ дифф-мы в т. $overline(t)_0$ и $overline(x)_0 = overline(g) (overline(t)_0)$. 
 Тогда функция $f compose overline(g)$ дифф-ма в т. $overline(t)_0$ и при любом $j = 1, dots, k$:
 $(diff (f compose overline(g)))/(diff t_j) (overline(t)_0) = (diff f)/(diff x_1) (overline(x)_0) (diff g_1)/(diff t_j) (overline(t)_0) + 
-(diff f)/(diff x_2) (overline(x)_0) (diff g_2)/(diff t_j) (overline(t)_0) + dots + (diff f)/(diff x_m) (overline(x)_0) (diff g_m)/(diff t_j) (overline(t)_0)$
-
+(diff f)/(diff x_2) (overline(x)_0) (diff g_2)/(diff t_j) (overline(t)_0) + dots + (diff f)/(diff x_m) (overline(x)_0) (diff g_m)/(diff t_j) (overline(t)_0)$ \ 
 #proof 
 Т.к. функ. $f$ дифф-ма в т. $overline(x)_0$, то $f(overline(x)) - f(overline(x)_0) = limits(sum)_(i=1)^m phi_i (overline(x)) (x_i - x_i^0)$, 
 где функции $phi_i$ $(i = 1, dots, m)$ непр. в т. $overline(x)_0$ и $phi_i (overline(x)_0) = (diff f)/(diff x_i) (overline(x)_0)$

@@ -2,7 +2,7 @@
 
 = Дифференциалы первого и высших порядков
 
-#def Пусть $f$ 2-дифф. в т. $overline(x)_0$. $forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифференциал первого порядка
+#def Пусть $f$ 2-дифф. в т. $overline(x)_0 quad forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифференциал первого порядка
 
 #def Дифф. 2-го порядка функ. $f$ в т. $overline(x)_0$ называется функ. $d^2f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR$: $d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h))$. 
 

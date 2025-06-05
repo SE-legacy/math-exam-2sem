@@ -3,20 +3,18 @@
 = Функциональные ряды. Поточечная, равномерная и нормальная сходимости функциональных рядов, их связь. Критерий Коши равномерной сходимости функционального ряда. Признак Вейерштрасса равномерной сходимости
 
 #def Пусть $(f_n)$ --- функ. послед. и $forall n in NN$ $f_n$ опр. на мн. $X$.
-Функ. рядом назыв. посл. $(S_n)$, где $S_n = limits(sum)_(k=1)^(n) f_k$, $n in NN$ и обозн. как $sum f_n$
+Функ. рядом назыв. посл. $(S_n)$, где $S_n = limits(sum)_(k=1)^(n) f_k quad n in NN$ и обозн. как $sum f_n$
 
 #def Ряд $sum f_n$ поточ. сх., если послед. $(S_n)$ поточ. сх.
 
 #def Ряд $sum f_n$ равн. сх., если послед. $(S_n)$ равн. сх.
 
-#def Ряд $sum f_n$ норм. сх., если ряд $sum ||f_n||$ сх.
+#def Ряд $sum f_n$ норм. сх., если ряд $sum norm(f_n)$ сх.
 
-#theorem(name: "крит. Коши равн. сх.") Ряд $sum f_n$ норм. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$
+#theorem(name: "крит. Коши равн. сх.") Ряд $sum f_n$ норм. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ norm(limits(sum)_(k = n+1)^(n+p) f_k) < epsilon$
 
-#theorem(name: "о равн. сх. норм. сх-ся ряда") Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх.
+#theorem(name: "о равн. сх. норм. сх-ся ряда") Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх. \ 
+#proof $norm(limits(sum)_(k = n+1)^(n+p) f_k) <= limits(sum)_(k = n+1)^(n+p) norm(f_k)$, применим кр. Коши сх. числ. ряда и кр. Коши равн. сх. функ. ряда. #qed
 
-#proof $||limits(sum)_(k = n+1)^(n+p) f_k|| <= limits(sum)_(k = n+1)^(n+p) ||f_k||$, применим кр. Коши сх. числ. ряда и кр. Коши равн. сх. функ. ряда. #qed
-
-#theorem(name: "признак Вейерштрасса") Пусть $forall n in NN$ $||f_n|| <= a_n$, $limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равн. сх.
-
-#proof $sum ||f_n||$ сх. по признаку маж., т.е. ряд $sum f_n$ норм. сх., т.е. равн. сх. #qed
+#theorem(name: "признак Вейерштрасса") Пусть $forall n in NN$ $norm(f_n) <= a_n quad limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равн. сх. \ 
+#proof $sum norm(f_n)$ сх. по признаку маж., т.е. ряд $sum f_n$ норм. сх., т.е. равн. сх. #qed

@@ -2,9 +2,9 @@
 
 = Коммутативный закон для знакоположительных и абсолютно сходящихся рядов. Теорема Римана (без док-ва)
 
-#theorem(name: "коммут. закон для знакопол. ряда") $forall k in NN #h(4pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется: $limits(sum)^infinity_(k=1) a_(n_k) = limits(sum)^infinity_(k=1) a_k$ \
-#proof Пусть $m_p = max(n_1, n_2, dots, n_p), #h(4pt) p in NN ==>$\
-$forall p #h(4pt) limits(sum)^p_(k=1) a_(n_k) <= limits(sum)^(m_p)_(k=1) a_k <= limits(sum)^infinity_(k=1) a_k ==> limits(sum)^infinity_(k=1) a_(n_k) <= limits(sum)^infinity_(k=1) a_k$.  $sum a_k$ можно также считать перестановкой $sum a_(n_k) ==> limits(sum)^infinity_(k=1) a_k <= limits(sum)^infinity_(k=1) a_(n_k)$. Cл-но, равенство верно. #qed
+#theorem(name: "коммут. закон для знакопол. ряда") $forall k in NN quad a_k >= 0 ==>$ для любой перестановки ряда выполняется: $limits(sum)^infinity_(k=1) a_(n_k) = limits(sum)^infinity_(k=1) a_k$ \
+#proof Пусть $m_p = max(n_1, n_2, dots, n_p) quad p in NN ==>$\
+$forall p quad limits(sum)^p_(k=1) a_(n_k) <= limits(sum)^(m_p)_(k=1) a_k <= limits(sum)^infinity_(k=1) a_k ==> limits(sum)^infinity_(k=1) a_(n_k) <= limits(sum)^infinity_(k=1) a_k$.  $sum a_k$ можно также считать перестановкой $sum a_(n_k) ==> limits(sum)^infinity_(k=1) a_k <= limits(sum)^infinity_(k=1) a_(n_k)$. Cл-но, равенство верно. #qed
 
 
 #theorem(name: "коммут. закон для абс. сх-ся ряда") Ряд абс. сх-ся $==>$ любая его перестановка абс. сх-ся и их суммы равны. \
