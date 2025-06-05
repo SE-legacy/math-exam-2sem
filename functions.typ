@@ -1,6 +1,7 @@
 #let def = [*Опр.*]
 
 #let theorem(name: none) = {
+  [#v(0.3em)]
   if name != none {
     [*Т. (#name)*:]
   } else {
@@ -29,6 +30,7 @@
 }
 
 #let lemma(name: none) = {
+  [#v(0.3em)]
   if name != none {
     [*Лемма (#name)*:]
   } else {
