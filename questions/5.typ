@@ -53,7 +53,7 @@ limits(integral)_(a)^(b) g(x) d x = 0 ==> 0 = 0. \
 limits(integral)_(a)^(b) g(x) d x > 0 ==> m <= (limits(integral)_(a)^(b) f(x) g(x) d x)/(limits(integral)_(a)^(b) g(x) d x) <= M (limits(integral)_(a)^(b) f(x) g(x) d x)/(limits(integral)_(a)^(b) g(x) d x) = mu. $ #qed
 
 *Замечание*: 
-$f$ непр. на $[a, b] stretch(=>)^("Т. Коши о")_("промеж. знач-ях")$, 
+$f$ непр. на $[a, b] stretch(=>)^"Т. Коши о"_"промеж. знач-ях"$, 
 $ exists xi in [a, b] quad f(xi) = mu, limits(integral)_(a)^(b) f(x) g(x) d x = f(xi) limits(integral)_(a)^(b) g(x) d x. $ \ 
 #conseq() 
 $ g(x) equiv 1 ==> limits(integral)_(a)^(b) f(x) d x  = f(xi)(b - a) $
