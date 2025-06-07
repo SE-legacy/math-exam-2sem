@@ -15,16 +15,16 @@ $sigma(c f, P, xi_(P)) = c dot sigma(f, P, xi_(P))$. #qed
 $ limits(integral)_(a)^(b) f(x) d x = limits(integral)_(a)^(c) f(x) d x + limits(integral)_(c)^(b) f (x) d x. $
 #proof 
 $arrow.r.double.long.bar$ $f in Re_([a, b]), epsilon > 0 stretch(=>)_"крит. инт-сти" exists P_([a, b]): S(P) - s(P) < epsilon$. Пусть $P^(*) = P union {c} ==>$
-$S(P^(*)) - s(P^(*)) <= S(P) - s(P) < epsilon quad P^(*) = P'_([a, c]) union P''_([c, b]) = P' union P''$,
+$S(P^(*)) - s(P^(*)) <= S(P) - s(P) < epsilon, #h(4pt) P^(*) = P'_([a, c]) union P''_([c, b]) = P' union P''$,
 
 $(S(P') - s(P') <= S(P^(*)) - s(P^(*)) < epsilon$,
 $(S(P'') - s(P'') <= S(P^(*)) - s(P^(*)) < epsilon stretch(=>)^"крит."_" инт-сти"$
 
-$f in Re[a, c] quad f in Re[c, b]$.
+$f in Re[a, c], #h(4pt) f in Re[c, b]$.
 
 $arrow.l.double.long.bar$ $f in Re[a, c]$ и $f in Re[c, b]. #h(4pt) epsilon > 0. #h(4pt) exists P' = P'_([a, c])$ и $exists P'' = P''_([c, b]):$
 
-$S(P') - s(P') < (epsilon)/(2) quad S(P'') - s(P'') < (epsilon)/(2)$.
+$S(P') - s(P') < (epsilon)/(2), #h(4pt) S(P'') - s(P'') < (epsilon)/(2)$.
 
 Тогда для $P = P_([a, b]) = P' union P'' quad S(P) - s(P) < (epsilon)/(2) + (epsilon)/(2) < epsilon$ т.е. $f in Re_([a, b])$. #qed
 

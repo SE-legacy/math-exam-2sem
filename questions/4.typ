@@ -17,7 +17,7 @@ $f$ монотон. на $[a, b] ==> f$ интегрируема на $[a, b]$. 
 #proof
 Если $f = c = "const" ==> f$ интегрируема и $limits(integral)_(a)^(b) f(x) d x = c(b - a)$.
 
-Пусть $f != "const"$ и $f arrow.t quad P = P_([a,b]) = {x_(k)}_(k = 0)^(n) quad Delta_(k) = [x_(k - 1), x_(k)] ==>$
+Пусть $f != "const"$ и $f arrow.t, #h(4pt) P = P_([a,b]) = {x_(k)}_(k = 0)^(n), #h(4pt) Delta_(k) = [x_(k - 1), x_(k)] ==>$
 $ S(P) - s(P) = limits(sum)_(k = 1)^(n) (M_(k) - m_(k)) Delta x_(k), M_(k) = f(x_(k)), m_(k) = f(x_(k - 1)). $
 Пусть $epsilon > 0$, т.к. $f(b) != f(a) ==> (epsilon)/(f(b) - f(a)) > 0$.
 

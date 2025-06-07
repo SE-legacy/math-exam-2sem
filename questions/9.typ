@@ -40,6 +40,6 @@ $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d 
 $ limits(integral)_(a)^(omega) f(x)d x "сходится" <==> forall epsilon > 0 #h(4pt) exists B in [a, omega) #h(4pt) forall b_(1), b_(2) in (B, omega) #h(4pt) abs(limits(integral)_(b_(1))^(b_(2)) f(x) d x) < epsilon. $\ 
 #proof 
 По опр. несобст. интеграла он сходится $<==>$ существует и конечен 
-$ limits(lim)_(b -> infinity) F(b) = limits(integral)_(a)^(b) f(x) d x quad b in [a, omega), " и" $
+$ limits(lim)_(b -> infinity) F(b) = limits(integral)_(a)^(b) f(x) d x, #h(4pt) b in [a, omega), " и" $
 $ limits(integral)_(b_(1))^(b_(2)) f(x) d x = limits(integral)_(a)^(b_(2)) f(x) d x - limits(integral)_(a)^(b_(1)) f(x) d x = F(b_(2)) - F(b_(1)). $
 Тогда $F$ имеет предел при $b -> omega$ по Крит. Коши существования предела функции. #qed

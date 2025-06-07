@@ -30,6 +30,6 @@ $forall x in [a, omega) f(x) >= 0, g(x) >= 0, #h(4pt) 0 < A < +infinity$ и
 $ lim_(x -> omega) f(x)/g(x) = A ==> $
 $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ одновременно сходятся или расходятся \ 
 #proof 
-Пусть $epsilon = A/2 > 0 quad exists c in [a, omega)$ такое, что при $x in [c, omega)$
+Пусть $epsilon = A/2 > 0, #h(4pt) exists c in [a, omega)$ такое, что при $x in [c, omega)$
 $ abs(f(x)/g(x) - A) < A/2, " т.е. " A/2 g(x) < f(x) < 3/2 A g(x). $ 
 Остаётся воспользоваться признаком мажорации и пунктом 3 из теоремы о свойствах несобст. интеграла. #qed
