@@ -35,8 +35,7 @@ $ limits(integral)_(a)^(b) f(x) d x <= limits(integral)_(a)^(b) g(x) d x. $
 $ forall P, #h(4pt) forall xi_(P) quad sigma(f, P, xi_(P)) <= sigma(g, P, xi_(P)) stretch(=>)^"lim"_(d(P) -> 0) 
 limits(integral)_(a)^(b) f(x) d x <= limits(integral)_(a)^(b) g(x) d x. $ #qed \ 
 #conseq(number: 1) 
-$f in Re_([a, b]), forall x f(x) >= 0 ==>$
-$ limits(integral)_(a)^(b) f(x) d x >= 0. $ \ 
+$f in Re_([a, b]), forall x f(x) >= 0 ==> limits(integral)_(a)^(b) f(x) d x >= 0$. \ 
 #conseq(number: 2) 
 $f in Re_([a, b]) ==>$
 $ abs(limits(integral)_(a)^(b) f(x) d x) <= limits(integral)_(a)^(b) abs(f(x)) d x <= limits(sup)_(x in[a, b]) abs(f(x)) (b - a). $ 
@@ -56,9 +55,9 @@ limits(integral)_(a)^(b) g(x) d x > 0 ==> m <= (limits(integral)_(a)^(b) f(x) g(
 $f$ непр. на $[a, b] stretch(=>)^"Т. Коши о"_"промеж. знач-ях"$, 
 $ exists xi in [a, b] quad f(xi) = mu, limits(integral)_(a)^(b) f(x) g(x) d x = f(xi) limits(integral)_(a)^(b) g(x) d x. $ \ 
 #conseq() 
-$ g(x) equiv 1 ==> limits(integral)_(a)^(b) f(x) d x  = f(xi)(b - a) $
-$f$ непр. на $[a, b] ==>$ 
-$ exists xi in [a, b] quad limits(integral)_(a)^(b) f(x) d x = f(xi) (b - a). $
+$g(x) equiv 1 ==> limits(integral)_(a)^(b) f(x) d x  = f(xi)(b - a)$.
+
+$f$ непр. на $[a, b] ==> exists xi in [a, b] quad limits(integral)_(a)^(b) f(x) d x = f(xi) (b - a)$.
 
 #theorem(name: "операции над интегрируемыми функциями") 
 $f, g in Re_([a, b]) ==> abs(f), f dot g in Re_([a, b]), (f)/(g) in Re_([a, b])$ при усл. $exists c > 0 forall x in [a, b] abs(g(x)) >= c$. \ 
