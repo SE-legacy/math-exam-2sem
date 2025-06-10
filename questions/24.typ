@@ -9,7 +9,7 @@
 
 *Опр.*: Ряд $sum f_n$ норм. сх., если ряд $sum ||f_n||$ сх.
 
-*Т. (крит. Коши равн. сх.)*: Ряд $sum f_n$ норм. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$
+*Т. (крит. Коши равн. сх.)*: Ряд $sum f_n$ равн. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$
 
 *Т. (о равн. сх. норм. сх-ся ряда)*: Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх.
 
