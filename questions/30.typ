@@ -12,8 +12,8 @@ $forall overline(x) in D(overline(f))$ $(abs(overline(x) - overline(x)_0) < delt
 
 *Опр.*: Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$ 
 
-*Опр.*: Функ. $f$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
-$(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$sswap.img
+*Опр.*: Функ. $overline(f)$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $exists delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
+$(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$
 
 *Т. (Кантора)*
 Пусть функ. $overline(f)$ непр. на множ. $X$ и множ. $X$ --- компакт. Тогда функ. $overline(f)$ равн. непр. на $X$
