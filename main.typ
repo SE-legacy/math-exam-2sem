@@ -10,6 +10,8 @@
 #text(size: 0.8em)[
 #{
   for num in range(1, 53) {
-    include("questions/" + str(num) + ".typ")
+    block(breakable: false)[
+      #include("questions/" + str(num) + ".typ")
+    ]
   }}
 ]
