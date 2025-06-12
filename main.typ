@@ -2,7 +2,7 @@
 
 #show heading: it => [
   #set align(center)
-  #set text(10pt, weight: "regular")
+  #set text(9pt, weight: "bold")
   #block(smallcaps(it.body))
 ]
 
