@@ -3,10 +3,11 @@
 #show heading: it => [
   #set align(center)
   #set text(9pt, weight: "bold")
+  #set par(leading: 0pt)
   #block(smallcaps(it.body))
 ]
 
-#text(size: 8pt)[
+#text(size: 8pt, top-edge: 1em)[
 #{
   for num in range(1, 53) {
     let filename
