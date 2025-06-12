@@ -1,24 +1,24 @@
 touch length.txt
+> length.txt
 
 cp -r questions questions-backup
 
 for file in questions/*.typ; do	
-  length=$(wc -m < $file)
+  length=$(wc -m < "$file")
   echo "$length $file" >> length.txt
 done
 
-sort -n -k1,1 length.txt > sorted_length.txt
+sort -n -k1,1 length.txt > sorted-length.txt
 
-mkdir questions-sorted
+mkdir -p questions-sorted
 count=1
 while IFS=' ' read -r length file; do
   newname=$(printf "%02d.typ" "$count")
   mv "$file" "questions-sorted/$newname"
   ((count++))
-done < sorted_length.txt
+done < sorted-length.txt
 
 rm -r questions
-cp -r questions-sorted questions
-rm -r questions-sorted
+mv questions-sorted questions
 
-rm length.txt sorted_length.txt
+rm length.txt sorted-length.txt
