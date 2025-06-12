@@ -1,19 +1,12 @@
-= №25. Признаки Абеля и Дирихле равн. сх. функ. ряда
+= №21. Произведение числ. рядов, согл. с произведением частных сумм. Т. о пр-ии абс. сх-ся рядов.
 
-*T. (признак Дирихле равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, $norm(limits(sum)_(k = n+1)^(n+p) g_k) = O(1)$, $norm(f_n) = o(1)$.
-Тогда ряд $sum f_n g_n$ равн. сх.
+*Опр.* Числ. ряд $sum c_n$, где $c_n = a_n dot  limits(sum)^(n-1)_(k=1) b_k + b_n dot  limits(sum)^(n-1)_(k=1) a_k + a_n b_n$, наз. произведением рядов $sum a_n$ и $sum b_n$, согл. с произведением частных сум. \
+Если $A_n = limits(sum)^(n)_(k=1) a_k, #h(4pt) B_n = limits(sum)^(n)_(k=1) b_k, #h(4pt) C_n = limits(sum)^(n)_(k=1) c_k$, то $C_n = A_n dot B_n$.
 
-*Док-во*: Пусть $G_n = limits(sum)_(k = 1)^(n) g_k$, $G_(n,k) = limits(sum)_(i = 1)^(k) g_(n+i)$. 
-$exists M$ $forall n in NN$ $norm(G_n) <= M$ и $forall n in NN$ $forall k in NN$ $norm(G_(n,k)) = norm(G_(n+k) - G_n) <= norm(G_(n+k)) + norm(G_n) <= 2M$.
-
-Тогда $forall x in X$ $abs(limits(sum)_(k = n + 1)^(n + p) f_k (x) g_k (x)) = abs(limits(sum)_(k=1)^(p-1) (f_(n+k) (x) - f_(n+k+1) (x)) G_(n,k) (x) + f_(n+p) (x) G_(n, p) (x))$
-$<= 2M limits(sum)_(k = 1)^(p-1) (f_(n+k) (x) - f_(n+k+1) (x)) + f_(n+p) (x) dot 2M = 2M f_(n+1) (x) <= 2M norm(f_(n+1))$. 
-Пусть $epsilon > 0$. Тогда $exists n_(epsilon)$ $forall n >= n_(epsilon)$ $norm(f_n) < epsilon$ и 
-$forall n >= n_(epsilon)$ $forall p in NN$ $forall x in X$ $abs(limits(sum)_(k=n+1)^(n+p) f_k (x) g_k (x)) <= 2M norm(f_(n+1)) < 2M epsilon$. 
-Ряд $sum f_n g_n$ равн. сх. по крит. Коши
-
-*Т. (признак Абеля равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, ряд $sum g_n$ равн. сх. и $norm(f_n) = O(1)$. Тогда ряд $sum f_n g_n$ равн. сх.
-
-*Док-во*: Пусть $G_n = limits(sum)_(k = 1)^(n) g_k$, $G_(n,k) = limits(sum)_(i = 1)^(k) g_(n+i)$, $M > 0$ такое, что $forall n in NN$ $norm(f_n <= M)$, и $epsilon > 0$. 
-Согласно крит. Коши равн. сх. функ. ряда: $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall k in NN$ $forall x in X$ 
-$abs(limits(sum)_(k=n+1)^(n+p) f_k (x) g_k (x)) <= 2M norm(f_(n+1)) < 2M epsilon$. Ряд $sum f_n g_n$ равн. сх. по крит. Коши
+*Т. (о пр-ии абс. сх-ся рядов)*: Пусть $sum a_n$ и $sum b_n$ абс. сх-ся, тогда при любой нумерации эл-тов матрицы $C = mat(
+  a_1 b_1, a_1 b_2, dots;
+  a_2 b_1, a_2 b_2, dots;
+  dots, dots, dots;
+)$ ряд $sum c_n$ абс. сх-ся и $limits(sum)^infinity_(n=1) c_n = limits(sum)^infinity_(n=1) a_n dot limits(sum)^infinity_(n=1) b_n$. \
+*Док-во*: Рассм. нумерацию $c_1 = a_1 b_1, c_2 = a_1 b_2, c_3 = a_2 b_2, c_4 = a_2 b_1, c_5 = a_1 b_3, dots $. Тогда $limits(sum)^(n)_(k=1) abs(c_k) <= limits(sum)^(n^2)_(k=1) abs(c_k) = limits(sum)^n_(k=1) abs(a_k) dot limits(sum)^n_(k=1) abs(b_k) stretch(=>)^lim_(n-> infinity) limits(sum)^infinity_(k=1) abs(c_k) <= limits(sum)^infinity_(k=1) abs(a_k) dot limits(sum)^infinity_(k=1) abs(b_k) < + infinity$, т. е. $sum c_n$ абс. сх-ся $==>$ любая его перестановка абс. сх-ся и её сумма равна сумме $sum c_n$. \
+Произведем группировку $c_1 + (c_2 + c_3 + c_4) + (c_5 + dots + c_9) + dots$, согл. с пр-ем частных сумм. Тогда при любой нумерации эл-ов матрицы $C$ $limits(sum)^infinity_(n=1) c_(phi(n)) = limits(sum)^infinity_(n=1) c_n = limits(sum)^infinity_(n=1) a_n dot limits(sum)^infinity_(n=1) b_n$.

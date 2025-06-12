@@ -1,21 +1,11 @@
-= №18. Преобр. Абеля. Т. о равносходимости рядов, связ. пр-ем Абеля. Признак Абеля. Признак Дирихле и признак Лейбница
+= №42. Локальный экстремум функции многих переменных. Необходимое условие локального экстремума. Достаточное условие локального экстремума.
 
-*Т. (преобр. Абеля)*: $B_n = limits(sum)^n_(k=1) b_k, n>= 1 ==> limits(sum)^n_(k=1) a_k b_k = a_n B_n - limits(sum)^(n-1)_(k=1)(a_(k+1) - a_k) B_k$ \
-*Док-во*: $b_1 = B_1, #h(4pt) b_2 = B_2 - B_1, dots, #h(4pt) B_n = B_n - B_(n-1)$ \
-$limits(sum)^n_(k=1) a_k b_k = a_1 B_1 + a_2 (B_2 - B_1)+dots+a_n (B_n - B_(n-1)) = B_1 (a_1 - a_2) + dots + B_(n-1) (a_(n-1) - a_n) + B_n a_n = limits(sum)^(n-1)_(k=1) (a_k - a_(k+1)) B_k + B_n a_n$.
+*Опр.* т. $overline(x)_0$ наз. т. лок. макс. (мин.), если $exists O(overline(x)_0)$, что $f(overline(x)) <= f(overline(x)_0) (f(overline(x)) >= f(overline(x)_0))$
 
-*Т. (о равносходимости рядов, связ. пр-ем Абеля)*: $B_n = limits(sum)^n_(k=1) b_k, #h(4pt) (a_n B_n)$ сх-ся $==> sum a_n B_n$ и $sum B_n (a_(n+1) - a_n)$ ведут себя одинаково.
+*Т. (Необ. усл. лок. экстрем.)*: Пусть т. $overline(x)_0$ - т. лок. экстрем. $f$ и в этой т. у функ. сущ. все част. произ. первого порядка $f'_x_i (overline(x)_0), i = 1,...,m$. Тогда $f'_x_i (overline(x)_0) = 0, i = 1,...,m$ \
+*Док-во*: Рассмотрим функ. $phi(x_1) = f(x_1, x_1^0, ... , x_m^0)$. Она имеет лок. экс. в т. $x_1^0$ и ее произ $phi'(x_1^0) = f'_x_i (overline(x)_0)$. По Т. Ферма $f'_x_i (overline(x)_0) = 0$ \
 
-*Т. (признак Дирихле)*: $(a_n)$ --- монотонна, и беск. малая; $B_n = limits(sum)^n_(k=1) b_k = O(1) ==> sum a_n b_n$ сх-ся. \
-*Док-во*: $a_n B_n = o(1) O(1) = o(1) stretch(=>)^"пред."_"т." sum a_n B_n$ и $sum B_n (a_(n+1) - a_n)$ ведут себя одинаково. 
-Пусть $abs(B_k) <= M, #h(4pt) k>=1. #h(4pt) epsilon > 0$ --- произв. число. $exists n_0 in NN #h(4pt) forall n>= n_0 #h(4pt) abs(a_n) < epsilon$, т. к. $a_n = o(1)$.\
-При $n >= n #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) <= limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k)) abs(B_k) <= M limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k))$.
-$(a_n)$ монотонна $==> limits(sum)^(n+p)_(k=n+1) abs(a_(k+1) - a_k) = abs(limits(sum)^(n+p)_(k=n+1) a_(k+1) - a_k) = abs(a_(n+p+1) - a_(n+1)) <= abs(a_(n+p+1)) + abs(a_(n+1)) < 2epsilon$, т. е. $forall n>= n_0 #h(4pt) forall p>=1 #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) < 2 M epsilon stretch(<=>)^"крит."_"Коши" sum B_n (a_(n+1) - a_n)$ сх-ся.
-
-*Т. (признак Абеля)*: $(a_n)$ --- монотонна, и огр; $sum b_n$ сх-ся $==> sum a_n b_n$ сх-ся. \ 
-*Док-во*: Пусть $B^n_p = limits(sum)^(n+p)_(k=n+1) b_k$ и $abs(a_k) <= M, #h(4pt) k>=1$. По крит. Коши $forall epsilon > 0 #h(4pt) exists n_0 in NN #h(4pt) forall n>= n_0 #h(4pt) forall p in NN #h(4pt) abs(B^n_p) < epsilon$.\
-По преобр. Абеля $limits(sum)^(n+p)_(k=n+1) a_k b_k = a_(n+p) B^n_p - limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k) B^n_p$.\
-При $n >= n_0 #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) = abs(a_(n+p)) abs(B^n_p) - limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k)) abs(B^n_p) < M epsilon + epsilon limits(sum)^(n+p-1)_(k=n+1) abs(a_(k+1) - a_k) stretch(=>)^"мон."_("и огр." a_n) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) < M epsilon + epsilon 2 M = 3 M epsilon stretch(=>)^"кр."_"Коши" sum a_n b_n$ сх-ся.
-
-*Т. (признак Лейбница)*: $(a_n)$ --- монотонна, и беск. малая $==> sum (-1)^(n-1) a_n$ сх-ся. \
-*Док-во*: Из признака Дирихле при $b_n = (-1)^(n-1)$.
+*Т. (Достат. усл. лок. экс.)* Пусть $f$ опр. в нек. окр. $O(overline(x)_0), f in C^((2)) (O(overline(x)_0))$ и т. $overline(x)_0$ является стационар. т. этой функ. Если квадратичная форма $d^2 f(overline(x)_0)(overline(h)) = limits(sum)_(i,j=1)^m (diff^2 f)/(diff x_j diff x_i) (overline(x)_0)h_i h_j$ \
+1) знакоопределена, то в т. $overline(x)_0$ функ. имеет лок. экс., который является строгим лок. мин., если квадр. форма положит. опр., и строгим лок. макс, если она отриц. опр\
+2) неопределена, то в т. $overline(x)_0$ функ. экс. не имеет\
+*Док-во*: поберегите мозг. не надо 

@@ -1,33 +1,9 @@
-= №32. Дифф-ие вект.-функ. Св-ва опер. дифф-ия. Лок. формула Тейлора, нер-во Лагранжа
+= №7. Дифференцируемость интеграла по верхнему пределу инт-я. Формула Ньютона-Лейбница.
 
-*Опр.*: Пусть функ. $overline(f) : RR -> RR^k$, $k > 1$, и т. $t_0$ --- внутр. точка обл. опред. функ. $overline(f)$
-Функ. $overline(f)$ называется дифф-ой в т. $t_0$, если существует непр. в т. $t_0$ функ. $overline(A)$ такая, что 
-$overline(f) (t) - overline(f) (t_0) = overline(A) (t) dot (t - t_0)$
+*Т. (о дифф-сти инт-а по верх. пределу инт-я):* $f in Re[a, b]$ и непр. в т. $x_(0) in [a, b] ==> F(x) = limits(integral)_(a)^(x) f(t) d t$ дифф. в т. $x_(0)$ и $F'(x_(0)) = f(x_(0))$.\
+*Док-во:* По св-ву инт-а $(F(x_(0) + h) - F(x_(0))) / h = 1/h limits(integral)_(x_(0))^(x_(0) + h) f(t) d t = 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(x_(0)) + (f(t) - f(x_(0)))) d t = 1/h limits(integral)_(x_(0))^(x_(0) + h) f(x_(0)) d t + 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t = f(x_(0)) + 1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t$. Пусть $epsilon > 0$. $f$ непр. в т. $x_(0) ==> exists delta > 0$ такое, что $forall t in [a, b]: |t - x_(0)| < delta$ вып. усл. $|f(t) - f(x_(0))| < epsilon$. Тогда, если $|h| < delta$, то $abs(1/h limits(integral)_(x_(0))^(x_(0) + h) (f(t) - f(x_(0))) d t) <= 1/abs(h) dot abs(h) dot epsilon = epsilon ==> limits(lim)_(h -> 0) 1/h limits(integral)_(x_(0))^(x_(0)+h) (f(t) - f(x_(0))) d t = 0 ==>$ существует предел $limits(lim)_(h -> 0) (F(x_(0) + h) - F(x_(0))) / h = f(x_(0))$, т.е. $F'(x_(0)) = f(x_(0))$.\
+*След-е:* $f$ непр. на $[a, b]$ $==>$ $f$ имеет первообразную на $[a, b]$.
 
-*Т.*: Функ. $overline(f) = (f_1, dots, f_k)$ дифф. в т. $overline(t)_0$ $<=>$ все её коорд. функ. $f_1, dots, f_k$ дифф. в т. $t_0$, причём
-$overline(f)^(prime) (t_0) = (f_1^(prime) (t_0), dots, f_k^(prime) (t_0))$
-
-Следствия:
-
-Если функ. $overline(f)$ и $overline(g)$ дифф. в т. $overline(x)_0$, то их сумма, разность, произв. на число и скал. произв. дифф. в т. $overline(x)_0$, причём:
-$(overline(f) plus.minus overline(g))^(prime) (x_0) = (overline(f)^(prime) (x_0) plus.minus overline(g)^(prime) (x_0))$;
-$(overline(lambda f)^(prime)) (x_0) = lambda overline(f)^prime (x_0)$, $lambda in RR$;
-$(overline(f) dot overline(g))^(prime) (x_0) = overline(f)^(prime) (x_0) dot overline(g) (x_0) + overline(f) (x_0) dot overline(g)^(prime) (x_0)$
-
-Если функ. $overline(f)$ дифф. в $t_0$, а скалярная функ. $g$ дифф. в т. $u_0$ и $g(u_0) = t_0$, то $overline(f) compose g$ дифф.
-в т. $u_0$ и $(overline(f) compose g)^(prime) (u_0) = overline(f)^(prime) (t_0) dot g^(prime) (u_0)$
-
-*Т. (лок. формула Тейлора)*: Пусть функ. $overline(f)$ $n$-дифф. в т. $overline(t)_0$, тогда
-$overline(f) (t) = limits(sum)_(m=1)^n (overline(f)^(m) (t_0))/m! (t-t_0)^m + overline(epsilon) (t) (t-t_0)^n$,
-где $overline(epsilon) (t) -> overline(0)$ при $t -> t_0$
-
-*Т. (нер-во Лагранжа)*:
-Пусть функ. $overline(f)$ непр. на отр. $[a, b]$ и дифф. на инт. $(a, b)$. Тогда $exists xi in (a,b):$ 
-$abs(overline(f) (b) - overline(f) (a)) <= abs(overline(f)^(prime) (xi))(b-a)$
-
-*Док-во*: 
-Если $overline(f) (a) = overline(f) (b)$, нер-во очевидно. 
-Пусть $overline(f) (a) != overline(f) (b)$ и $overline(e) = (overline(f) (b) - overline(f) (a))/abs(overline(f) (b) - overline(f) (a))$.
-Тогда $abs(overline(e)) = 1$ и $abs(overline(f) (b) - overline(f) (a)) = (overline(f) (b) - overline(f) (a), overline(e)) = (overline(f) (b), overline(e)) - (overline(f) (a), overline(e))$.
-Введём скалярную функ. $g(t) = (overline(f) (t), overline(e))$. Для неё вып. усл. т. Лагранжа, значит $exists xi in (a, b):$ 
-$g(b) - g(a) = g^prime (xi)(b-a) = (overline(f)^prime (xi), overline(e))(b-a) <= abs(overline(f)^prime (xi))(b-a)$
+*Т. (ф-ла Ньютона-Лейбница):* $f$ непр. на $[a, b] ==> limits(integral)_(a)^(b) f(x) d x = Phi(b) - Phi(a)$, где $Phi$ - произвольн. первообразная $f$.\ 
+*Док-во:* По пред. Т. $Phi$ имеет вид $Phi(x) = limits(integral)_(a)^(x) f(t) d t + C$, где $C = "const"$. Пусть сначала $x = a$, а потом $x = b$. Тогда $Phi(a) = limits(integral)_(a)^(a) f(t) d t + C = 0 + C = C$, $Phi(b) = limits(integral)_(a)^(b) f(t) d t + C ==> limits(integral)_(a)^(b) f(x) d x = Phi(b) - Phi(a)$.\
+*Замеч-е:* Ф-лу Н-Л часто записывают $limits(integral)_(a)^(b) f(x) d x = Phi(x)|_(a)^(b)$, где $Phi(x)|_(a)^(b) = Phi(b) - Phi(a)$.

@@ -1,10 +1,11 @@
-= №13. Т. об арифм. действиях над сх-ся рядами. Абс. сходимость числ. рядов, связь со сходимостью
+= №38. Производная по направлению и вектор градиент. Свойства вектора градиента.
 
-*Т. (об арифм. действиях над сх-ся рядами)*: $sum a_n, sum b_n$ сх-ся, и $limits(sum)^infinity_(n=1) a_n = A, limits(sum)^infinity_(n=1) b_n = B, lambda in RR ==> sum(a_n + b_n), sum lambda a_n$ сх-ся $limits(sum)^infinity_(n=1)(a_n + b_n) = A+B, limits(sum)^infinity_(n=1) lambda a_n = lambda A$ \
-*Док-во*: $limits(sum)^infinity_(n=1) (a_n+b_n) = limits(lim)_(n->infinity)limits(sum)^n_(k=1)(a_k+b_k) = limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k + limits(lim)_(n->infinity) limits(sum)^n_(k=1) b_k = A+B$. \
-$limits(sum)^infinity_(k=1) lambda a_k = limits(lim)_(n->infinity)limits(sum)^n_(k=1)lambda a_k = lambda limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k = lambda A$
+*Опр.* Пусть век. $overline(a) in RR^m$ --- век. един. длины и прямая $l$ проходит через т. $overline(x)_0$ параллел. век. $overline(a)$. Параметрическое представление пр. $l$ имеет вид: $overline(x) = overline(x)_0 + t overline(a), t in RR$. Рассмотрим функ. $F(t) = f(overline(x)_0 + t overline(a))$. Она опр. $forall t$, что т. $overline(x)_0 + t overline(a) in $ обл. опр. $f$ \
+Если $exists F'(0)$, то ее наз. произ. функ. $f$ в т. $overline(x)_0$ по напр. век. $overline(a)$ и обоз. символом $(diff f )/(diff overline(a))(overline(x)_0)$
 
-$sum a_n$ абс. сх-ся $<==> sum abs(a_n)$ сх-ся.
+*Опр.* Пусть функ. $f$ дифф в т. $overline(x)_0$. Градиентом функ. $f$ в т. $overline(x)_0$ наз. век. \
+$g r a d f(overline(x)_0) = ((diff f) / (diff x_1)(overline(x)_0), (diff f) / (diff x_2)(overline(x)_0),..., (diff f) / (diff x_m)(overline(x)_0))$
 
-*Т. (о сх-ти абс. сх-ся ряда)*: $sum a_n$ абс. сх-ся $==> sum a_n$ сх-ся. \
-*Док-во*: $abs(limits(sum)^(n+p)_(k=n+1) a_k) <= limits(sum)^(n+p)_(k=n+1) abs(a_k) stretch(=>)^"кр. Коши"_"cх-ти ряда"$ $sum a_n$ сх-ся. 
+*Свойства*:\
+1) век. градиент указывает направление, по которому функ. имеет макс. произ. в т. $overline(x)_0$;\
+2) знач. произ. функ. по направлению, опр. градиентом этой функ. в т. $overline(x)_0$, равно длине век. град. 

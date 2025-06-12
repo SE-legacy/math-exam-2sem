@@ -1,12 +1,16 @@
-= №21. Произведение числ. рядов, согл. с произведением частных сумм. Т. о пр-ии абс. сх-ся рядов.
+= №36. Дост. усл. дифф-ти
 
-*Опр.* Числ. ряд $sum c_n$, где $c_n = a_n dot  limits(sum)^(n-1)_(k=1) b_k + b_n dot  limits(sum)^(n-1)_(k=1) a_k + a_n b_n$, наз. произведением рядов $sum a_n$ и $sum b_n$, согл. с произведением частных сум. \
-Если $A_n = limits(sum)^(n)_(k=1) a_k, #h(4pt) B_n = limits(sum)^(n)_(k=1) b_k, #h(4pt) C_n = limits(sum)^(n)_(k=1) c_k$, то $C_n = A_n dot B_n$.
+*Т. (дост. усл. дифф-ти функ. в т.)*:
+Если у функ. $f$ в некоторой окр. т. $overline(x)_0$ сущ. все част. произв. и они непр. в т. $overline(x)_0$, то функ. $f$ дифф. в т. $overline(x)_0$
 
-*Т. (о пр-ии абс. сх-ся рядов)*: Пусть $sum a_n$ и $sum b_n$ абс. сх-ся, тогда при любой нумерации эл-тов матрицы $C = mat(
-  a_1 b_1, a_1 b_2, dots;
-  a_2 b_1, a_2 b_2, dots;
-  dots, dots, dots;
-)$ ряд $sum c_n$ абс. сх-ся и $limits(sum)^infinity_(n=1) c_n = limits(sum)^infinity_(n=1) a_n dot limits(sum)^infinity_(n=1) b_n$. \
-*Док-во*: Рассм. нумерацию $c_1 = a_1 b_1, c_2 = a_1 b_2, c_3 = a_2 b_2, c_4 = a_2 b_1, c_5 = a_1 b_3, dots $. Тогда $limits(sum)^(n)_(k=1) abs(c_k) <= limits(sum)^(n^2)_(k=1) abs(c_k) = limits(sum)^n_(k=1) abs(a_k) dot limits(sum)^n_(k=1) abs(b_k) stretch(=>)^lim_(n-> infinity) limits(sum)^infinity_(k=1) abs(c_k) <= limits(sum)^infinity_(k=1) abs(a_k) dot limits(sum)^infinity_(k=1) abs(b_k) < + infinity$, т. е. $sum c_n$ абс. сх-ся $==>$ любая его перестановка абс. сх-ся и её сумма равна сумме $sum c_n$. \
-Произведем группировку $c_1 + (c_2 + c_3 + c_4) + (c_5 + dots + c_9) + dots$, согл. с пр-ем частных сумм. Тогда при любой нумерации эл-ов матрицы $C$ $limits(sum)^infinity_(n=1) c_(phi(n)) = limits(sum)^infinity_(n=1) c_n = limits(sum)^infinity_(n=1) a_n dot limits(sum)^infinity_(n=1) b_n$.
+*Док-во*:
+Для сокращения записи проведём док-во для функ. двух перем. $f(x, y)$ и т. $(x_0, y_0)$.
+$f(x_0 + h_1, y_0 + h_2) - f(x_0, y_0) = (f(x_0 + h_1, y_0 + h_2)-f(x_0, y_0 + h_2)) + (f(x_0, y_0 + h_2)-f(x_0, y_0))$.
+Выражение $f(x_0 + h_1, y_0 + h_2) - f(x_0, y_0 + h_2)$ --- приращ. функ. $f(x, y_0 + h_2)$ одной перем. $x$ на отр. $[x_0, x_0 + h_1]$.
+Применяя формулу Лагранжа, $exists theta_1 in (0, 1):$ $f(x_0+h_1, y_0+h_2) - f(x_0, y_0 + h_2) = f^prime_x (x_0 + theta_1 h_1, y_0 + h_2) h_1$.
+Т.к. $f^prime_x$ непр. в т. $(x_0, y_0)$, то $f_x^prime (x_0 + theta_1 h_1, y_0 + h_2) = f_x^prime (x_0, y_0) + alpha_1 (h_1, h_2)$, где $alpha_1$ --- беск. мал. при $(h_1, h_2) -> (0,0)$.
+Аналог. получим $f(x_0, y_0 + h_2) - f(x_0, y_0) = f^prime_y (x_0, y_0 + theta_2 h_2) h_2 = (f^prime_y (x_0, y_0) + alpha_2 (h_1, h_2))h_2$, где $theta_2 in (0, 1)$ и
+$alpha_2$ --- беск. мал. при $(h_1, h_2) -> (0, 0)$. 
+Тогда $f(x_0 + h_1, y_0 + h_2) - f(x_0, y_0) = f_x^(prime) (x_0, y_0) h_1 + f_y^prime (x_0, y_0) h_2 + alpha_1 (h_1, h_2) h_1 + alpha_2 (h_1, h_2) h_2$, 
+это равенство является условием дифф-ти функ. $f$ в т. $(x_0, y_0)$
+

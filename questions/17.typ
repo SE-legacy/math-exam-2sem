@@ -1,13 +1,15 @@
-= №17. Необх. и дост. условие абс. сх-ти ряда. Условно сх-ся ряд. Т. об условно сх-ся рядах
+= №33. Инт-ие вект.-функ. Оценка модуля интеграла 
 
-*Опр.* $a^+ = (abs(a)+a)/2$ --- полож. часть числа,  $a^- = (abs(a)-a)/2$  --- отриц. часть числа
+*Опр.*: Пусть вект.-функ. $overline(f) = (f_1, dots, f_k)$ опр. на отр. $[a, b]$. Функ. $overline(f)$ называется инт-мой на отр. $[a, b]$, если ее коорд. функ. $f_1, dots, f_k$ инт-мы 
+на этом отрезке. При этом полагают $limits(integral)_a^b overline(f) (x) d x = (limits(integral)_a^b f_1 (x) d x, dots, limits(integral)_a^b f_k (x) d x)$
 
-$sum a_n = sum a_n^+ - sum a_n^-, #h(4pt) sum abs(a_n) = sum a_n^+ + sum a_n^-$
+*Т.*: 
+Пусть функ. $overline(f)$ инт-ма на отр. $[a, b]$. Тогда функ. $abs(overline(f))$ инт-ма и $abs(limits(integral)_a^b overline(f) (x) d x) <= limits(integral)_a^b abs(overline(f) (x)) d x$
 
-*Т. (необх. и дост. условие абс. сх-ти ряда)*: $sum a_n$ абс. сх-ся $<==>$ сх-ся  $sum a_n^+$ и $sum a_n^-$.
-
-*Опр.* $sum a_n$ условно сх-ся $<==>$ он сх-ся, но не сх-ся абсолютно.
-
-*Т. (об условно сх-ся рядах)*: $sum a_n$ сх-ся условно $==> sum a_n^+$ и $sum a_n^-$ рас-ся.\
-*Док-во*: $sum a_n^+$ и $sum a_n^-$ сх-ся $==>$ ряд $sum abs(a_n) = sum a_n^+ + sum a_n^-$ сх-ся, $==> sum a_n$ сх-ся условно.\
-Пусть один из рядов $sum a_n^+$ и $sum a_n^-$, например $sum a_n^+$, сх-ся $==>$ ряд $sum a_n^- = sum a_n^+ - sum a_n$ сх-ся $==> sum a_n$ сх-ся абсолютно.
+*Док-во*:
+Пусть $overline(y) = (y_1, dots, y_k)$, где $y_1 = limits(integral)_a^b f_1 (x) d x, dots, y_k = limits(integral)_a^b f_k (x) d x$.
+Тогда $abs(overline(y))^2 = y_1^2 + dots + y_k^2 = y_1 limits(integral)_a^b f_1 (x) d x + dots + y_k limits(integral)_a^b f_k (x) d x = 
+limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x$.
+В силу нер-ва Коши-Буянковского-Шварца $abs(y_1 f_1 (x) + dots + y_k f_k (x)) <= abs(overline(y)) dot abs(overline(f) (x))$
+Поэтому $limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$, т. е.
+$abs(overline(y))^2 <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$. Остальное очевидно

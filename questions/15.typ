@@ -1,11 +1,20 @@
-= №15. Признак мажорации и признак сравнения
+= №24. Функ. ряды. Поточ., равн. и норм. сх. функ. рядов, их связь. Крит. Коши равн. сх. функ. ряда. Признак В-сса равн. сх.
 
-*Опр.* $a_n = O(b_n) <==> exists C>0 #h(4pt) forall n in NN #h(4pt) abs(a_n) = C abs(b_n).$
+*Опр.*: Пусть $(f_n)$ --- функ. послед. и $forall n in NN$ $f_n$ опр. на мн. $X$.
+Функ. рядом назыв. посл. $(S_n)$, где $S_n = limits(sum)_(k=1)^(n) f_k$, $n in NN$ и обозн. как $sum f_n$
 
-*Т. (пр. мажорации)*: $forall n in NN #h(4pt) a_n >= 0, #h(4pt) b_n >=0, #h(4pt) a_n = O(b_n), #h(4pt) limits(sum)^infinity_(n=1) b_n < + infinity$ \
-*Док-во*: $exists C>0 #h(4pt) forall n in NN #h(4pt) 0<= a_n <= C b_n ==> 0 <= limits(sum)^n_(k=1) a_k <= C limits(sum)^n_(k=1) b_k stretch(=>)^"lim"_(n-> infinity) 0<= limits(sum)^infinity_(n=1) a_n <= C limits(sum)^infinity_(n=1) b_n < + infinity$. \
-*Cл-е 1.* $forall n in NN #h(4pt) a_n >= 0, b_n >= 0, ((a_n)/(b_n))$ сх-ся, $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$ \
-*Cл-е 2.* $forall n in NN #h(4pt) a_n > 0, b_n > 0, (a_(n+1))/(a_n) <= (b_(n+1))/(b_n)$ сх-ся, $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$
+*Опр.*: Ряд $sum f_n$ поточ. сх., если послед. $(S_n)$ поточ. сх.
 
-*Т. (пр. сравнения)*: $forall n in NN #h(4pt) a_n > 0, #h(4pt) b_n > 0, #h(4pt) exists "кон." limits(lim)_(n -> infinity) (a_n)/(b_n) = k != 0 ==> sum a_n, sum b_n$ ведут себя одинаково. \
-*Док-во*: По следствию 1 из пр. мажорации из сх-ти $sum b_n$ вытекает сходимость $sum a_n$. $limits(lim)_(n->infinity) (b_n)/(a_n) = 1/k stretch(=>)^"сл-е 1 из"_"пр. маж."$ из сх-ти $sum a_n$ вытекает сходимость $sum b_n$.
+*Опр.*: Ряд $sum f_n$ равн. сх., если послед. $(S_n)$ равн. сх.
+
+*Опр.*: Ряд $sum f_n$ норм. сх., если ряд $sum ||f_n||$ сх.
+
+*Т. (крит. Коши равн. сх.)*: Ряд $sum f_n$ равн. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$
+
+*Т. (о равн. сх. норм. сх-ся ряда)*: Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх.
+
+*Док-во*: $||limits(sum)_(k = n+1)^(n+p) f_k|| <= limits(sum)_(k = n+1)^(n+p) ||f_k||$, применим кр. Коши сх. числ. ряда и кр. Коши равн. сх. функ. ряда
+
+*Т. (признак В-сса)*: Пусть $forall n in NN$ $||f_n|| <= a_n$, $limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равн. сх.
+
+*Док-во*: $sum ||f_n||$ сх. по признаку маж., т.е. ряд $sum f_n$ норм. сх., т.е. равн. сх.

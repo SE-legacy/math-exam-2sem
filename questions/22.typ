@@ -1,26 +1,14 @@
-= №22. Равном. норм. функ. и её св-ва. Поточ. и равн. сх. функ. послед. Крит. Коши равн. сход.
+= №1. Опр. интегральной суммы Римана и интеграла Римана. Необх. условие интегрируемости
 
-*Опр.*: Пусть функ. $f$ опр. на множ. $X$. Равном. норм. обознач. символом $norm(f) = limits(sup)_(x in X) |f(x)|$
+*Опр.* $[a,b] subset RR; #h(4pt) P = P_([a,b]) = {x_k}^n_(k=0)$ наз. разбиением отрезка $[a,b]$. \
+$Delta k = [x_k, x_(k-1)], #h(4pt) Delta x_k = x_k - x_(k-1), #h(4pt) k = overline(1\, n)$.\
+$d = d(P) = limits(max)_(1<= k <= n)(Delta x_k)$ наз. диаметром разбиения\
+$xi_P = {xi_k}^n_(k=1):xi_k in Delta_k$ наз. системой промежуточных точек
 
-Свойства: 
-1) $forall x in X$ $abs(f(x)) <= norm(f)$ 
-2) $norm(f) < +infinity <==> f$ огр. 
-3) $norm(f) >=0$ и $norm(f) = 0$ $<==>$ $forall x in X$ $f(x) = 0$
-4) $forall lambda in RR norm(lambda f) = abs(lambda) dot norm(f)$
-5) $norm(f+g) <= norm(f) + norm(g)$
-6) $norm(f dot g) <= norm(f) dot norm(g)$
+*Опр.* Пусть $f$ опр. на $[a,b], #h(4pt) sigma(P) = sigma(f, P, xi_p) = limits(sum)^n_(k=1)f(xi_k)Delta x_k$ наз. интегральной сумма Римана.\
+*Опр.* $I in RR, I = limits(lim)_(d(P) -> 0)sigma(P)$ наз. пределом инт. сумм Римана $<==>$\
+$forall epsilon>0 #h(4pt) exists delta>0 #h(4pt) forall(P, xi_P) #h(4pt) (d(P)<delta => abs(sigma(P, xi_p)-I) < epsilon)$. Обозн. $I = limits(integral)^a_b f(x)d x$, $f$ называют интегрируемой по Риману на $[a,b]$
 
-*Опр.*: Послед. $(f_n)$ сх. в т. $x_0 in X$, если сх. числ. посл. $f_n (x)$
-
-*Опр.*: Послед. $(f_n)$ поточ. сх. на мн. $M subset X, $ если послед. $(f_n)$ сх. во всех т. мн. $M$
-
-*Опр.*: Послед. $(f_n)$ равн. сх. к ф-ции $f$, если $limits(lim)_(n -> infinity) norm(f_n - f) = 0$, обозн. как $f_n arrows f$
-
-*Т. (Крит. Коши равн. сх.)*: послед. $(f_n)$ равн. сх. $<==> forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $norm(f_n - f_m) < epsilon$
-
-*Док-во*: $==>$ : Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f_n (x) - f(x)) < epsilon/2$, то $forall x in X$ $forall m >= n_(epsilon)$ $abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon $, т.е. выполн. услов. крит. Коши
-
-$<==$: Услов. крит. Коши равносильно $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $forall x in X$ $abs(f_m (x) - f_n (x)) < epsilon$, т.е. $forall x in X$ послед. $(f_n (x))$ фунд. $<==>$ $(f_n (x))$ сход. Пусть $f$ --- поточ. пред. послед. $(f_n (x))$. Переходя к пред. при $m -> infinity$ в пред. условии:
-$forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f(x) - f_n (x)) <= epsilon$, т.е. $f_n arrows f$
-
-
+*Т. (необх. усл. интегрируемости)*: $f$ интегр. на $[a,b] ==> f$ ограничена \
+*Док-во*: От противного. Пусть $f$ не огр. на $[a,b]$, $P$ --- произв. разб $==> exists delta_i: f$ не огр. на нем. $sigma(P) = f(xi_i)Delta x_i + A$, где $A = limits(sum)^(i_n)_(k=1, i!= k) f(xi_k)Delta x_k$. #h(4pt) $abs(sigma(P)) = abs(f(xi_i)Delta x_i + A) >= abs(f(xi_i))Delta x_i - A$.\
+$forall M>0 #h(4pt) exists xi_i in Delta_i:abs(f(xi_i))> (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M ==>$ инт. сумма не имеет предела ($f$ не интегр. --- противоречие).

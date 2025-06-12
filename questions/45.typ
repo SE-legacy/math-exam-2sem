@@ -1,7 +1,21 @@
-= №45. Условный экстремум. Необходимое условие условного экстремума.
+= №18. Преобр. Абеля. Т. о равносходимости рядов, связ. пр-ем Абеля. Признак Абеля. Признак Дирихле и признак Лейбница
 
-*Опр.* Пусть функ. $f$, $g_i$ $i = 1, ..., r$ отображения из $RR^m$ в $RR$, опр. в нек. окр. т. $overline(x)_0$ и $g_i (overline(x)_0) = 0$. Значение $f(overline(x)_0)$ наз. условным макс. (мин.) $f$ при условиях связи $g_i (overline(x)) = 0$ $i = 1, ..., r$, если $exists O(overline(x)_0)$, что $f(overline(x)_0)$ является наибол. (наимен.) знач. сужения функ. на мн.: $O(overline(x)_0) inter {overline(x) in RR^m : g_i (overline(x)) = 0, i = 1, ..., r\}$
+*Т. (преобр. Абеля)*: $B_n = limits(sum)^n_(k=1) b_k, n>= 1 ==> limits(sum)^n_(k=1) a_k b_k = a_n B_n - limits(sum)^(n-1)_(k=1)(a_(k+1) - a_k) B_k$ \
+*Док-во*: $b_1 = B_1, #h(4pt) b_2 = B_2 - B_1, dots, #h(4pt) B_n = B_n - B_(n-1)$ \
+$limits(sum)^n_(k=1) a_k b_k = a_1 B_1 + a_2 (B_2 - B_1)+dots+a_n (B_n - B_(n-1)) = B_1 (a_1 - a_2) + dots + B_(n-1) (a_(n-1) - a_n) + B_n a_n = limits(sum)^(n-1)_(k=1) (a_k - a_(k+1)) B_k + B_n a_n$.
 
-*Т. (Лагранжа)*: Пусть функ. $f$ и $g$ непр. дифф. в нек. окр. т. $overline(x)_0$, $g(overline(x)_0) = 0$ и вектор-градиент $g r a d g(overline(x)_0) != 0$. Если функ. $f$ имеет усл. экст. в т. $overline(x)_0$ с усл. $g(overline(x)) = 0$, то $exists lambda in RR$, что $g r a d (f - lambda g)(overline(x)_0) = 0$ \
-*Док-во*: Не огранич. общности, будем считать, что $(diff g(overline(x)_0))/(diff x_m) != 0$. Выберем число $lambda in RR$, что $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$. Осталось док-ать равенство $forall i = 1,...,m-1$. По Т. о неяв. функ. $exists O(x_1^0,..., x_(m-1)^0), O(x_m^0)$, что ур-ие $g(overline(x) = 0$ опр. неяв. дифф. функ. $phi: O(x_1^0,..., x_(m-1)^0) -> O(x_m^0)$. В окр. $O(x_1^0,..., x_(m-1)^0)$ рассмот. функ. $F(x_1,...,x_(m-1)) = f(x_1,...,x_(m-1), phi(x_1,...,x_(m-1)))$
-Из опр. усл. экс. следует, что $F$ имеет лок. экс. в т. $(x_1^0,..., x_(m-1)^0)$. По Т. Ферма $forall i = 1,...,m-1$ имеем равенства $0 = (diff F(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + (diff f(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i)$. По Т. О неяв. функ. $forall i = 1,...,m-1$: $lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff g(overline(x)_0))/(diff x_i)$. Значит $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$ $forall i = 1,...,m-1$
+*Т. (о равносходимости рядов, связ. пр-ем Абеля)*: $B_n = limits(sum)^n_(k=1) b_k, #h(4pt) (a_n B_n)$ сх-ся $==> sum a_n B_n$ и $sum B_n (a_(n+1) - a_n)$ ведут себя одинаково.
+
+*Т. (признак Дирихле)*: $(a_n)$ --- монотонна, и беск. малая; $B_n = limits(sum)^n_(k=1) b_k = O(1) ==> sum a_n b_n$ сх-ся. \
+*Док-во*: $a_n B_n = o(1) O(1) = o(1) stretch(=>)^"пред."_"т." sum a_n B_n$ и $sum B_n (a_(n+1) - a_n)$ ведут себя одинаково. 
+Пусть $abs(B_k) <= M, #h(4pt) k>=1. #h(4pt) epsilon > 0$ --- произв. число. $exists n_0 in NN #h(4pt) forall n>= n_0 #h(4pt) abs(a_n) < epsilon$, т. к. $a_n = o(1)$.\
+При $n >= n #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) <= limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k)) abs(B_k) <= M limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k))$.
+$(a_n)$ монотонна $==> limits(sum)^(n+p)_(k=n+1) abs(a_(k+1) - a_k) = abs(limits(sum)^(n+p)_(k=n+1) a_(k+1) - a_k) = abs(a_(n+p+1) - a_(n+1)) <= abs(a_(n+p+1)) + abs(a_(n+1)) < 2epsilon$, т. е. $forall n>= n_0 #h(4pt) forall p>=1 #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) < 2 M epsilon stretch(<=>)^"крит."_"Коши" sum B_n (a_(n+1) - a_n)$ сх-ся.
+
+*Т. (признак Абеля)*: $(a_n)$ --- монотонна, и огр; $sum b_n$ сх-ся $==> sum a_n b_n$ сх-ся. \ 
+*Док-во*: Пусть $B^n_p = limits(sum)^(n+p)_(k=n+1) b_k$ и $abs(a_k) <= M, #h(4pt) k>=1$. По крит. Коши $forall epsilon > 0 #h(4pt) exists n_0 in NN #h(4pt) forall n>= n_0 #h(4pt) forall p in NN #h(4pt) abs(B^n_p) < epsilon$.\
+По преобр. Абеля $limits(sum)^(n+p)_(k=n+1) a_k b_k = a_(n+p) B^n_p - limits(sum)^(n+p)_(k=n+1) (a_(k+1) - a_k) B^n_p$.\
+При $n >= n_0 #h(4pt) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) = abs(a_(n+p)) abs(B^n_p) - limits(sum)^(n+p)_(k=n+1) abs((a_(k+1) - a_k)) abs(B^n_p) < M epsilon + epsilon limits(sum)^(n+p-1)_(k=n+1) abs(a_(k+1) - a_k) stretch(=>)^"мон."_("и огр." a_n) abs(limits(sum)^(n+p)_(k=n+1) a_k b_k) < M epsilon + epsilon 2 M = 3 M epsilon stretch(=>)^"кр."_"Коши" sum a_n b_n$ сх-ся.
+
+*Т. (признак Лейбница)*: $(a_n)$ --- монотонна, и беск. малая $==> sum (-1)^(n-1) a_n$ сх-ся. \
+*Док-во*: Из признака Дирихле при $b_n = (-1)^(n-1)$.

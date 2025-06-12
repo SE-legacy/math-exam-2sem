@@ -1,15 +1,26 @@
-= №33. Инт-ие вект.-функ. Оценка модуля интеграла 
+= №22. Равном. норм. функ. и её св-ва. Поточ. и равн. сх. функ. послед. Крит. Коши равн. сход.
 
-*Опр.*: Пусть вект.-функ. $overline(f) = (f_1, dots, f_k)$ опр. на отр. $[a, b]$. Функ. $overline(f)$ называется инт-мой на отр. $[a, b]$, если ее коорд. функ. $f_1, dots, f_k$ инт-мы 
-на этом отрезке. При этом полагают $limits(integral)_a^b overline(f) (x) d x = (limits(integral)_a^b f_1 (x) d x, dots, limits(integral)_a^b f_k (x) d x)$
+*Опр.*: Пусть функ. $f$ опр. на множ. $X$. Равном. норм. обознач. символом $norm(f) = limits(sup)_(x in X) |f(x)|$
 
-*Т.*: 
-Пусть функ. $overline(f)$ инт-ма на отр. $[a, b]$. Тогда функ. $abs(overline(f))$ инт-ма и $abs(limits(integral)_a^b overline(f) (x) d x) <= limits(integral)_a^b abs(overline(f) (x)) d x$
+Свойства: 
+1) $forall x in X$ $abs(f(x)) <= norm(f)$ 
+2) $norm(f) < +infinity <==> f$ огр. 
+3) $norm(f) >=0$ и $norm(f) = 0$ $<==>$ $forall x in X$ $f(x) = 0$
+4) $forall lambda in RR norm(lambda f) = abs(lambda) dot norm(f)$
+5) $norm(f+g) <= norm(f) + norm(g)$
+6) $norm(f dot g) <= norm(f) dot norm(g)$
 
-*Док-во*:
-Пусть $overline(y) = (y_1, dots, y_k)$, где $y_1 = limits(integral)_a^b f_1 (x) d x, dots, y_k = limits(integral)_a^b f_k (x) d x$.
-Тогда $abs(overline(y))^2 = y_1^2 + dots + y_k^2 = y_1 limits(integral)_a^b f_1 (x) d x + dots + y_k limits(integral)_a^b f_k (x) d x = 
-limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x$.
-В силу нер-ва Коши-Буянковского-Шварца $abs(y_1 f_1 (x) + dots + y_k f_k (x)) <= abs(overline(y)) dot abs(overline(f) (x))$
-Поэтому $limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$, т. е.
-$abs(overline(y))^2 <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$. Остальное очевидно
+*Опр.*: Послед. $(f_n)$ сх. в т. $x_0 in X$, если сх. числ. посл. $f_n (x)$
+
+*Опр.*: Послед. $(f_n)$ поточ. сх. на мн. $M subset X, $ если послед. $(f_n)$ сх. во всех т. мн. $M$
+
+*Опр.*: Послед. $(f_n)$ равн. сх. к ф-ции $f$, если $limits(lim)_(n -> infinity) norm(f_n - f) = 0$, обозн. как $f_n arrows f$
+
+*Т. (Крит. Коши равн. сх.)*: послед. $(f_n)$ равн. сх. $<==> forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $norm(f_n - f_m) < epsilon$
+
+*Док-во*: $==>$ : Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f_n (x) - f(x)) < epsilon/2$, то $forall x in X$ $forall m >= n_(epsilon)$ $abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon $, т.е. выполн. услов. крит. Коши
+
+$<==$: Услов. крит. Коши равносильно $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $forall x in X$ $abs(f_m (x) - f_n (x)) < epsilon$, т.е. $forall x in X$ послед. $(f_n (x))$ фунд. $<==>$ $(f_n (x))$ сход. Пусть $f$ --- поточ. пред. послед. $(f_n (x))$. Переходя к пред. при $m -> infinity$ в пред. условии:
+$forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f(x) - f_n (x)) <= epsilon$, т.е. $f_n arrows f$
+
+

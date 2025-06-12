@@ -1,19 +1,39 @@
-= №30. Вект.-функ. вект. перем. Предел и непр. функ. в т. Непр. функ. на множ. Равн. непр. функ. на множ., т. Кантора 
+= №29. Прост. $RR^m$. Послед. в $RR^m$ и их св-ва
 
-*Опр.*: Отображение вида $overline(f) : X -> RR^k$, где $X subset RR^m$, $m > 1$, $k > 1$, называют вект. функ. вект. арг.
+*Опр.*: Пусть число $m in NN$. Множ. упорядоченных наборов $(x_1, x_2, dots, x_m)$, где $x_i in RR$, $i = 1, dots, m$, называют
+пространством $RR^m$
 
-*Опред. пред. по Коши*:
-Пусть т. $overline(x)_0$ --- пред. т. обл. опред. функ. $overline(f) : X -> RR^k$, $overline(A) in RR^k$.
-Вект. $overline(A)$ называют пред. функ. $overline(f)$ в т. $overline(x)_0$ и обозначают символом $limits(lim)_(overline(x) -> overline(x)_0) overline(f) (overline(x)) = overline(A)$, если
-$forall epsilon > 0$ $exists delta > 0$ $forall overline(x) in D(overline(f))$ $(0 < abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon)$
+*Опр.*: Будем обозначать $overline(x) = (x_1, x_2, dots, x_m)$ и называть точкой или вектором
 
-*Опред. непр-ти. функ. по Коши*: Функ. $overline(f)$ называется непр. в т. $overline(x)_0$, если 
-$forall overline(x) in D(overline(f))$ $(abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon$
+*Опр.*: Отображение множ. $NN$ в множ. $RR^m$ называем послед. и обозначаем $(overline(x)_n)$ или $(overline(x)_n)_(n=1)^(infinity)$, где
+$overline(x)_n = (x_(1 n), dots, x_(m n))$
 
-*Опр.*: Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$ 
+*Опр.*:
+- $overline(x)_n = O(1) <=> exists M > 0$ $forall n in NN$ $abs(overline(x)_n) <= M$;
+- $overline(x)_n = o(1) <=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $overline(x)_n < epsilon$;
+- $overline(x)_n -> overline(x)_0 <=> overline(x)_n - overline(x)_0 = o(1)$;
+- $overline(x)_n$ --- фунд. $<=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $forall k >= n_epsilon$ $abs(overline(x)_n - overline(x)_k) < epsilon$;
 
-*Опр.*: Функ. $overline(f)$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $exists delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
-$(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$
+*Т.*:
+Послед. $(overline(x)_n)$ огр. или беск. мал., или фунд. $<=>$ все её коорд. послед. $(x_(i n))^(infinity)_(n=1)$, $i = 1, dots, m$
+огр. или беск. мал., или фунд. сооотв. 
 
-*Т. (Кантора)*
-Пусть функ. $overline(f)$ непр. на множ. $X$ и множ. $X$ --- компакт. Тогда функ. $overline(f)$ равн. непр. на $X$
+*Т.*:
+$overline(x)_n -> overline(x)_0 <=>$ $forall i = 1, dots, m$ $x_(i m) -> x_(i 0)$
+
+*Т.*:
+$overline(x)_n -> overline(x)_0$, $overline(y)_n -> overline(y)_0$, $alpha_n -> alpha_0$ (в $RR$) $=>$
+$overline(x)_n + overline(y)_n -> overline(x)_0 + overline(y)_0$, $alpha_n overline(x)_n -> alpha_0 overline(x)_0$,
+$overline(x)_n dot overline(y)_n -> overline(x)_0 dot overline(y)_0$, $abs(overline(x)_n) -> abs(overline(x)_0)$.
+
+*Т.*:
+Всякая сх. послед. огр.
+
+*Т.*:
+Любая подпослед. сх. послед. сх., причём к той же т.
+
+*Т. (крит. Коши)*:
+Послед. сх. $<=>$ послед. фунд.
+
+*Т. (Больц.-В-сса)*:
+У любой огр. послед. сущ. сход. подпослед.

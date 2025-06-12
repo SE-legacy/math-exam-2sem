@@ -1,19 +1,11 @@
-//Непрерывность, дифференцируемость и интегрируемость суммы функционального ряда
+= №3. Крит. интегрируемости
 
-= №26. Непр., дифф-ть и инт-ть суммы функ. ряда
+*Т. (крит. интегрируемости)*: $f$ опр. и огр. на $[a,b] ==>$ След-ие условия эквивалентны:
++ $f$ интегрируема
++ $forall epsilon > 0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$
++ $underline(I) = overline(I)$, при этом $underline(I) = overline(I) = limits(integral)^b_a f(x) d x$
+*Док-во*: $1==>2$. $f$ интегрируема $==> forall epsilon>0 #h(4pt) exists delta >0 #h(4pt) forall(P, xi_p) #h(4pt)$ \ $(d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4) stretch(=>)^"св-во 4"_("сумм Дарбу")$ для $P #h(4pt) exists xi'_P, xi''_P:$ \ $S(P)-sigma(P,xi'_P) < epsilon/4, #h(4pt) sigma(P,xi''_P) - s(P) < epsilon/4$, но $abs(sigma(P,xi'_P)- I) < epsilon/4, #h(4pt) abs(I-sigma(P,xi''_P)) <epsilon/4 $ $==> abs(S(P)-s(P))=abs((S(P)-sigma(P,xi'_P)) + (sigma(P,xi'_P) - I) + (I-sigma(P,xi''_P)) + (sigma(P,xi''_P) - s(P))) < 4 dot epsilon/4 = epsilon$.
 
-*Т. (о непр. суммы ряда)*: Пусть $forall n in NN$ $f_n$ непр. в т. $x_0 in X$ и ряд $sum f_n$ равн. сх. 
-Тогда сумма ряда $S = limits(sum)_(n=1)^(infinity) f_n$ непр. в т. $x_0$
+$2==>3$.  $forall epsilon>0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$. $s(P)<=underline(I) <= overline(I) <= S(P) ==> 0 <= overline(I) - underline(I) <= S(P) - s(P) < epsilon$. Т. к. $epsilon$ --- произв., то $overline(I) - underline(I) = 0 <==> underline(I) = overline(I)$
 
-*Док-во*: Следует из т. о непр-ти. пред. функ. послед.
-
-*Т. (об инт-ти суммы ряда)*: Пусть $X = [a,b]$, $forall n in NN$ $f_n$ непр. на $[a, b]$ и ряд $sum f_n$ равн. сх.
-Тогда сумма ряда $S = limits(sum)_(n=1)^(infinity) f_n$ инт-ма и 
-$limits(integral)_(a)^(b) (limits(sum)_(n=1)^(infinity) f_n (x)) d x = limits(sum)_(n=1)^(infinity) f_n (x) limits(integral)_(a)^(b) f_n (x) d x$
-
-*Док-во*: Следует из т. об инт-ти пред. функ. послед.
-
-*Т. (о дифф-ти суммы ряда)*: Пусть $X = [a, b]$, $forall n in NN$ $f_n$ непр. дифф. на $[a,b]$, ряд $sum f_(n)^(prime)$ равн. сх., ряд $sum f_n$ сх. в некоторой точке $x_0 in [a, b]$. 
-Тогда ряд $sum f_n$ равн. сх. и $forall x in [a, b]$ $(limits(sum)_(n=1)^(infinity) f_n (x))^(prime) = limits(sum)_(n=1)^(infinity) f_(n)^(prime) (x)$
-
-*Док-во*: Следует из т. о дифф-ти. пред. функ. послед.
+$3==>1$. Пусть $underline(I) = overline(I) = A stretch(=>)^"осн. лемма"_"Дарбу" forall epsilon>0 #h(4pt) exists delta>0 #h(4pt) forall P #h(4pt) (d(P)< delta => (S(P)-A < epsilon and A-s(P) < epsilon)) stretch(=>)^"св-во 1"_("сумм Дарбу") A-epsilon<s(P)<= sigma(P,xi_P)<= S(P) < A + epsilon ==> abs(sigma(P, xi_P)-A) < epsilon$, т. е. $limits(lim)_(d->0) sigma(P, xi_P) = A ==> f$ интегрируема, $limits(integral)^b_a f(x) d x = A = underline(I) = overline(I)$.

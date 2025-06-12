@@ -1,29 +1,19 @@
-= №27. Степ. ряды. Рад. сход. и инт. сход. Т. Коши-Адамара. Т. Абеля 
+= №25. Признаки Абеля и Дирихле равн. сх. функ. ряда
 
-*Опр.*: Функ. ряд вида $a_0 + a_1 (x-x_0) + a_2 (x-x_0)^2 + dots = limits(sum)_(n=0)^(infinity) a_n (x-x_0)^n$,
-где $a_0, a_1, dots in RR$, $x_0 in RR$, называют степ. рядом. 
-Числа $a_0, a_1, dots$ назыв. коэфф. степ. ряда
+*T. (признак Дирихле равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, $norm(limits(sum)_(k = n+1)^(n+p) g_k) = O(1)$, $norm(f_n) = o(1)$.
+Тогда ряд $sum f_n g_n$ равн. сх.
 
-*Опр.*: Пусть $L = overline(limits(lim)_(n -> infinity)) root(n, abs(a_n))$. Определим число $R$:
-- $R = 1/L$, если $0 < L < +infinity$
-- $R = +infinity$, если $L = 0$
-- $R = 0$, если $L = +infinity$
-Число $R$ называют рад. сход. степ. ряда $limits(sum)_(n=0)^(infinity) a_n x^n$. 
-Если $0 < R < +infinity$, то инт. $(-R, R)$ называют инт. сход. степ. ряда $limits(sum)_(n=0)^(infinity) a_n x^n$
+*Док-во*: Пусть $G_n = limits(sum)_(k = 1)^(n) g_k$, $G_(n,k) = limits(sum)_(i = 1)^(k) g_(n+i)$. 
+$exists M$ $forall n in NN$ $norm(G_n) <= M$ и $forall n in NN$ $forall k in NN$ $norm(G_(n,k)) = norm(G_(n+k) - G_n) <= norm(G_(n+k)) + norm(G_n) <= 2M$.
 
-*Т. (Коши-Адамара)*:
-$L = overline(limits(lim)_(n -> infinity)) root(n, abs(a_n))$
-+ Если послед. $(root(n, abs(a_n)))$ неогр., то ряд $limits(sum)_(n=0)^(infinity) a_n x^n$ сх. только в т. $x_0$
-+ Если послед. $(root(n, abs(a_n)))$ огр. и $L > 0$, то ряд сх. абс. во всех т. $x$, удовл. условию $abs(x) < 1/L$, и расх. во всех т. $x$, удовл. условию $abs(x) > 1/L$
-+ Если послед. $(root(n, abs(a_n)))$ огр. и $L = 0$, то ряд сх. абс. $forall x in RR$
+Тогда $forall x in X$ $abs(limits(sum)_(k = n + 1)^(n + p) f_k (x) g_k (x)) = abs(limits(sum)_(k=1)^(p-1) (f_(n+k) (x) - f_(n+k+1) (x)) G_(n,k) (x) + f_(n+p) (x) G_(n, p) (x))$
+$<= 2M limits(sum)_(k = 1)^(p-1) (f_(n+k) (x) - f_(n+k+1) (x)) + f_(n+p) (x) dot 2M = 2M f_(n+1) (x) <= 2M norm(f_(n+1))$. 
+Пусть $epsilon > 0$. Тогда $exists n_(epsilon)$ $forall n >= n_(epsilon)$ $norm(f_n) < epsilon$ и 
+$forall n >= n_(epsilon)$ $forall p in NN$ $forall x in X$ $abs(limits(sum)_(k=n+1)^(n+p) f_k (x) g_k (x)) <= 2M norm(f_(n+1)) < 2M epsilon$. 
+Ряд $sum f_n g_n$ равн. сх. по крит. Коши
 
-*Док-во*: 
-+ При любом $x != 0$ посл. $(abs(x) root(n, abs(a_n))) = (root(n, abs(a_n x^n)))$ неогр., а значит $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
-+ Пусть $abs(x) < 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) =  abs(x) dot overline(limits(lim)_(n -> infinity)) root(n, abs(a_n)) < 1/L dot L = 1$, в силу признака Коши ряд сх. абс. Пусть $abs(x) > 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) > 1/L dot L = 1$ и послед. $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
-+ $forall x in RR$ $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) = abs(x) dot L = 0$, в силу признака Коши ряд сх. абс.
+*Т. (признак Абеля равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, ряд $sum g_n$ равн. сх. и $norm(f_n) = O(1)$. Тогда ряд $sum f_n g_n$ равн. сх.
 
-*Т. (Абеля)*: 
-Если степ. ряд $limits(sum)_(n=0)^(infinity) a_n x^n$ сх. в некоторой т. $x_1 != 0$, то ряд сх. в инт. $(-abs(x_1), abs(x_1))$
-
-*Док-во*: 
-Т. $x_1$ лежит внутри инт. сх., либо является граничной т. инт. сх., а значит $(-abs(x_1), abs(x_1)) subset (-R, R)$
+*Док-во*: Пусть $G_n = limits(sum)_(k = 1)^(n) g_k$, $G_(n,k) = limits(sum)_(i = 1)^(k) g_(n+i)$, $M > 0$ такое, что $forall n in NN$ $norm(f_n <= M)$, и $epsilon > 0$. 
+Согласно крит. Коши равн. сх. функ. ряда: $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall k in NN$ $forall x in X$ 
+$abs(limits(sum)_(k=n+1)^(n+p) f_k (x) g_k (x)) <= 2M norm(f_(n+1)) < 2M epsilon$. Ряд $sum f_n g_n$ равн. сх. по крит. Коши

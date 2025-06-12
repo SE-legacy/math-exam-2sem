@@ -1,7 +1,26 @@
-= №47. Сведение двойного интеграла к повторному.
+=  №37. Дифф. слож. функ.
 
-*Т. (Случай прямоуг.)*: Пусть ф. $f$ интег. в прямоуг. $P = [a,b] times [c,d]$ и $forall x in [a,b]$ сущ. однократный интег. $I(x) = limits(integral)_c^d f(x,y) d y$. Тогда сущ. повторный интег. $limits(integral)_a^b I(x) d x = limits(integral)_a^b d x limits(integral)_c^d f(x,y) d y$ и справедливо $limits(integral integral)_P f(x,y) d x d y = limits(integral)_a^b d x limits(integral)_c^d f(x,y) d y$  \
-*Док-во*: Разобьем прямоуг. $P$ на $n dot p$ прямоуг. $P_(k l) = [x_(k-1), x_k] times [y_(l-1), y_l], (k = 1,...,n; l = 1,...,p)$, где $a = x_0 < ... < x_n = b$, $c = y_0 < ... < y_p = d$. Пусть $Delta P_(k l) = Delta x_k dot Delta y_l = (x_k - x_(k-1)) dot (y_l - y_(l-1))$, $Delta$ - диам. разбиения, $M_(k l) = limits(sup)_(P_(k l)) f(x, y), m_(k l) = limits(inf)_(P_(k l)) f(x, y)$, $S$ и $s$ - верх. и ниж. сум. Дарбу ф. $f$. Тогда всюду на прямоуг. $P_(k l)$ $m_(k l) <= f(x,y) <= M_(k l)$. Фиксируем произвол. $xi_k in [x_(k-1), x_k]$ и, положив в нерав. $x = xi_k$, проинтег. его по $y in [y_(l-1), y_l]$ Получим $m_(k l) Delta y_l <= limits(integral)_(y_(l-1))^y_l f(xi_k, y) d y <= M_(k l) Delta y_l$ Умнож. все части послед. нерав. на $Delta x_k$, просум. полученные нерав. по всем $l = 1,...p$, а затем по всем $k = 1,..., n$: $s = limits(sum)_(k=1)^n limits(sum)_(l=1)^p m_(k l) Delta x_k Delta y_l <= limits(sum)_(k=1)^n I(xi_k) Delta x_k <= limits(sum)_(k=1)^n limits(sum)_(l=1)^p M_(k l) Delta x_k Delta y_l = S$. Пусть и $limits(max)_k Delta x_k -> 0$. При этом $s$ и $S$ стрем. к двойному интег. следов., сущ. предел и срел. члена нерав., равный тому же самому двойному интег. $limits(integral integral)_P f(x,y) d x d y$. Но этот предел по опр. однократ. интег. = $limits(integral)_a^b I(x) d x = limits(integral)_a^b d x limits(integral)_c^d f(x,y) d y$
+Пусть функ. $f: RR^m -> RR$, функ. $overline(g): RR^k -> RR^m$, т.е. 
+$(f compose overline(g)) (overline(t)) = f(g_1 (overline(t)), dots, g_m (overline(t))) = f(g_1 (t_1, dots, t_k), dots, g_m (t_1, dots, t_k))$
 
-*Т. (Случай произ. обл)*: Пусть мн. $D$ - трап. первого рода. Если ф. $f$ интег. на $D$ и $forall x in [a,b]$ сущ. однократ. интег. $I(x) = limits(integral)_(phi_1 (x))^(phi_2 (x)) f(x, y) d y$. То сущ. повт. интег. $limits(integral)_a^b d x limits(integral)_(phi_1 (x))^(phi_2 (x)) f(x, y) d y = limits(integral)_a^b I(x) d x$. И справедливо $limits(integral integral)_D f(x,y) d x d y = limits(integral)_a^b d x limits(integral)_(phi_1 (x))^(phi_2 (x)) f(x, y) d y$ \
-*Док-во*: Для док-ва заключим мн. $D$ в нек. прямоуг. $P = {(x,y) in RR^2 : x in [a,b], y in [c,d]}$ и рассмотр. функ. $F(x, y) = cases(f(x,y)\, x in D, 0\, x in P \\ D)$. Соглас. св-ам интег. $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_P F(x,y) d x d y$. Применяя теор. выше к ф. $F$ и учитывая, что $limits(integral)_c^d F(x,y) d y = limits(integral)_(phi_1 (x))^(phi_2 (x)) F(x, y) d y = limits(integral)_(phi_1 (x))^(phi_2 (x)) f(x, y) d y$, получим требуемое нерав. 
+*Т. (о дифф. слож. функ.)*:
+Пусть $f$ дифф-ма в т. $overline(x)_0$, а функции $g_i$ при всех $i = 1, dots, m$ дифф-мы в т. $overline(t)_0$ и $overline(x)_0 = overline(g) (overline(t)_0)$. 
+Тогда функция $f compose overline(g)$ дифф-ма в т. $overline(t)_0$ и при любом $j = 1, dots, k$:
+$(diff (f compose overline(g)))/(diff t_j) (overline(t)_0) = (diff f)/(diff x_1) (overline(x)_0) (diff g_1)/(diff t_j) (overline(t)_0) + 
+(diff f)/(diff x_2) (overline(x)_0) (diff g_2)/(diff t_j) (overline(t)_0) + dots + (diff f)/(diff x_m) (overline(x)_0) (diff g_m)/(diff t_j) (overline(t)_0)$
+
+*Док-во*: 
+Т.к. функ. $f$ дифф-ма в т. $overline(x)_0$, то $f(overline(x)) - f(overline(x)_0) = limits(sum)_(i=1)^m phi_i (overline(x)) (x_i - x_i^0)$, 
+где функции $phi_i$ $(i = 1, dots, m)$ непр. в т. $overline(x)_0$ и $phi_i (overline(x)_0) = (diff f)/(diff x_i) (overline(x)_0)$
+Т.к. $overline(x) = overline(g) (t)$ и $overline(x)_0 = overline(g) (t_0)$, то $(f compose overline(g)) (overline(t)) - (f compose overline(g)) (overline(t)_0) = 
+f(overline(g) (t)) - f(overline(g) (overline(t)_0)) = f(g_1(overline(t)), dots, g_m (overline(t))) - f(g_1(overline(t)_0), dots, g_m (overline(t)_0)) = 
+limits(sum)_(i=1)^m phi_i (overline(g) (overline(t))) (g_i (overline(t)) - g_i (overline(t)_0))$. 
+Т.к. функции $g_i$ при всех $i = 1, dots, m$ дифф-мы в т. $overline(t)_0$, то $exists$ непр. в т. $overline(t)_0$ функции $psi_(i j) (overline(t))$ такие, что
+$g_i (overline(t)) - g_i (overline(t)_0) = limits(sum)_(j=1)^k psi_(i j) (overline(t))(t_j - t_j^0)$ и $psi_(i j)(overline(t)_0) = (diff g_i)/(diff t_j) (overline(t)_0)$.
+Тогда $(f compose overline(g)) (overline(t)) - (f compose overline(g)) (overline(t)_0) = limits(sum)_(i=1)^m phi_i (overline(g) (overline(t)))
+(limits(sum)_(j=1)^k psi_(i j) (overline(t)) (t_j - t_j^0)) = 
+limits(sum)_(j=1)^k (limits(sum)_(i=1)^m phi_i (overline(g) (overline(t)) psi_(i j) (overline(t)))) (t_j - t_j^0)$
+Функции $phi_i (overline(g) (overline(t))) psi_(i j) (overline(t))$ непр. в т. $overline(t)_0$ и последнее равенство означает усл. дифф-ти функ. $f compose overline(g)$ в т. $overline(t)_0$.
+При всех $j = 1, dots, k$ $(diff (f compose overline(g)))/(diff t_j) (overline(t)_0) = limits(sum)_(i=1)^m phi_i (overline(g) (overline(t)_0)) psi_(i j) (overline(t)_0) = 
+limits(sum)_(i=1)^m phi_i (overline(x)_0) psi_(i j) (overline(t)_0) = limits(sum)_(i=1)^m (diff f)/(diff x_i) (overline(x)_0) (diff g_i)/(diff t_j) (overline(t)_0)$
+

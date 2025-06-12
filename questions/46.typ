@@ -1,37 +1,10 @@
-= №46. Плоские множества, измеримые по Жордану. Определение двойного интеграла. Критерий интегрируемости и достаточные условия интегрируемости. Основные свойства двойного интеграла.
+= №48. Непрерывная кривая. Спрямляемая кривая. Гладкая кривая. Длина кривой. 
 
-*Опр.* Пусть $F$ — огр. замкн. мн. Рассмотрим всевозможные многоуг. фигуры $P$, содержащиеся в $F$, и многоуг. ф. $Q$, содержащие ф. $F$. ф. $P$ будем называть впис., а ф. $Q$ — опис.. Чис. мн. ${mu P}$ площадей всех впис. многоуг. ф. $P$ огр. сверху, а чис. мн. ${mu Q}$ площадей всех впис. многоуг. ф. $Q$ огр. снизу. Поэтому сущ. верхняя и нижняя грани $mu_*(F), mu^*(F)$
+*Опр.* Непр. отобр. отрезка в прост. $RR^n$ наз. кривой. Кривая $Gamma$ задается век.-функ. $overline(gamma)(t) = (gamma_1 (t),..., gamma_n (t))$ \
 
-*Опр.* Плоская фигура называется квадратичной или измеримой по Жордану, если $mu_*(F) = mu^*(F)$ = $mu (F)$ - мера (площадь) Жордана
+*Опр.* Кривую $Gamma$ наз. спрямляемой, если длины всех ломаных, впис. в неё, образуют огр. мн.. Длиной спрямляемой кривой наз. верх. грань длин таких ломаных $abs(Gamma)$. \
 
-*Опр.* Множ. т. пл. наз. мн. меры нуль, если оно содержится в многоуг. ф. сколь угодно малой меры.
+*Опр.* Непр. дифф. кривая без особых т. (где $overline(gamma)'(t) = 0$) наз. гладкой. Кривая $Gamma = Gamma_(overline(gamma))$ дифф. (непр. дифф.), если $overline(gamma)$ дифф. (непр. дифф.) на $[a,b]$ \
 
-*Опр.* Функ. $f$ наз. инт. (по Риману) на мн. $D$ если $exists I = limits(lim)_(d(T)->0) sigma(T)$, где $T$ - разбиение квадрируемого замкн. мн., $d(T)$ - диаметр разбиения $T$, a $sigma(T)$ - интеграл. сумма\
-Число $I$ наз. двойным интег. от функ. $f(x,y)$ по мн. D и обознач. $I = limits(integral integral)_D f(x,y) d x d y $
-
-*Т. (Критерий интег.)*: Чтобы огр. на квадрируемом мн. $D$ функ. $f$ была интегрир., необ. и дост., чтобы $forall epsilon > 0$, $exists T$: $S(T) - s(T) < epsilon$
-
-*Т. (об интег. непр. функ.)* Всякая непр. на квадрируемом мн. функция интег. на нем
-
-*Достат. усл. интег. 1* Пусть ф. $f$ опр. и огр. на квадрируемом мн. $D$. Если ф. $f$ непр. на $D$ всюду, кроме точек нек. мн. меры нуль, то она интег. на $D$.
-
-*Достат. усл. интег. 2* Пусть ф. $f$ и $g$ опр., огр. на квадрируемом мн.$D$ и отличаются друг от друга на нек. мн. меры нуль. Тогда интег. одной ф.равносильна интег. другой, причем $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D g(x,y) d x d y$.
-
-*Основ. св-ва*:
-1) Аддитивность интеграла. Если ф. $f$ интег. на мн. $D$, то она интег. и на любом квадрируемом подмн. $D'subset D$. \ Если ф. $f$ интег. на мн. $D_1$ и $D_2$, то она интег. на мн. $D = D_1 union D_2$.\ Если $D = D_1 union D_2$, и квадрируемые мн. $D_1$ и $D_2$ не имеют общих внутренних точек, то
-$limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D_1 f(x,y) d x d y + limits(integral integral)_D_2 f(x,y) d x d y$. 
-
-2) Линейность интеграла. Пусть ф. $f$ и $g$ интег. на мн. $D$, $alpha, beta in RR$. Тогда ф. $alpha f + beta g$ также интег. на $D$ и справ. рав.
-$limits(integral integral)_D (alpha f(x,y) + beta g(x,y)) d x d y = alpha limits(integral integral)_D f(x,y) d x d y + \beta limits(integral integral)_D g(x,y) d x d y$.
-
-3) Монотон. интеграла. Если ф. $f$ и $g$ интег. на мн. $D$ и всюду на этом множестве $f(x, y) <= g(x, y)$, то $limits(integral integral)_D f(x, y) d x d y <= limits(integral integral)_D g(x, y) d x d y$.
-
-4) Если ф. $f$ и $g$ интег. на мн. $D$, то ф. $f g$ также интег. на $D$.
-
-5) Если функция $f$ интегрируема на $D$ и удовлетворяет условию $abs(f(x, y)) >= c > 0$, $(x, y) in D$, то ф. $1/f$ также интег. на $D$.
-
-6) Оценка модуля интеграла. Если ф. $f$ интег. на мн. $D$, то ф. $abs(f)$ также интег. на $D$, причем $abs(limits(integral integral)_D f(x, y) d x d y) <= limits(integral integral)_D abs(f(x, y)) d x d y$.
-
-7) $limits(integral integral)_D 1 d x d y = mu(D)$.
-
-8) Т. о ср. знач.. Если ф. $f$ и $g$ интег. на мн. $D$, ф. $g$ неотр.(непол.) всюду на $D$, $M = sup_D f(x, y)$, $m = inf_D f(x, y)$, то найдется число $mu in [m, M]$ такое, что  $limits(integral integral)_D f(x, y) g(x, y) d x d y = mu limits(integral integral)_D g(x, y) d x d y$. Если при этом ф. $f$ непр. на $D$, а мн. $D$ связно, то $exists (xi, eta) in D$, что $mu = f(xi, eta)$.
+*Т. (О длине кривой)*: Если $Gamma = Gamma_overline(gamma), t in [a,b]$ непр. дифф. кривая, то ее длина выраж. рав. $abs(Gamma) = limits(integral)_a^b abs(overline(gamma)'(t)) d t$ \
+*Док-во*: $forall t_i: a = t_0<...<t_n = b$ имеем $limits(sum)_(i=1)^n abs(overline(gamma)(t_i) - overline(gamma)(t_(i-1))) = limits(sum)_(i=1)^n abs(limits(integral)_(t_(i-1))^t_i overline(gamma)'(t) d t) <= limits(sum)_(i=1)^n limits(integral)_(t_(i-1))^t_i abs(overline(gamma)'(t)) d t = limits(integral)_a^b abs(overline(gamma)'(t)) d t$. Переходя к верх. грани по всевоз. разбиен. отр., получ. нарав. $abs(Gamma) <= limits(integral)_a^b abs(overline(gamma)'(t)) d t$. Докаж. противопол. нерав. Пусть $epsilon > 0$. В силу равномер. непр-ти ф. $overline(gamma)'$, $exists delta > 0: abs(s-t) < delta => abs(overline(gamma)'(s) - overline(gamma)'(t)) < epsilon$. Возьмем разбиен. с диам., меньшим $delta$. Тогда $forall t in [t_(i-1), t_i]$ $abs(overline(gamma)')(t) = abs((overline(gamma)'(t) - overline(gamma)'(t_i)) + overline(gamma)'(t_i)) <= abs(overline(gamma)'(t) - overline(gamma)'(t_i)) + abs(overline(gamma)'(t_i)) <= abs(overline(gamma)'(t_i)) + epsilon$. Далее получим $limits(integral)_(t_(i-1))^t_i abs(overline(gamma)'(t)) d t - epsilon Delta t_i <= abs(overline(gamma)'(t_i)) Delta t_i = abs(limits(integral)_(t_(i-1))^t_i (overline(gamma)'(t) + overline(gamma)'(t_i) - overline(gamma)'(t)) d t) <= abs(limits(integral)_(t_(i-1))^(t_i) overline(gamma)'(t) d t) + abs(limits(integral)_(t_(i-1))^(t_i) (overline(gamma)'(t_i) - overline(gamma)'(t)) d t) <= abs(overline(gamma)(t_i) - overline(gamma)(t_(i-1))) + epsilon Delta t_i$ и \ $limits(integral)_a^b abs(overline(gamma)'(t)) d t = limits(sum)_(i=1)^n limits(integral)_(t_(i-1))^(t_i) abs(overline(gamma)'(t)) d t <= limits(sum)_(i=1)^n abs(overline(gamma)(t_i) - overline(gamma)(t_(i-1))) + 2 epsilon (b-a) <= abs(Gamma) + 2 epsilon (b-a)$. Тогда в силу произвол. $epsilon > 0$, имеем $limits(integral) abs(overline(gamma)'(t)) d t <= abs(Gamma)$. И так мы получаем, что $limits(integral) abs(overline(gamma)'(t)) d t = abs(Gamma)$

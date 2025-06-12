@@ -1,19 +1,9 @@
-= №16. Признак Коши. Признак Даламбера
+= №8. Интегрирование по частям и замена переменной в интеграле Римана.
 
-*Т. (пр. Коши)*: $forall n in NN #h(4pt) a_n >= 0, #h(4pt) overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*:
-+ $alpha < q < 1 stretch(=>)^"опр."_"верх. пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) root(n, a_n) <= limits(sup)_(n>= n_0) root(n, a_n) < q ==> a_n < q_n$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"пр."_"маж." sum a_n$ сх-ся.
-+ $alpha > 1 ==>$ для беск. числа значений $n$ $root(n, a_n) >= 1 ==> a_n != o(1)$, ряд рас-ся. \
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
+*Опр.:* Ф-ция, имеющая на отрезке непр. производную, наз. непр. дифф. или гладкой. 
 
-*Т. (пр. Даламбера)*: $forall n in NN #h(4pt) a_n > 0, #h(4pt) limits(lim)_(n-> infinity) (a_(n+1))/(a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*: 
-+ $alpha < q < 1 stretch(=>)^"порядк."_"св-ва пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) (a_(n+1))/(a_n) < q = (q^(n+1))/(q^n)$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"сл-е 1 из"_"пр. маж."sum a_n$ сх-ся. \
-+ $alpha > 1 ==> exists n_0 #h(4pt) forall n>= n_0 #h(4pt) a_(n+1)/(a_n) > 1$, т. е. при $n >= n_0 #h(4pt) a_(n+1) > a_n ==> a_n != o(1)$, ряд рас-ся. \
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
+*Т. (ф-ла инт-я по частям):* $u(x)$ и $v(x)$ непр. дифф. на $[a, b] ==> limits(integral)_(a)^(b) u(x)v'(x) d x = u(x)v(x)|_(a)^(b) - limits(integral)_(a)^(b) v(x) u'(x) d x$.\
+*Док-во:* Т.к. $(u(x)v(x))' = u'(x)v(x) + u(x)v'(x)$, и все функции непр. а значит и инт. на $[a, b]$, то по Т. о лин-сти инт-а и ф-ле Ньютона-Лейбница $u(x)v(x)|_(a)^(b) = limits(integral)_(a)^(b) (u(x)v(x))' d x = limits(integral)_(a)^(b) u'(x)v(x) d x + limits(integral)_(a)^(b) u(x)v'(x) d x$. 
+
+*Т. (ф-ла замены переменной):* $f$ непр. на $[a, b]$, $g$ имеет непр. производную на $[alpha, beta]$ и $min_(t in [alpha, beta]) g(t) = g(alpha) = a, max_(t in [alpha, beta]) g(t) = g(beta) = b ==> limits(integral)_(a)^(b) f(x) d x = limits(integral)_(alpha)^(beta) f(g(t))g'(t) d t$.\ 
+*Док-во:* Пусть $Phi$ - первообразная $f$. $forall t in [alpha, beta] (Phi(g(t)))' = Phi'(g(t))g'(t) = f(g(t))g'(t)$, т.е. ф-ция $Phi compose g$ явл. первообразной $(f compose g)g'$. По ф-ле Ньютона-Лейбница $limits(integral)_(alpha)^(beta) f(g(t))g'(t) d t = Phi(g(beta)) - Phi(g(alpha)) = Phi(b) - Phi(a) = limits(integral)_(a)^(b) f(x) d x$. 

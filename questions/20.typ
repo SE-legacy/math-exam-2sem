@@ -1,11 +1,19 @@
-= №20. Коммут. закон для знакопол. и абс. сх-ся рядов. Т. Римана 
+= №16. Признак Коши. Признак Даламбера
 
-*Т. (коммут. закон для знакопол. ряда)*: $forall k in NN #h(4pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется: $limits(sum)^infinity_(k=1) a_(n_k) = limits(sum)^infinity_(k=1) a_k$ \
-*Док-во*: Пусть $m_p = max(n_1, n_2, dots, n_p), #h(4pt) p in NN ==>$\
-$forall p #h(4pt) limits(sum)^p_(k=1) a_(n_k) <= limits(sum)^(m_p)_(k=1) a_k <= limits(sum)^infinity_(k=1) a_k ==> limits(sum)^infinity_(k=1) a_(n_k) <= limits(sum)^infinity_(k=1) a_k$.  $sum a_k$ можно также считать перестановкой $sum a_(n_k) ==> limits(sum)^infinity_(k=1) a_k <= limits(sum)^infinity_(k=1) a_(n_k)$. Cл-но, равенство верно.
+*Т. (пр. Коши)*: $forall n in NN #h(4pt) a_n >= 0, #h(4pt) overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha$.
++ $alpha < 1 ==> sum a_n$ сх-ся;
++ $alpha > 1 ==> sum a_n$ рас-ся;
++ $alpha = 1 ==>$ вопрос о сх-ти открытый.
+*Док-во*:
++ $alpha < q < 1 stretch(=>)^"опр."_"верх. пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) root(n, a_n) <= limits(sup)_(n>= n_0) root(n, a_n) < q ==> a_n < q_n$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"пр."_"маж." sum a_n$ сх-ся.
++ $alpha > 1 ==>$ для беск. числа значений $n$ $root(n, a_n) >= 1 ==> a_n != o(1)$, ряд рас-ся. \
++ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
 
-
-*Т. (коммут. закон для абс. сх-ся ряда)*: Ряд абс. сх-ся $==>$ любая его перестановка абс. сх-ся и их суммы равны. \
-*Док-во*: Применим пред. теорему для рядов $sum a^+_n$ и $sum a^-_n$.
-
-*Т. (Римана)*: $sum a_n$ сх-ся усл. $==> forall A in overline(RR) #h(4pt) exists "перестановка": limits(sum)^infinity_(k=1) a_(n_k) = A$
+*Т. (пр. Даламбера)*: $forall n in NN #h(4pt) a_n > 0, #h(4pt) limits(lim)_(n-> infinity) (a_(n+1))/(a_n) = alpha$.
++ $alpha < 1 ==> sum a_n$ сх-ся;
++ $alpha > 1 ==> sum a_n$ рас-ся;
++ $alpha = 1 ==>$ вопрос о сх-ти открытый.
+*Док-во*: 
++ $alpha < q < 1 stretch(=>)^"порядк."_"св-ва пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) (a_(n+1))/(a_n) < q = (q^(n+1))/(q^n)$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"сл-е 1 из"_"пр. маж."sum a_n$ сх-ся. \
++ $alpha > 1 ==> exists n_0 #h(4pt) forall n>= n_0 #h(4pt) a_(n+1)/(a_n) > 1$, т. е. при $n >= n_0 #h(4pt) a_(n+1) > a_n ==> a_n != o(1)$, ряд рас-ся. \
++ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.

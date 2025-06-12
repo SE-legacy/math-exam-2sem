@@ -1,39 +1,11 @@
-= №29. Прост. $RR^m$. Послед. в $RR^m$ и их св-ва
+= №11. Условная сход-ть несобст. инт-ов. Признак Дирихле и признак Абеля сход-ти несобст. инт-ов. 
 
-*Опр.*: Пусть число $m in NN$. Множ. упорядоченных наборов $(x_1, x_2, dots, x_m)$, где $x_i in RR$, $i = 1, dots, m$, называют
-пространством $RR^m$
+*Опр.:* несобст. инт. $limits(integral)_(a)^(omega) f(x) d x$ наз. условно сходящимся, если он сход., а $limits(integral)_(a)^(omega) |f(x)| d x$ расход.\ 
+Пусть f, g, g' непр. на $[a, omega)$, $F(b) = limits(integral)_(a)^(b) f(x) d x$. Тогда по ф–ле инт-я по частям: $limits(integral)_(a)^(b) f(x)g(x) d x = g(b)F(b) - g(a)F(a) - limits(integral)_(a)^(b) g'(x)F(x) d x$.\ 
+*Утверждение:* Если сущ. $limits(integral)_(a)^(omega) g'(x)F(x) d x = A$ и сущ. конечный предел $limits(lim)_(b -> omega) g(b)F(b) = B$, то сущ. несобст. инт. $limits(integral)_(a)^(omega) f(x)g(x) d x = B - g(a)F(a) - A$.
 
-*Опр.*: Будем обозначать $overline(x) = (x_1, x_2, dots, x_m)$ и называть точкой или вектором
+*Т. (признак Дирихле):* $f, g, g'$ непр. на $[a, omega)$, $F(b) = limits(integral)_(a)^(b) f(x) d x$ огр. на $[a, omega)$, $g(x) -> 0$, монотонно убывая, при $x -> omega ==> limits(integral)_(a)^(omega) f(x)g(x) d x$ сход.\ 
+*Док-во:* $limits(lim)_(b -> omega) g(b)F(b) = 0$. Т.к. $g'(x) <= 0$, то $limits(lim)_(b -> omega) limits(integral)_(a)^(b) |g'(x)| d x = -limits(lim)_(b -> omega) limits(integral)_(a)^(b) g'(x) d x = -limits(lim)_(b -> omega) [g(b) - g(a)] = g(a)$, т.е. $limits(integral)_(a)^(omega) |g'(x)| d x$ сход. Т.к. ф-ция $F$ огр., то по признаку мажорации $limits(integral)_(a)^(omega) |g'(x)F(x)| d x$ сход. $==> limits(integral)_(a)^(omega) g'(x) F(x) d x$ сход. Осталось воспользоваться предыдущим утверждением. 
 
-*Опр.*: Отображение множ. $NN$ в множ. $RR^m$ называем послед. и обозначаем $(overline(x)_n)$ или $(overline(x)_n)_(n=1)^(infinity)$, где
-$overline(x)_n = (x_(1 n), dots, x_(m n))$
-
-*Опр.*:
-- $overline(x)_n = O(1) <=> exists M > 0$ $forall n in NN$ $abs(overline(x)_n) <= M$;
-- $overline(x)_n = o(1) <=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $overline(x)_n < epsilon$;
-- $overline(x)_n -> overline(x)_0 <=> overline(x)_n - overline(x)_0 = o(1)$;
-- $overline(x)_n$ --- фунд. $<=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $forall k >= n_epsilon$ $abs(overline(x)_n - overline(x)_k) < epsilon$;
-
-*Т.*:
-Послед. $(overline(x)_n)$ огр. или беск. мал., или фунд. $<=>$ все её коорд. послед. $(x_(i n))^(infinity)_(n=1)$, $i = 1, dots, m$
-огр. или беск. мал., или фунд. сооотв. 
-
-*Т.*:
-$overline(x)_n -> overline(x)_0 <=>$ $forall i = 1, dots, m$ $x_(i m) -> x_(i 0)$
-
-*Т.*:
-$overline(x)_n -> overline(x)_0$, $overline(y)_n -> overline(y)_0$, $alpha_n -> alpha_0$ (в $RR$) $=>$
-$overline(x)_n + overline(y)_n -> overline(x)_0 + overline(y)_0$, $alpha_n overline(x)_n -> alpha_0 overline(x)_0$,
-$overline(x)_n dot overline(y)_n -> overline(x)_0 dot overline(y)_0$, $abs(overline(x)_n) -> abs(overline(x)_0)$.
-
-*Т.*:
-Всякая сх. послед. огр.
-
-*Т.*:
-Любая подпослед. сх. послед. сх., причём к той же т.
-
-*Т. (крит. Коши)*:
-Послед. сх. $<=>$ послед. фунд.
-
-*Т. (Больц.-В-сса)*:
-У любой огр. послед. сущ. сход. подпослед.
+*Т.(признак Абеля):* $f, g, g'$ непр. на $[a, omega)$, инт. $limits(integral)_(a)^(omega) f(x) d x$ сход., $g$ монотонна и ограничена на $[a, omega) ==> limits(integral)_(a)^(omega) f(x)g(x) d x$ сход.\
+*Док-во:* Д О К А З А Т Ь $quad$ С А М О С Т О Я Т Е Л Ь Н О #emoji.skull.

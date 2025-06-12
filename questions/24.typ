@@ -1,20 +1,19 @@
-= №24. Функ. ряды. Поточ., равн. и норм. сх. функ. рядов, их связь. Крит. Коши равн. сх. функ. ряда. Признак В-сса равн. сх.
+= №30. Вект.-функ. вект. перем. Предел и непр. функ. в т. Непр. функ. на множ. Равн. непр. функ. на множ., т. Кантора 
 
-*Опр.*: Пусть $(f_n)$ --- функ. послед. и $forall n in NN$ $f_n$ опр. на мн. $X$.
-Функ. рядом назыв. посл. $(S_n)$, где $S_n = limits(sum)_(k=1)^(n) f_k$, $n in NN$ и обозн. как $sum f_n$
+*Опр.*: Отображение вида $overline(f) : X -> RR^k$, где $X subset RR^m$, $m > 1$, $k > 1$, называют вект. функ. вект. арг.
 
-*Опр.*: Ряд $sum f_n$ поточ. сх., если послед. $(S_n)$ поточ. сх.
+*Опред. пред. по Коши*:
+Пусть т. $overline(x)_0$ --- пред. т. обл. опред. функ. $overline(f) : X -> RR^k$, $overline(A) in RR^k$.
+Вект. $overline(A)$ называют пред. функ. $overline(f)$ в т. $overline(x)_0$ и обозначают символом $limits(lim)_(overline(x) -> overline(x)_0) overline(f) (overline(x)) = overline(A)$, если
+$forall epsilon > 0$ $exists delta > 0$ $forall overline(x) in D(overline(f))$ $(0 < abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon)$
 
-*Опр.*: Ряд $sum f_n$ равн. сх., если послед. $(S_n)$ равн. сх.
+*Опред. непр-ти. функ. по Коши*: Функ. $overline(f)$ называется непр. в т. $overline(x)_0$, если 
+$forall overline(x) in D(overline(f))$ $(abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon$
 
-*Опр.*: Ряд $sum f_n$ норм. сх., если ряд $sum ||f_n||$ сх.
+*Опр.*: Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$ 
 
-*Т. (крит. Коши равн. сх.)*: Ряд $sum f_n$ равн. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$
+*Опр.*: Функ. $overline(f)$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $exists delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$
+$(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$
 
-*Т. (о равн. сх. норм. сх-ся ряда)*: Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх.
-
-*Док-во*: $||limits(sum)_(k = n+1)^(n+p) f_k|| <= limits(sum)_(k = n+1)^(n+p) ||f_k||$, применим кр. Коши сх. числ. ряда и кр. Коши равн. сх. функ. ряда
-
-*Т. (признак В-сса)*: Пусть $forall n in NN$ $||f_n|| <= a_n$, $limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равн. сх.
-
-*Док-во*: $sum ||f_n||$ сх. по признаку маж., т.е. ряд $sum f_n$ норм. сх., т.е. равн. сх.
+*Т. (Кантора)*
+Пусть функ. $overline(f)$ непр. на множ. $X$ и множ. $X$ --- компакт. Тогда функ. $overline(f)$ равн. непр. на $X$

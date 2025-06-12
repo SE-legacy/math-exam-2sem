@@ -1,8 +1,37 @@
-= №40. Дифференциалы первого и высших порядков.
+= №28. Св-ва суммы степ. ряда. Ряд Тейлора и понятие анал. в т. функ. Опр. элем. функ. степ. рядами
+*Т.*:
+Пусть $R > 0$ --- рад. сх. степ. ряда $limits(sum)_(n=0)^(infinity) a_n x^n$. Тогда $forall r in (0, R)$ ряд равн. сх. на отр. $[-r, r]$
 
-*Опр.* Пусть $f$ 2-дифф. в т. $overline(x)_0$. $forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифференциал первого порядка
+*Док-во*:
+Степ. ряд. абс. сх. в т. $x = r$. Т.к. $forall x in [-r, r]$ $abs(a_n x^n) <=abs(a_n) r^n$,
+то в силу признака В-сса ряд равн. сх. на отр. $[-r, r]$
 
-*Опр.* Дифф. 2-го порядка функ. $f$ в т. $overline(x)_0$ называется функ. $d^2f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR$: $d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h))$. 
+*Т. (о непр-ти суммы степ. ряда)*:
+Пусть $R > 0$ --- рад. сх. степ. ряда. Тогда $S(x) = limits(sum)_(n=0)^(inf) a_n x^n$ непр. на инт. $(-R, R)$
 
-*Опр.* Пусть $f$ n-дифф. в т. $overline(x)_0$. Ее n-дифф. в этой точке наз. функ. $d^n f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR^m$: $d^n f(overline(x)_0)(overline(h)) = d(d^(n-1)_overline(h) f)(overline(x)_0)(overline(h))$
+*Док-во*: 
+В силу пред. т. и т. о непр. суммы ряда $forall r in (0, R)$ функ. $S$ непр. на $[-r, r]$, значит $S$ непр. на $(-R, R)$
 
+*Т. (об инт-ти суммы степ. ряда)*:
+Пусть $R > 0$ --- рад. сх. степ. ряда и $abs(x) < R$. Тогда степ. ряд. можно почленно инт-ть на отр. с концами $0$ и $x$:
+$limits(integral)_0^x S(t) d t = a_0 x + (a_1 x^2)/2 + dots + (a_(n-1) x^n)/n + dots$ и рад. сх. полученного ряда равен $R$.
+
+*Док-во*:
+Возможность почленного инт-ия следует из равн. сх. ряда на отр. с концаи $0$ и $x$ и т. об инт-ти суммы функ. ряда.
+$overline(limits(lim)_(n -> infinity)) root(n, abs(a_(n-1)/n)) = overline(limits(lim)_(n -> infinity)) root(n, abs(a_(n-1)))/root(n,n) = 
+overline(limits(lim)_(n -> infinity)) root(n, abs(a_(n-1))) = R$
+
+*Т. (о дифф-ти суммы степ. ряда)*:
+Сумма степ. ряда дифф. на инт. сход. $(-R, R)$, $R > 0$, и $S^(prime) (x) = limits(sum)_(n=1)^(infinity) a_n n x^(n-1)$,
+причём рад. сх. полученного ряда равен $R$.
+
+*Опр.*: Функ. $f$ называют анал. в т. $x_0$, если в некоторой окр. $(x_0 - r, x_0 + r)$ этой т. функцию можно разложить в степ. ряд:
+$limits(sum)_(n=0)^(infinity) a_n (x - x_0)^n$
+
+*Опр.*: Пусть функ. $f$ беск. дифф. в т. $x = x_0$. Ряд $limits(sum)_(n=0)^(infinity) f^((n)) (x_0)/n! (x-x_0)^n$ называют рядом Тейлора функ. $f$
+
+*Опр.*: Функцию $e^x := limits(sum)_(n=0)^(infinity) x^n/n!$, $x in RR$ называют показательной функ. или экспонентой
+
+*Опр.*: $sin(x) := limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n+1))/(2n+1)!$, $cos(x) :=  limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n))/(2n)!$, $forall x in RR$
+
+*Опр.*: Сумма степ. ряда $1 + limits(sum)_(n=1)^(infinity) (alpha(alpha - 1) dots (alpha - n + 1))/n! x^n$ называется биноминальной функ. и обозначается как $(1+x)^alpha$

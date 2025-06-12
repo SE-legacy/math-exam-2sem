@@ -1,19 +1,11 @@
-= №43. Дифференцируемые вектор-функции, матрица Якоби и якобиан.
+= №50. Замена параметра в криволинейном интеграле первого рода. Гладкая кривая, криволинейный интеграл первого рода по гладкой кривой. Ориентированная гладкая кривая и криволинейный интеграл второго рода по ней.
 
-*Опр.* Вектор-функцию $overline(f) = (f_1, ..., f_n) : RR^m → RR^n$ назовем дифф. в т. $overline(x)_0$, если все функ. $f_k$, $k = 1, ..., n$, дифф. в т. $overline(x)_0$.
-Вектор-столбец $d overline(f)(overline(x)_0) = mat(d f_1(overline(x)_0); dots.v; d f_ n (overline(x)_0))$ - дифф. $overline(f)$. \
-Матрица $D overline(f)(overline(x)_0) = mat(
-      (diff f_1(overline(x)_0))/(diff x_1), dots.h, (diff f_1(overline(x)_0))/(diff x_m);
-      dots.v, dots.v;
-      (diff f_n(overline(x)_0))/(diff x_1), dots.h, (diff f_n(overline(x)_0))/(diff x_m)
-    )$ - матр. Якоби отображения $overline(f)$.
-Введем вектор-столбец $d overline(x) = mat(
-      d x_1; 
-      dots.v; 
-      d x_m
-    )$
-Тогда можно записать $d overline(f)(overline(x)_0) = D overline(f)(overline(x)_0) d overline(x).$
-Если $n = m$, то опред матр. Якоби наз. якобианом и обозначают через $D(f_1, ..., f_m)/D(x_1, ..., x_m) (overline(x)_0).$
+*Опр. Замена пар. в крив. инт. первого рода* Пусть $L = L_overline(gamma)$ - глад. кривая, ф. $overline(gamma)$ опр. на отр. $[a, b]$, а ф. $phi$ опр. на отр. $[a_1, b_1]$, отоб. его на отр. $[a, b]$, имеет непр. произв. и $phi'(u) != 0 forall u in [a_1, b_1]$. Тогда ф. $phi'$ сохр. знак на отр. $[a_1, b_1]$, и ф. $phi$ является возраст., если $phi'(u) > 0$, и уб., если $phi'(u) < 0$. Согл. правилу замены перем. в интег. Римана имеем: $limits(integral)_a^b f(gamma_1(t), gamma_2(t)) sqrt(gamma'_1(t)^2 + (gamma'_2(t))^2) d t = limits(integral)_a^b f(overline(gamma)(t)) abs(overline(gamma)'(t)) d t = limits(integral)_(phi^-1(a))^(phi^-1(b)) f(overline(gamma)(phi(u))) abs(overline(gamma)'(phi(u))) phi'(u) d u $. Если $phi'(u) > 0$, то $abs(overline(gamma)'(phi(u))) phi'(u) = abs(overline(gamma)'(phi(u)) phi'(u)) = abs((overline(gamma) #sym.compose phi)'(u))$, $phi^-1(a) = a_1$, $phi^-1(b) = b_1$. Если же $phi'(u) < 0$, то $abs(overline(gamma)'(phi(u))) phi'(u) = -abs(overline(gamma)'(phi(u)) phi'(u)) = -abs((overline(gamma) #sym.compose phi)'(u))$, $phi^-1(a) = b_1$, $phi^-1(b) = a_1$. Тогда в любом случае: $limits(integral)_(phi^-1(a))^(phi^-1(b)) f(overline(gamma)(phi(u))) abs(overline(gamma)'(phi(u))) phi'(u) d u = limits(integral)_(a_1)^(b_1) f(overline(gamma)(phi(u))) abs((overline(gamma) #sym.compose phi)'(u)) d u $ \
 
-*Опр.* Матрица Якоби наз. произ. отоб. $overline(f)$ в т. $overline(x)_0$ и обозн. через $overline(f)'(overline(x)_0)$.
+*Опр.* Класс всех эквив. парам. глад. кривых наз. гладкой кривой. Криволин. интег. первого рода по глад. кривой опр. как интег. по любой из парам. кривых, принадлежащих этому классу. \
 
+*Опр.* Пусть $L$ - глад. кривая. Две ее парам. $L_overline(gamma)$, где $overline(gamma)$ опр. на отр. $[a, b]$, и $L_overline(gamma')$, где $overline(gamma')$ опр. на отр. $[a_1, b_1]$, наз. положит. экв., если сущ. ф. $phi$ опр. на отр. $[a_1, b_1]$, отображ. его на отр. $[a, b]$, имеющая непр. произ. с условием $phi'(u) > 0 forall u in [a_1, b_1]$, такая, что $overline(gamma') = (overline(gamma) #sym.compose phi)$.\
+
+*Опр.* Класс всех полож. эквив. друг другу парам. наз. ориентир. гладкой кривой.\
+
+*Опр.* Криволи. интег. второго рода по ориент. кривой опр. как интег. по одной из ее параметризаций. Также $limits(integral)_(L^+) P(x,y) d x + Q(x,y) d y = - limits(integral)_(L^-) P(x,y) d x + Q(x,y) d y$
