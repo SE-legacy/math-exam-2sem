@@ -1,5 +1,4 @@
 #set page(width: 21cm, height: 29.7cm, columns: 2, margin: 1cm)
-#set text(size: 10pt)
 
 #show heading: it => [
   #set align(center)
@@ -7,11 +6,18 @@
   #block(smallcaps(it.body))
 ]
 
-#text(size: 0.8em)[
+#text(size: 8pt)[
 #{
   for num in range(1, 53) {
+    let filename
+    if num < 10 {
+      filename = "questions/0" + str(num) + ".typ"
+    } else {
+      filename = "questions/" + str(num) + ".typ"
+    }
     block(breakable: false)[
-      #include("questions/" + str(num) + ".typ")
+      #include(filename)
+      #v(10pt)
     ]
   }}
 ]
