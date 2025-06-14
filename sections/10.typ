@@ -1,14 +1,41 @@
-*Опр.:* $limits(integral)_(a)^(omega) f(x) d x$ сходится абсолютно, если $limits(integral)_(a)^(omega) |f(x)| d x$ сходится. 
+#import "../conf.typ": definition, theorem
 
-*Т. (о сход–ти абс. сход. инт-а):* $limits(integral)_(a)^(omega) f(x) d x$ абс. сход. $==>$ он сход.\ 
-*Док-во:* По св-вам несобственного инт-а $abs(limits(integral)_(b_(1))^(b_(2)) f(x) d x) <= limits(integral)_(b_(1))^(b_(2)) |f(x)| d x$.\ По Крит. Коши сход-ти несобст. инт-а интеграл сходится.
+#definition()[
+  $limits(integral)_(a)^(omega) f(x) d x$ сходится абсолютно, если сходится $limits(integral)_(a)^(omega) abs(f(x)) d x$.
+]
 
-*Т.:* Пусть $forall x in [a, omega) f(x) >= 0$. Тогда $limits(integral)_(a)^(omega) f(x) d x$ сход. $<==> F(b) = limits(integral)_(a)^(b) f(x) d x, b in [a,omega)$ огр.\ 
-*Док-во:* $forall x in [a, omega) f(x) >= 0 ==> F(b) = limits(integral)_(a)^(b) f(x) d x$ не убывает на $[a, omega) ==>$ она имеет предел при $b -> omega, b in [a, omega) <==>$ она огр.
+#theorem(name: "Теорема (о сходимости абсолютно сходящегося интеграла)")[ 
+  $limits(integral)_(a)^(omega) f(x) d x$ абсолютно сходится $==>$ он сходится
+][
+  По свойствам несобственного интеграла 
+  $ abs(limits(integral)_(b_(1))^(b_(2)) f(x) d x) <= limits(integral)_(b_(1))^(b_(2)) abs(f(x)) d x. $
+  По критерию Коши сходимости несобственного интеграла интеграл сходится.
+]
 
-*Т. (признак мажорации):* $forall x in [a, omega) 0 <= f(x) <= g(x)$ и
-$limits(integral)_(a)^(omega) g(x) d x$ сход. $==> limits(integral)_(a)^(omega) f(x) d x$ сход.\ 
-*Док-во:* $limits(integral)_(a)^(omega) g(x) d x$ сход. $==>$ ф-ция $G(b) = limits(integral)_(a)^(b) g(x) d x, b in [a, omega)$ огр. По св-ву монотонности собственного инт-а $0 <= F(b) = limits(integral)_(a)^(b) f(x) d x <= limits(integral)_(a)^(b) g(x) d x = G(b) ==>$ ф-ция $F$ огр. По пред. Т. $limits(integral)_(a)^(omega) f(x) d x$ сход. 
+#theorem(breakline: true)[
+  Пусть $forall x in [a, omega) #h(4pt) f(x) >= 0$. $limits(integral)_(a)^(omega) f(x) d x$ сходится тогда и только тогда, когда 
+  $ F(b) = limits(integral)_a^b f(x) d x, #h(4pt) b in [a,omega) $ ограничена
+][
+  Пусть $forall x in [a, omega) #h(4pt) f(x) >= 0$. Тогда $F(b) = limits(integral)_a^b f(x) d x$ не убывает на $[a, omega)$. Значит, она имеет предел при $b -> omega, #h(4pt) b in [a, omega)$ тогда и только тогда, когда она ограничена.
+]
 
-*Т. (признак сравнения):* $forall x in [a, omega) f(x) >= 0, g(x) >= 0$ и $limits(lim)_(x -> omega) (f(x)/g(x)) = A, 0 < A < +infinity ==> limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ одновременно сход. или расход.\ 
-*Док-во:* Пусть $epsilon = A/2 > 0$. $exists c in [a, omega)$ такая, что при $x in [c, omega) abs(f(x)/g(x) - A) < A/2$, т.е. $A/2 g(x) < f(x) < 3/2 A g(x)$ при $x in [c, omega)$. Остаётся воспользоваться признаком мажорации и пунктом (c) из Т. о св-вах несобст. инт-а. 
+#theorem(name: "Теорема (признак мажорации)")[ 
+  $forall x in [a, omega) #h(4pt) 0 <= f(x) <= g(x)$ и
+  $limits(integral)_(a)^(omega) g(x) d x$ сходится $==> limits(integral)_(a)^(omega) f(x) d x$ сходится
+][ 
+  $limits(integral)_(a)^(omega) g(x) d x$ сходится. Тогда функция $G(b) = limits(integral)_a^b g(x) d x, b in [a, omega)$ ограничена. По свойству монотонности собственного интеграла 
+  $ 0 <= F(b) = limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x = G(b) $
+  Тогда $F$ ограничена По предыдущей теореме $limits(integral)_(a)^(omega) f(x) d x$ сходится.
+]
+
+#theorem(name: "Теорема (признак сравнения)",
+  breakline: true
+)[
+  $forall x in [a, omega) #h(4pt) f(x) >= 0, #h(4pt) g(x) >= 0, #h(4pt) 0 < A < +infinity$ и 
+  $ lim_(x -> omega) f(x)/g(x) = A ==> $
+  $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ одновременно сходятся или расходятся.
+][
+  Пусть $epsilon = A/2 > 0, #h(4pt) exists c in [a, omega)$ такое, что при $x in [c, omega)$
+  $ abs(f(x)/g(x) - A) < A/2 ==> \ A/2 g(x) < f(x) < 3/2 A g(x). $ 
+  Остаётся воспользоваться признаком мажорации и свойством 3 из теоремы о свойствах несобственного интеграла.
+]
