@@ -1,29 +1,21 @@
-= №29. Прост. $RR^m$. Послед. в $RR^m$ и их св-ва
+= №46. Плоские множества, измеримые по Жордану. Определение двойного интеграла. Критерий интегрируемости и достаточные условия интегрируемости. Основные свойства двойного интеграла.
 
-*Опр.*: Пусть число $m in NN$. Множ. упорядоченных наборов $(x_1, x_2, dots, x_m)$, где $x_i in RR$, $i = 1, dots, m$, называют
-пространством $RR^m$.\
-*Опр.*: Будем обозначать $overline(x) = (x_1, x_2, dots, x_m)$ и называть точкой или вектором.\
-*Опр.*: Отображение множ. $NN$ в множ. $RR^m$ называем послед. и обозначаем $(overline(x)_n)$ или $(overline(x)_n)_(n=1)^(infinity)$, где
-$overline(x)_n = (x_(1 n), dots, x_(m n))$.\
-*Опр.*:
-- $overline(x)_n = O(1) <=> exists M > 0$ $forall n in NN$ $abs(overline(x)_n) <= M$;
-- $overline(x)_n = o(1) <=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $overline(x)_n < epsilon$;
-- $overline(x)_n -> overline(x)_0 <=> overline(x)_n - overline(x)_0 = o(1)$;
-- $overline(x)_n$ --- фунд. $<=> forall epsilon > 0$ $exists n_epsilon in NN$ $forall n >= n_epsilon$ $forall k >= n_epsilon$ $abs(overline(x)_n - overline(x)_k) < epsilon$;
-*Т.*:
-Послед. $(overline(x)_n)$ огр. или беск. мал., или фунд. $<=>$ все её коорд. послед. $(x_(i n))^(infinity)_(n=1)$, $i = 1, dots, m$
-огр. или беск. мал., или фунд. сооотв.\ 
-*Т.*:
-$overline(x)_n -> overline(x)_0 <=>$ $forall i = 1, dots, m$ $x_(i m) -> x_(i 0)$.\
-*Т.*:
-$overline(x)_n -> overline(x)_0$, $overline(y)_n -> overline(y)_0$, $alpha_n -> alpha_0$ (в $RR$) $=>$
-$overline(x)_n + overline(y)_n -> overline(x)_0 + overline(y)_0$, $alpha_n overline(x)_n -> alpha_0 overline(x)_0$,
-$overline(x)_n dot overline(y)_n -> overline(x)_0 dot overline(y)_0$, $abs(overline(x)_n) -> abs(overline(x)_0)$.\
-*Т.*:
-Всякая сх. послед. огр.\
-*Т.*:
-Любая подпослед. сх. послед. сх., причём к той же т.\
-*Т. (крит. Коши)*:
-Послед. сх. $<=>$ послед. фунд.\
-*Т. (Больц.-В-сса)*:
-У любой огр. послед. сущ. сход. подпослед.\
+*Опр.* Пусть $F$ — огр. замкн. мн. Рассмотрим всевозможные многоуг. фигуры $P$, содержащиеся в $F$, и многоуг. ф. $Q$, содержащие ф. $F$. ф. $P$ будем называть впис., а ф. $Q$ — опис.. Чис. мн. ${mu P}$ площадей всех впис. многоуг. ф. $P$ огр. сверху, а чис. мн. ${mu Q}$ площадей всех впис. многоуг. ф. $Q$ огр. снизу. Поэтому сущ. верхняя и нижняя грани $mu_*(F), mu^*(F)$.\
+*Опр.* Плоская фигура называется квадратичной или измеримой по Жордану, если $mu_*(F) = mu^*(F)$ = $mu (F)$ - мера (площадь) Жордана.\
+*Опр.* Множ. т. пл. наз. мн. меры нуль, если оно содержится в многоуг. ф. сколь угодно малой меры.\
+*Опр.* Функ. $f$ наз. инт. (по Риману) на мн. $D$ если $exists I = limits(lim)_(d(T)->0) sigma(T)$, где $T$ - разбиение квадрируемого замкн. мн., $d(T)$ - диаметр разбиения $T$, a $sigma(T)$ - интеграл. сумма. Число $I$ наз. двойным интег. от функ. $f(x,y)$ по мн. D и обознач. $I = limits(integral integral)_D f(x,y) d x d y $.\
+*Т. (Критерий интег.)*: Чтобы огр. на квадрируемом мн. $D$ функ. $f$ была интегрир., необ. и дост., чтобы $forall epsilon > 0$, $exists T$: $S(T) - s(T) < epsilon$.\
+*Т. (об интег. непр. функ.)* Всякая непр. на квадрируемом мн-ве функция интег. на нем.\
+*Достат. усл. интег. 1* Пусть ф. $f$ опр. и огр. на квадрируемом мн. $D$. Если ф. $f$ непр. на $D$ всюду, кроме точек нек. мн. меры нуль, то она интег. на $D$.\
+*Достат. усл. интег. 2* Пусть ф. $f$ и $g$ опр., огр. на квадрируемом мн.$D$ и отличаются друг от друга на нек. мн. меры нуль. Тогда интег. одной ф.равносильна интег. другой, причем $limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D g(x,y) d x d y$.\
+*Основ. св-ва*:
+1) Аддитивность интеграла. Если ф. $f$ интег. на мн. $D$, то она интег. и на любом квадрируемом подмн. $D'subset D$. Если ф. $f$ интег. на мн. $D_1$ и $D_2$, то она интег. на мн. $D = D_1 union D_2$. Если $D = D_1 union D_2$, и квадрируемые мн. $D_1$ и $D_2$ не имеют общих внутренних точек, то
+$limits(integral integral)_D f(x,y) d x d y = limits(integral integral)_D_1 f(x,y) d x d y + limits(integral integral)_D_2 f(x,y) d x d y$.\
+2) Линейность интеграла. Пусть ф. $f$ и $g$ интег. на мн. $D$, $alpha, beta in RR$. Тогда ф. $alpha f + beta g$ также интег. на $D$ и справ. рав.
+$limits(integral integral)_D (alpha f(x,y) + beta g(x,y)) d x d y = alpha limits(integral integral)_D f(x,y) d x d y + beta limits(integral integral)_D g(x,y) d x d y$.\
+3) Монотон. интеграла. Если ф. $f$ и $g$ интег. на мн. $D$ и всюду на этом множестве $f(x, y) <= g(x, y)$, то $limits(integral integral)_D f(x, y) d x d y <= limits(integral integral)_D g(x, y) d x d y$.\
+4) Если ф. $f$ и $g$ интег. на мн. $D$, то ф. $f g$ также интег. на $D$.\
+5) Если функция $f$ интегрируема на $D$ и удовлетворяет условию $abs(f(x, y)) >= c > 0$, $(x, y) in D$, то ф. $1/f$ также интег. на $D$.\
+6) Оценка модуля интеграла. Если ф. $f$ интег. на мн. $D$, то ф. $abs(f)$ также интег. на $D$, причем $abs(limits(integral integral)_D f(x, y) d x d y) <= limits(integral integral)_D abs(f(x, y)) d x d y$.\
+7) $limits(integral integral)_D 1 d x d y = mu(D)$.\
+8) Т. о ср. знач.. Если ф. $f$ и $g$ интег. на мн. $D$, ф. $g$ неотр.(непол.) всюду на $D$, $M = sup_D f(x, y)$, $m = inf_D f(x, y)$, то найдется число $mu in [m, M]$ такое, что  $limits(integral integral)_D f(x, y) g(x, y) d x d y = mu limits(integral integral)_D g(x, y) d x d y$. Если при этом ф. $f$ непр. на $D$, а мн. $D$ связно, то $exists (xi, eta) in D$, что $mu = f(xi, eta)$.

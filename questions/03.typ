@@ -1,5 +1,4 @@
-= №40. Дифференциалы первого и высших порядков.
+= №44. Неявные функции. Теорема о неявной функции.
 
-*Опр.* Пусть $f$ 2-дифф. в т. $overline(x)_0$. $forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифф. первого порядка.\
-*Опр.* Дифф. 2-го порядка функ. $f$ в т. $overline(x)_0$ называется функ. $d^2f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR$: $d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h))$.\ 
-*Опр.* Пусть $f$ n-дифф. в т. $overline(x)_0$. Ее n-дифф. в этой точке наз. функ. $d^n f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR^m$: $d^n f(overline(x)_0)(overline(h)) = d(d^(n-1)_overline(h) f)(overline(x)_0)(overline(h))$
+*Опр.* Пусть даны функ. $F: RR^(m+1) -> RR$, мн. $X in RR^m, Y in RR$ и ур-ие $F(overline(x), y) = 0$. Если $forall overline(x) in X $ $exists! y = f(overline(x)) in Y$, что $F(overline(x), f(overline(x))) = 0$, то ур-ие выше на мн. $X times Y$ опр. неяв. функ. $f: X -> Y$.\
+*Т. (О неявной функции)*: Если функ. $F$ опр. и окр. $U$ т. $(overline(x)_0, y_0)$ такова, что 1) $F in C^((1)) (U)$, т.е. $F$ непр. дифф. на $U$; 2) $F(overline(x)_0, y_0) = 0$; 3) $F'_y (overline(x)_0, y_0) != 0$; то $exists O(overline(x)_0), O(y_0)$ такие, что на мн. $O(overline(x)_0) times O(y_0)$ ур-ие выше опр. непр. дифф. функ. $f: O(overline(x)_0) -> O(y_0)$. Причем $forall overline(x) in O(overline(x)_0), k = 1,..., m$: $f'_x_k (overline(x)) = - (F'_x_k (overline(x), f(overline(x))))/(F'_y (overline(x), f(overline(x))))$.

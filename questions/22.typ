@@ -1,11 +1,24 @@
-= №1. Опр. интегральной суммы Римана и интеграла Римана. Необх. условие интегрируемости
+= №27. Степенные ряды. Радиус и интервал сход-ти. Т. Коши-Адамара. Т. Абеля. 
 
-*Опр.* $[a,b] subset RR; #h(4pt) P = P_([a,b]) = {x_k}^n_(k=0)$ наз. разбиением отрезка $[a,b]$. \
-$Delta k = [x_k, x_(k-1)], #h(4pt) Delta x_k = x_k - x_(k-1), #h(4pt) k = overline(1\, n)$.\
-$d = d(P) = limits(max)_(1<= k <= n)(Delta x_k)$ наз. диаметром разбиения.\
-$xi_P = {xi_k}^n_(k=1):xi_k in Delta_k$ наз. системой промежуточных точек.\
-*Опр.* Пусть $f$ опр. на $[a,b], #h(4pt) sigma(P) = sigma(f, P, xi_p) = limits(sum)^n_(k=1)f(xi_k)Delta x_k$ наз. интегральной сумма Римана.\
-*Опр.* $I in RR, I = limits(lim)_(d(P) -> 0)sigma(P)$ наз. пределом инт. сумм Римана $<==>$\
-$forall epsilon>0 #h(4pt) exists delta>0 #h(4pt) forall(P, xi_P) #h(4pt) (d(P)<delta => abs(sigma(P, xi_p)-I) < epsilon)$. Обозн. $I = limits(integral)^a_b f(x)d x$, $f$ называют интегрируемой по Риману на $[a,b]$.\
-*Т. (необх. усл. интегрируемости)*: $f$ интегр. на $[a,b] ==> f$ ограничена \
-*Док-во*: От противного. Пусть $f$ не огр. на $[a,b]$, $P$ --- произв. разб $==> exists delta_i: f$ не огр. на нем. $sigma(P) = f(xi_i)Delta x_i + A$, где $A = limits(sum)^(i_n)_(k=1, i!= k) f(xi_k)Delta x_k$. #h(4pt) $abs(sigma(P)) = abs(f(xi_i)Delta x_i + A) >= abs(f(xi_i))Delta x_i - A$. $forall M>0 #h(4pt) exists xi_i in Delta_i:abs(f(xi_i))> (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M ==>$ инт. сумма не имеет предела ($f$ не интегр. --- противоречие).
+*Опр.*: Функ. ряд вида $a_0 + a_1 (x-x_0) + a_2 (x-x_0)^2 + dots = limits(sum)_(n=0)^(infinity) a_n (x-x_0)^n$,
+где $a_0, a_1, dots in RR$, $x_0 in RR$, называют степ. рядом.\ 
+Числа $a_0, a_1, dots$ назыв. коэфф. степ. ряда.\
+*Опр.*: Пусть $L = overline(limits(lim)_(n -> infinity)) root(n, abs(a_n))$. Определим число $R$:
+- $R = 1/L$, если $0 < L < +infinity$
+- $R = +infinity$, если $L = 0$
+- $R = 0$, если $L = +infinity$
+Число $R$ называют радиусом сход-ти степ. ряда $limits(sum)_(n=0)^(infinity) a_n x^n$. 
+Если $0 < R < +infinity$, то инт. $(-R, R)$ называют интервал сход-ти степ. ряда $limits(sum)_(n=0)^(infinity) a_n x^n$.\
+*Т. (Коши-Адамара)*:
+$L = overline(limits(lim)_(n -> infinity)) root(n, abs(a_n))$
++ Если послед. $(root(n, abs(a_n)))$ неогр., то ряд $limits(sum)_(n=0)^(infinity) a_n x^n$ сх. только в т. $x_0$
++ Если послед. $(root(n, abs(a_n)))$ огр. и $L > 0$, то ряд сх. абс. во всех т. $x$, удовл. условию $abs(x) < 1/L$, и расх. во всех т. $x$, удовл. условию $abs(x) > 1/L$
++ Если послед. $(root(n, abs(a_n)))$ огр. и $L = 0$, то ряд сх. абс. $forall x in RR$
+*Док-во*: 
++ При любом $x != 0$ посл. $(abs(x) root(n, abs(a_n))) = (root(n, abs(a_n x^n)))$ неогр., а значит $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
++ Пусть $abs(x) < 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) =  abs(x) dot overline(limits(lim)_(n -> infinity)) root(n, abs(a_n)) < 1/L dot L = 1$, в силу признака Коши ряд сх. абс. Пусть $abs(x) > 1/L$. Тогда $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) > 1/L dot L = 1$ и послед. $a_n x^n != o(1)$. Тогда не выполн. необход. усл. сх. ряда, значит ряд расх.
++ $forall x in RR$ $overline(limits(lim)_(n -> infinity)) root(n, abs(a_n x_n)) = abs(x) dot L = 0$, в силу признака Коши ряд сх. абс.
+*Т. (Абеля)*: 
+Если степ. ряд $limits(sum)_(n=0)^(infinity) a_n x^n$ сх. в некоторой т. $x_1 != 0$, то ряд сх. в интервале $(-abs(x_1), abs(x_1))$.\
+*Док-во*: 
+Т. $x_1$ лежит внутри интервала сход-ти, либо является граничной т. интервала сход-ти, а значит $(-abs(x_1), abs(x_1)) subset (-R, R)$.

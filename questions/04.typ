@@ -1,9 +1,5 @@
-= №17. Необх. и дост. условие абс. сх-ти ряда. Условно сх-ся ряд. Т. об условно сх-ся рядах
+= №41. Формула Тейлора с остаточным членом в форме Лагранжа и форме Пеано.
 
-*Опр.* $a^+ = (abs(a)+a)/2$ --- полож. часть числа,  $a^- = (abs(a)-a)/2$  --- отриц. часть числа.\
-$sum a_n = sum a_n^+ - sum a_n^-, #h(4pt) sum abs(a_n) = sum a_n^+ + sum a_n^-$\
-*Т. (необх. и дост. условие абс. сх-ти ряда)*: $sum a_n$ абс. сх-ся $<==>$ сх-ся  $sum a_n^+$ и $sum a_n^-$.\
-*Опр.* $sum a_n$ условно сх-ся $<==>$ он сх-ся, но не сх-ся абсолютно.\
-*Т. (об усл. сх-ся рядах)*: $sum a_n$ сх-ся условно $==> sum a_n^+$ и $sum a_n^-$ рас-ся.\
-*Док-во*: $sum a_n^+$ и $sum a_n^-$ сх-ся $==>$ ряд $sum abs(a_n) = sum a_n^+ + sum a_n^-$ сх-ся, $==> sum a_n$ сх-ся абсолютно.\
-Пусть один из рядов $sum a_n^+$ и $sum a_n^-$, например $sum a_n^+$, сх-ся $==>$ ряд $sum a_n^- = sum a_n^+ - sum a_n$ сх-ся $==> sum a_n$ сх-ся абсолютно.
+*Т. (Формула Тейлора)*: Пусть функ. $f$ n-дифф. в нек. окр. $O(overline(x)_0)$. Тогда $forall overline(x) in O(overline(x)_0)$: $f(overline(x)) = limits(sum)_(k=0)^(n-1)1/k! d_(overline(h))^k f(overline(x)_0) + 1/n! d_(overline(h))^n f(overline(x) + theta overline(h))$, где $overline(h) = overline(x) - overline(x)_0, theta in (0,1), d_overline(h)^0 f(overline(x)_0) = f(overline(x)_0)$. Это ф-ла Тейлора с ост. членом в ф-ме Лагранжа.\
+*Док-во*: Рассмотрим функ. $F(t) = f(overline(x)_0 + t overline(h))$ и воспользуемся ф-лой Тейлора с остат. членом в форме Лагранжа. Тогда $f(overline(x)) = F(1) = limits(sum)_(k=0)^n 1/k! F^((k)) (0) + 1/n! F^((n))(theta) = limits(sum)_(k=0)^(n-1)1/k! d_(overline(h))^k f(overline(x)_0) + 1/n! d_(overline(h))^n f(overline(x) + theta overline(h)), theta in (0,1)$.\
+*Следствие*: Если функ. $f$ n-непр. дифф. в окр. т. $overline(x)_0$, то справедливо формула Тейлора-Пеано $f(overline(x)) = limits(sum)_(k=0)^n 1/k! d_overline(h)^k f(overline(x)_0) + o(abs(overline(h))^n)$.

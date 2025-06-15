@@ -1,9 +1,23 @@
-= №15. Признак мажорации и признак сравнения
+= №35. Частн. произв. функ. многих перем. Дифф-ть в т. функ. многих перем. Т. о непр. дифф-мой функ.
 
-*Опр.* $a_n = O(b_n) <==> exists C>0 #h(4pt) forall n in NN #h(4pt) abs(a_n) = C abs(b_n)$.\
-*Т. (пр. мажорации)*: $forall n in NN #h(4pt) a_n >= 0, #h(4pt) b_n >=0, #h(4pt) a_n = O(b_n), #h(4pt) limits(sum)^infinity_(n=1) b_n < + infinity$.\
-*Док-во*: $exists C>0 #h(4pt) forall n in NN #h(4pt) 0<= a_n <= C b_n ==> 0 <= limits(sum)^n_(k=1) a_k <= C limits(sum)^n_(k=1) b_k stretch(=>)^"lim"_(n-> infinity) 0<= limits(sum)^infinity_(n=1) a_n <= C limits(sum)^infinity_(n=1) b_n < + infinity$.\
-*Cл-е 1.* $forall n in NN #h(4pt) a_n >= 0, b_n >= 0, ((a_n)/(b_n))$ сход, $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$ \
-*Cл-е 2.* $forall n in NN #h(4pt) a_n > 0, b_n > 0, (a_(n+1))/(a_n) <= (b_(n+1))/(b_n)$ сх-ся, $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$.\
-*Т. (пр. сравнения)*: $forall n in NN #h(4pt) a_n > 0, #h(4pt) b_n > 0, #h(4pt) exists "кон." limits(lim)_(n -> infinity) (a_n)/(b_n) = k != 0 ==> sum a_n, sum b_n$ ведут себя одинаково.\
-*Док-во*: По следствию 1 из пр. мажорации из сх-ти $sum b_n$ вытекает сх-ть $sum a_n$. $limits(lim)_(n->infinity) (b_n)/(a_n) = 1/k stretch(=>)^"сл-е 1 из"_"пр. маж."$ из сх-ти $sum a_n$ вытекает сх-ть $sum b_n$.
+Пусть $f : X -> RR$, опр. на множ. $X subset RR^m$, и т. $overline(x)_0$ --- внутр. т. обл. опр. $f$.\ 
+*Опр.*: Частной производной функ. $f$ по первой переменной в т. $overline(x)_0 = (x_1^0, dots, x_m^0)$ называют предел 
+$limits(lim)_(x_1 -> x_1^0) (f(x_1, x_2^0, dots, x_m^0) - f(x_1^0, x_2^0, dots, x_m^0))/(x_1 - x_1^0)$, 
+если он существует, и обозначают символом $(diff f)/(diff x_1) (overline(x)_0)$ или $f_(x_1)^prime (overline(x)_0)$.\
+*Опр.*: 
+Функ. $f$ называется дифф. в т. $overline(x)_0$, если найдутся непр. в т. $overline(x)_0$ функции $phi_0, phi_1, dots, phi_k$ такие, что
+$f(overline(x)) - f(overline(x)_0) = phi_1 (overline(x))(x_1 - x_1^0) + phi_2(overline(x)) (x_2 - x_2^0) + dots + phi_m (overline(x)) (x_m - x_m^0)$.
+Обозначим $A_k = phi_k (overline(x)_0)$. Тогда $phi_k (overline(x)) = A_k + alpha_k (overline(x))$, где функ. $alpha_k$ беск. малы в т. $overline(x)_0$. 
+Тогда опред-е эквив. равенству: $f(overline(x)) - f(overline(x)_0) = A_1 (x_1-x_1^0) + A_2 (x_2 - x_2^0) + dots + A_m (x_m - x_m^0) + 
+alpha_1 (overline(x)) (x_1 - x_1^0) + alpha_2 (overline(x)) (x_2 - x_2^0) + dots + alpha_m (overline(x)) (x_m - x_m^0) (*)$.\ 
+*Т. (о непр. дифф. функ.):*
+$f$ дифф-ма в т. $overline(x)_0 ==> f$ непр. в этой т.\
+*Док-во*:
+Следует из равенства выше.\
+*Т. (о сущ. част. произв. у дифф. функ.)*:
+Если функция $f$ дифф. в т. $overline(x)_0$, то в этой т. у неё сущ. все част. произв. и при всех $k = 1, dots, m$
+$(diff f)/(diff x_k) (overline(x)_0) = A_k$, где $A_k$ --- числа из равенства $(*)$.\
+*Док-во*:
+Из равенства $(*)$ имеем $f(x_1, x_2^0, dots, x_m^0) - f(x_1^0, x_2^0, dots, x_m^0) = A_1 (x_1 - x_1^0) + alpha_1 (x_1, x_2^0, dots, x_m^0) (x_1-x_1^0)$
+Поделив обе части на $x_1 - x_1^0$ и перейдя к пределу при $x_1 -> x_1^0$, получим $(diff f)/(diff x_1) (overline(x)_0) = A_1$.
+Аналогично доказываются равенства для част. произв. по остальным переменным.\

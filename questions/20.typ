@@ -1,18 +1,6 @@
-= №16. Признак Коши. Признак Даламбера
+= №45. Условный экстремум. Необходимое условие условного экстремума.
 
-*Т. (пр. Коши)*: $forall n in NN #h(4pt) a_n >= 0, #h(4pt) overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*:
-+ $alpha < q < 1 stretch(=>)^"опр."_"верх. пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) root(n, a_n) <= limits(sup)_(n>= n_0) root(n, a_n) < q ==> a_n < q_n$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"пр."_"маж." sum a_n$ сх-ся.
-+ $alpha > 1 ==>$ для беск. числа знач-й $n$ $root(n, a_n) >= 1 ==> a_n != o(1)$, ряд рас-ся.
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
-*Т. (пр. Даламбера)*: $forall n in NN #h(4pt) a_n > 0, #h(4pt) limits(lim)_(n-> infinity) (a_(n+1))/(a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*: 
-+ $alpha < q < 1 stretch(=>)^"порядк."_"св-ва пред." exists n_0 #h(4pt) forall n >= n_0 #h(4pt) (a_(n+1))/(a_n) < q = (q^(n+1))/(q^n)$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"сл-е 1 из"_"пр. маж."sum a_n$ сх-ся.
-+ $alpha > 1 ==> exists n_0 #h(4pt) forall n>= n_0 #h(4pt) a_(n+1)/(a_n) > 1$, т. е. при $n >= n_0 #h(4pt) a_(n+1) > a_n ==> a_n != o(1)$, ряд рас-ся.
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
+*Опр.:* Пусть $f$, $g_i$ $i = 1, ..., r$ отображ-я из $RR^m$ в $RR$, опр. в нек. окр. т. $overline(x)_0$ и $g_i (overline(x)_0) = 0$. Знач-е $f(overline(x)_0)$ наз. условным макс. (мин.) $f$ при условиях связи $g_i (overline(x)) = 0$ $i = 1, ..., r$, если $exists O(overline(x)_0)$, что $f(overline(x)_0)$ является наибол. (наимен.) знач. сужения функ. на мн.: $O(overline(x)_0) inter {overline(x) in RR^m : g_i (overline(x)) = 0, i = 1, ..., r\}$.\
+*Т. (Лагранжа)*: Пусть функ. $f$ и $g$ непр. дифф. в нек. окр. т. $overline(x)_0$, $g(overline(x)_0) = 0$ и вектор-градиент $g r a d g(overline(x)_0) != 0$. Если функ. $f$ имеет усл. экст. в т. $overline(x)_0$ с усл. $g(overline(x)) = 0$, то $exists lambda in RR$, что $g r a d (f - lambda g)(overline(x)_0) = 0$.\ 
+*Док-во*: Не огранич. общности, будем считать, что $(diff g(overline(x)_0))/(diff x_m) != 0$. Выберем число $lambda in RR$, что $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$. Осталось док-ать равенство $forall i = 1,...,m-1$. По Т. о неяв. функ. $exists O(x_1^0,..., x_(m-1)^0), O(x_m^0)$, что ур-ие $g(overline(x) = 0$ опр. неяв. дифф. функ. $phi: O(x_1^0,..., x_(m-1)^0) -> O(x_m^0)$. В окр. $O(x_1^0,..., x_(m-1)^0)$ рассмот. $F(x_1,...,x_(m-1)) = f(x_1,...,x_(m-1), phi(x_1,...,x_(m-1)))$.
+Из опр. усл. экс. следует, что $F$ имеет лок. экс. в т. $(x_1^0,..., x_(m-1)^0)$. По Т. Ферма $forall i = 1,...,m-1$ имеем равенства $0 = (diff F(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + (diff f(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i)$. По Т. О неяв. функ. $forall i = 1,...,m-1$: $lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff g(overline(x)_0))/(diff x_i)$. Значит $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$ $forall i = 1,...,m-1$.

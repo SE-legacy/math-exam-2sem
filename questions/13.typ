@@ -1,6 +1,10 @@
-= №38. Производная по направлению и вектор градиент. Свойства вектора градиента.
+= №30. Вект.-функ. вект. перем. Предел и непр. функ. в т. Непр. функ. на множ. Равн. непр. функ. на множ., т. Кантора 
 
-*Опр.* Пусть век. $overline(a) in RR^m$ --- век. един. длины и прямая $l$ проходит через т. $overline(x)_0$ параллел. век. $overline(a)$. Параметрическое представление пр. $l$ имеет вид: $overline(x) = overline(x)_0 + t overline(a), t in RR$. Рассмотрим функ. $F(t) = f(overline(x)_0 + t overline(a))$. Она опр. $forall t$, что т. $overline(x)_0 + t overline(a) in $ обл. опр. $f$. Если $exists F'(0)$, то ее наз. произ. функ. $f$ в т. $overline(x)_0$ по напр. век. $overline(a)$ и обоз. символом $(diff f )/(diff overline(a))(overline(x)_0)$.\
-*Опр.* Пусть функ. $f$ дифф в т. $overline(x)_0$. Градиентом функ. $f$ в т. $overline(x)_0$ наз. век. $g r a d f(overline(x)_0) = ((diff f) / (diff x_1)(overline(x)_0), (diff f) / (diff x_2)(overline(x)_0),..., (diff f) / (diff x_m)(overline(x)_0))$.\
-*Свойства*: 1) век. градиент указывает направление, по которому функ. имеет макс. произ. в т. $overline(x)_0$;\
-2) знач. произ. функ. по направлению, опр. градиентом этой функ. в т. $overline(x)_0$, равно длине век. град. 
+*Опр.*: Отображение вида $overline(f) : X -> RR^k$, где $X subset RR^m$, $m > 1$, $k > 1$, называют вект. функ. вект. арг.\
+*Опр. пред. по Коши*: Пусть т. $overline(x)_0$ --- пред. т. обл. опред. функ. $overline(f) : X -> RR^k$, $overline(A) in RR^k$.
+Вект. $overline(A)$ называют пред. функ. $overline(f)$ в т. $overline(x)_0$ и обозначают символом $limits(lim)_(overline(x) -> overline(x)_0) overline(f) (overline(x)) = overline(A)$, если $forall epsilon > 0$ $exists delta > 0$ $forall overline(x) in D(overline(f))$ $(0 < abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon)$.\
+*Опр. непр-ти. функ. по Коши*: Функ. $overline(f)$ называется непр. в т. $overline(x)_0$, если 
+$forall overline(x) in D(overline(f))$ $(abs(overline(x) - overline(x)_0) < delta => abs(overline(f) (overline(x)) - overline(A)) < epsilon$.\
+*Опр.*: Функ. $overline(f)$ непр. на множ. $X$, если $forall overline(x) in XX$ функ. $overline(f)$ непр. в $overline(x)$.\ 
+*Опр.*: Функ. $overline(f)$ называется равн. непр. на множ. $X$, если $forall epsilon > 0$ $exists delta = delta(epsilon) > 0$ $forall overline(x) in D(overline(f))$ $forall overline(x)^(prime) in D(overline(f))$ $(abs(overline(x) - overline(x)^(prime)) < delta => abs(overline(f) (overline(x)) - overline(f) (overline(x)^(prime))) < epsilon)$.\
+*Т. (Кантора):* Пусть функ. $overline(f)$ непр. на множ. $X$ и множ. $X$ --- компакт. Тогда функ. $overline(f)$ равн. непр. на $X$

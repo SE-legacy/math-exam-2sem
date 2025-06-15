@@ -1,5 +1,8 @@
-= №41. Формула Тейлора с остаточным членом в форме Лагранжа и форме Пеано.
+= №42. Локальный экстремум функции многих переменных. Необходимое условие локального экстремума. Достаточное условие локального экстремума.
 
-*Т. (Формула Тейлора)*: Пусть функ. $f$ n-дифф. в нек. окр. $O(overline(x)_0)$. Тогда $forall overline(x) in O(overline(x)_0)$: $f(overline(x)) = limits(sum)_(k=0)^(n-1)1/k! d_(overline(h))^k f(overline(x)_0) + 1/n! d_(overline(h))^n f(overline(x) + theta overline(h))$, где $overline(h) = overline(x) - overline(x)_0, theta in (0,1), d_overline(h)^0 f(overline(x)_0) = f(overline(x)_0)$. Это ф-ла Тейлора с ост. членом в ф-ме Лагранжа.\
-*Док-во*: Рассмотрим функ. $F(t) = f(overline(x)_0 + t overline(h))$ и воспользуемся ф-лой Тейлора с остат. членом в форме Лагранжа. Тогда $f(overline(x)) = F(1) = limits(sum)_(k=0)^n 1/k! F^((k)) (0) + 1/n! F^((n))(theta) = limits(sum)_(k=0)^(n-1)1/k! d_(overline(h))^k f(overline(x)_0) + 1/n! d_(overline(h))^n f(overline(x) + theta overline(h)), theta in (0,1)$.\
-*Следствие*: Если функ. $f$ n-непр. дифф. в окр. т. $overline(x)_0$, то справедливо формула Тейлора-Пеано $f(overline(x)) = limits(sum)_(k=0)^n 1/k! d_overline(h)^k f(overline(x)_0) + o(abs(overline(h))^n)$.
+*Опр.* т. $overline(x)_0$ наз. т. лок. макс. (мин.), если $exists O(overline(x)_0)$, такая что $f(overline(x)) <= f(overline(x)_0) (f(overline(x)) >= f(overline(x)_0))$.\
+*Т. (Необ. усл. лок. экстрем.)*: Пусть т. $overline(x)_0$ - т. лок. экстрем. $f$ и в этой т. у функ. сущ. все част. произ. первого порядка $f'_x_i (overline(x)_0), i = 1,...,m$. Тогда $f'_x_i (overline(x)_0) = 0, i = 1,...,m$.\
+*Док-во*: Рассмотрим функ. $phi(x_1) = f(x_1, x_1^0, ... , x_m^0)$. Она имеет лок. экс. в т. $x_1^0$ и ее произ $phi'(x_1^0) = f'_x_i (overline(x)_0)$. По Т. Ферма $f'_x_i (overline(x)_0) = 0$.\
+*Т. (Достат. усл. лок. экс.)* Пусть $f$ опр. в нек. окр. $O(overline(x)_0), f in C^((2)) (O(overline(x)_0))$ и т. $overline(x)_0$ является стационар. т. этой функ. Если квадратичная форма $d^2 f(overline(x)_0)(overline(h)) = limits(sum)_(i,j=1)^m (diff^2 f)/(diff x_j diff x_i) (overline(x)_0)h_i h_j$. 1) знакоопределена, то в т. $overline(x)_0$ функ. имеет лок. экс., который является строгим лок. мин., если квадр. форма положит. опр., и строгим лок. макс, если она отриц. опр\
+2) неопределена, то в т. $overline(x)_0$ функ. экс. не имеет\
+*Док-во*: поберегите мозг. не надо 

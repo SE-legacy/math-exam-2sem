@@ -1,16 +1,10 @@
-= №43. Дифференцируемые вектор-функции, матрица Якоби и якобиан.
+= №33. Инт-ие вект.-функ. Оценка модуля интеграла 
 
-*Опр.* Вектор-функцию $overline(f) = (f_1, ..., f_n) : RR^m → RR^n$ назовем дифф. в т. $overline(x)_0$, если все функ. $f_k$, $k = 1, ..., n$, дифф. в т. $overline(x)_0$.
-Вектор-столбец $d overline(f)(overline(x)_0) = mat(d f_1(overline(x)_0); dots.v; d f_ n (overline(x)_0))$ - дифф. $overline(f)$. Матрица $D overline(f)(overline(x)_0) = mat(
-      (diff f_1(overline(x)_0))/(diff x_1), dots.h, (diff f_1(overline(x)_0))/(diff x_m);
-      dots.v, dots.v;
-      (diff f_n(overline(x)_0))/(diff x_1), dots.h, (diff f_n(overline(x)_0))/(diff x_m)
-    )$ - матр. Якоби отображения $overline(f)$.
-Введем вектор-столбец $d overline(x) = mat(
-      d x_1; 
-      dots.v; 
-      d x_m
-    )$
-Тогда можно записать $d overline(f)(overline(x)_0) = D overline(f)(overline(x)_0) d overline(x).$
-Если $n = m$, то опред матр. Якоби наз. якобианом и обозначают через $D(f_1, ..., f_m)/D(x_1, ..., x_m) (overline(x)_0)$.\
-*Опр.* Матрица Якоби наз. произ. отоб. $overline(f)$ в т. $overline(x)_0$ и обозн. через $overline(f)'(overline(x)_0)$.
+*Опр.*: Пусть вект.-функ. $overline(f) = (f_1, dots, f_k)$ опр. на отр. $[a, b]$. Функ. $overline(f)$ называется инт-мой на отр. $[a, b]$, если ее коорд. функ. $f_1, dots, f_k$ инт-мы на $[a, b]$. При этом полагают $limits(integral)_a^b overline(f) (x) d x = (limits(integral)_a^b f_1 (x) d x, dots, limits(integral)_a^b f_k (x) d x)$.\
+*Т.*: Пусть функ. $overline(f)$ инт-ма на отр. $[a, b]$. Тогда функ. $abs(overline(f))$ инт-ма и $abs(limits(integral)_a^b overline(f) (x) d x) <= limits(integral)_a^b abs(overline(f) (x)) d x$.\
+*Док-во*: Пусть $overline(y) = (y_1, dots, y_k)$, где $y_1 = limits(integral)_a^b f_1 (x) d x, dots, y_k = limits(integral)_a^b f_k (x) d x$.
+Тогда $abs(overline(y))^2 = y_1^2 + dots + y_k^2 = y_1 limits(integral)_a^b f_1 (x) d x + dots + y_k limits(integral)_a^b f_k (x) d x = 
+limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x$.
+В силу нер-ва Коши-Буянковского-Шварца $abs(y_1 f_1 (x) + dots + y_k f_k (x)) <= abs(overline(y)) dot abs(overline(f) (x))$
+Поэтому $limits(integral)_a^b (y_1 f_1 (x) + dots + y_k f_k (x)) d x <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$, т. е.
+$abs(overline(y))^2 <= abs(overline(y)) limits(integral)_a^b abs(overline(f) (x)) d x$. Остальное очевидно.

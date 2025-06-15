@@ -1,7 +1,14 @@
-= №20. Коммут. закон для знакоположит. и абс. сх-ся рядов. Т. Римана 
+//Непрерывность, дифференцируемость и интегрируемость суммы функционального ряда
 
-*Т. (коммут. закон для знакопол. ряда)*: $forall k in NN #h(4pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется: $limits(sum)^infinity_(k=1) a_(n_k) = limits(sum)^infinity_(k=1) a_k$.\
-*Док-во*: Пусть $m_p = max(n_1, n_2, dots, n_p), #h(4pt) p in NN ==> forall p #h(4pt) limits(sum)^p_(k=1) a_(n_k) <= limits(sum)^(m_p)_(k=1) a_k <= limits(sum)^infinity_(k=1) a_k ==> limits(sum)^infinity_(k=1) a_(n_k) <= limits(sum)^infinity_(k=1) a_k$.  $sum a_k$ можно также считать перестановкой $sum a_(n_k) ==> limits(sum)^infinity_(k=1) a_k <= limits(sum)^infinity_(k=1) a_(n_k)$. Cледовательно, равенство верно.\
-*Т. (коммут. закон для абс. сх-ся ряда)*: Ряд абс. сх-ся $==>$ любая его перестановка абс. сх-ся и их суммы равны.\
-*Док-во*: Применим пред. теорему для рядов $sum a^+_n$ и $sum a^-_n$.\
-*Т. (Римана)*: $sum a_n$ сх-ся усл. $==> forall A in overline(RR) #h(4pt) exists "перестановка": limits(sum)^infinity_(k=1) a_(n_k) = A$
+= №26. Непр., дифф-ть и инт-ть суммы функ. ряда
+
+*Т. (о непр. суммы ряда)*: Пусть $forall n in NN$ $f_n$ непр. в т. $x_0 in X$ и ряд $sum f_n$ равн. сх. 
+Тогда сумма ряда $S = limits(sum)_(n=1)^(infinity) f_n$ непр. в т. $x_0$.\
+*Док-во*: Следует из т. о непр-ти. пред. функ. послед.\
+*Т. (об инт-ти суммы ряда)*: Пусть $X = [a,b]$, $forall n in NN$ $f_n$ непр. на $[a, b]$ и ряд $sum f_n$ равн. сх.
+Тогда сумма ряда $S = limits(sum)_(n=1)^(infinity) f_n$ инт-ма и 
+$limits(integral)_(a)^(b) (limits(sum)_(n=1)^(infinity) f_n (x)) d x = limits(sum)_(n=1)^(infinity) f_n (x) limits(integral)_(a)^(b) f_n (x) d x$.\
+*Док-во*: Следует из т. об инт-ти пред. функ. послед.\
+*Т. (о дифф-ти суммы ряда)*: Пусть $X = [a, b]$, $forall n in NN$ $f_n$ непр. дифф. на $[a,b]$, ряд $sum f_(n)^(prime)$ равн. сх., ряд $sum f_n$ сх. в некоторой точке $x_0 in [a, b]$. 
+Тогда ряд $sum f_n$ равн. сх. и $forall x in [a, b]$ $(limits(sum)_(n=1)^(infinity) f_n (x))^(prime) = limits(sum)_(n=1)^(infinity) f_(n)^(prime) (x)$.\
+*Док-во*: Следует из т. о дифф-ти. пред. функ. послед.

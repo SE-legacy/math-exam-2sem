@@ -1,5 +1,5 @@
-= №19. Сумма ряда как обобщение суммы кон. числа слагаемых. Сочетательный закон
+= №40. Дифференциалы первого и высших порядков.
 
-*Т. (Сочетательный закон)*: $sum a_n$ сх-ся, $(m_n)$ --- строго возр. посл. нат. чисел, $m_1 = 1 ==> limits(sum)^infinity_(n=1) (limits(sum)^(m_(n+1)-1)_(k=m_n) a_k)$ --- сх-ся и его сумма равна $limits(sum)^infinity_(n=1) a_n$.\ 
-*Док-во*: Посл. частных сумм сгруппированного
-ряда --- подпосл. посл-ти частных сумм исходного ряда $==>$ она также сходится, и их пределы равны.
+*Опр.* Пусть $f$ 2-дифф. в т. $overline(x)_0$. $forall overline(h) in RR^m$ определим в окр. $O(overline(x)_0)$ функ. $d_overline(h): RR^m -> RR$, что $forall overline(x) in O(overline(x)_0)$ : $d_overline(h)f(overline(x)) = d f(overline(x))(overline(h))$ - дифф. первого порядка.\
+*Опр.* Дифф. 2-го порядка функ. $f$ в т. $overline(x)_0$ называется функ. $d^2f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR$: $d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h))$.\ 
+*Опр.* Пусть $f$ n-дифф. в т. $overline(x)_0$. Ее n-дифф. в этой точке наз. функ. $d^n f(overline(x)_0): RR^m -> RR$, что $forall overline(h) in RR^m$: $d^n f(overline(x)_0)(overline(h)) = d(d^(n-1)_overline(h) f)(overline(x)_0)(overline(h))$

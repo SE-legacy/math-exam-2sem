@@ -1,6 +1,12 @@
-= №13. Т. об арифм. действиях над сх-ся рядами. Абс. сходимость числ. рядов, связь со сходимостью
+= №24. Функ. ряды. Поточ., равн. и норм. сх. функ. рядов, их связь. Крит. Коши равн. сх. функ. ряда. Признак В-сса равн. сх.
 
-*Т. (об арифм. действиях над сх-ся рядами)*: $sum a_n, sum b_n$ сх-ся, и $limits(sum)^infinity_(n=1) a_n = A, limits(sum)^infinity_(n=1) b_n = B, lambda in RR ==> sum(a_n + b_n), sum lambda a_n$ сх-ся $limits(sum)^infinity_(n=1)(a_n + b_n) = A+B, limits(sum)^infinity_(n=1) lambda a_n = lambda A$.\
-*Док-во*: $limits(sum)^infinity_(n=1) (a_n+b_n) = limits(lim)_(n->infinity)limits(sum)^n_(k=1)(a_k+b_k) = limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k + limits(lim)_(n->infinity) limits(sum)^n_(k=1) b_k = A+B$. $limits(sum)^infinity_(k=1) lambda a_k = limits(lim)_(n->infinity)limits(sum)^n_(k=1)lambda a_k = lambda limits(lim)_(n->infinity) limits(sum)^n_(k=1)a_k = lambda A$. $sum a_n$ абс. сх-ся $<==> sum abs(a_n)$ сх-ся.\
-*Т. (о сх-ти абс. сх-ся ряда)*: $sum a_n$ абс. сх-ся $==> sum a_n$ сх-ся. \
-*Док-во*: $abs(limits(sum)^(n+p)_(k=n+1) a_k) <= limits(sum)^(n+p)_(k=n+1) abs(a_k) stretch(=>)^"кр. Коши"_"cх-ти ряда"$ $sum a_n$ сх-ся. 
+*Опр.*: Пусть $(f_n)$ --- функ. послед. и $forall n in NN$ $f_n$ опр. на мн. $X$.
+Функ. рядом назыв. посл. $(S_n)$, где $S_n = limits(sum)_(k=1)^(n) f_k$, $n in NN$ и обозн. как $sum f_n$.\
+*Опр.*: Ряд $sum f_n$ поточ. сх., если послед. $(S_n)$ поточ. сх.\
+*Опр.*: Ряд $sum f_n$ равн. сх., если послед. $(S_n)$ равн. сх.\
+*Опр.*: Ряд $sum f_n$ норм. сх., если ряд $sum ||f_n||$ сх.\
+*Т. (крит. Коши равн. сх.)*: Ряд $sum f_n$ равн. сх. $<==>$ $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall p in NN$ $ ||limits(sum)_(k = n+1)^(n+p) f_k||<epsilon$.\
+*Т. (о равн. сх. норм. сх-ся ряда)*: Если ряд $sum f_n$ норм. сх., то ряд $sum f_n$ равн. сх.\
+*Док-во*: $||limits(sum)_(k = n+1)^(n+p) f_k|| <= limits(sum)_(k = n+1)^(n+p) ||f_k||$, применим кр. Коши сх. числ. ряда и кр. Коши равн. сх. функ. ряда.\
+*Т. (признак В-сса)*: Пусть $forall n in NN$ $||f_n|| <= a_n$, $limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равн. сх.\
+*Док-во*: $sum ||f_n||$ сх. по признаку маж., т.е. ряд $sum f_n$ норм. сх., т.е. равн. сх.
