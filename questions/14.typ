@@ -1,6 +1,6 @@
 = №25. Признаки Абеля и Дирихле равн. сх. функ. ряда
 
-*T. (признак Дирихле равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, $norm(limits(sum)_(k = n+1)^(n+p) g_k) = O(1)$, $norm(f_n) = o(1)$.
+*T. (признак Дирихле равн. сх. функ. ряда)*: Пусть $forall x in X$ $f_n (x) arrow.b$, $norm(limits(sum)_(k = 1)^(n) g_k) = O(1)$, $norm(f_n) = o(1)$.
 Тогда ряд $sum f_n g_n$ равн. сх.\
 *Док-во*: Пусть $G_n = limits(sum)_(k = 1)^(n) g_k$, $G_(n,k) = limits(sum)_(i = 1)^(k) g_(n+i)$. 
 $exists M$ $forall n in NN$ $norm(G_n) <= M$ и $forall n in NN$ $forall k in NN$ $norm(G_(n,k)) = norm(G_(n+k) - G_n) <= norm(G_(n+k)) + norm(G_n) <= 2M$.
