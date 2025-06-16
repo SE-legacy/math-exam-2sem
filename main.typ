@@ -10,6 +10,7 @@
 #text(size: 8pt, top-edge: 1em)[
 #{
   for num in range(1, 32) {
+    if num == 6 {continue}
     let filename
     if num < 10 {
       filename = "questions/0" + str(num) + ".typ"
