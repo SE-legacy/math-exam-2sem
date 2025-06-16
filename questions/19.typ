@@ -5,7 +5,7 @@
 $limits(lim)_(x_1 -> x_1^0) (f(x_1, x_2^0, dots, x_m^0) - f(x_1^0, x_2^0, dots, x_m^0))/(x_1 - x_1^0)$, 
 если он существует, и обозначают символом $(diff f)/(diff x_1) (overline(x)_0)$ или $f_(x_1)^prime (overline(x)_0)$.\
 *Опр.*: 
-Функ. $f$ называется дифф. в т. $overline(x)_0$, если найдутся непр. в т. $overline(x)_0$ функции $phi_0, phi_1, dots, phi_k$ такие, что
+Функ. $f$ называется дифф. в т. $overline(x)_0$, если найдутся непр. в т. $overline(x)_0$ функции $phi_1, phi_2, dots, phi_m$ такие, что
 $f(overline(x)) - f(overline(x)_0) = phi_1 (overline(x))(x_1 - x_1^0) + phi_2(overline(x)) (x_2 - x_2^0) + dots + phi_m (overline(x)) (x_m - x_m^0)$.
 Обозначим $A_k = phi_k (overline(x)_0)$. Тогда $phi_k (overline(x)) = A_k + alpha_k (overline(x))$, где функ. $alpha_k$ беск. малы в т. $overline(x)_0$. 
 Тогда опред-е эквив. равенству: $f(overline(x)) - f(overline(x)_0) = A_1 (x_1-x_1^0) + A_2 (x_2 - x_2^0) + dots + A_m (x_m - x_m^0) + 
