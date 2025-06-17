@@ -6,7 +6,7 @@ $S(P) = limits(sum)^n_(k=1)M_k Delta x_x$ --- верхняя, $s(P) = limits(sum
 + $forall P #h(4pt) forall xi_p #h(4pt) s(P)<= sigma(P,xi_P) <=S(P)$
 + $P subset P_1 ==> s(P)<=s(P_1), #h(4pt) S(P)>=S(P_1)$ 
 + $forall P_1 #h(4pt) forall P_2 #h(4pt) s(P_1) <= S(P_2)$ \ *Сл-е:* ${s(P)}$ огр. сверху, ${S(P)}$ огр. снизу.
-+ $forall P_1 #h(4pt) forall epsilon >0 #h(4pt) exists xi_P #h(4pt) 0<=S(P)-sigma(P,xi_p)<epsilon #h(4pt) (0<=sigma(P,xi_p)-s(P)<epsilon)$ \ *Сл-е:* $forall P #h(4pt) S(P) = limits(sup)_(xi_P)sigma(P,xi_P),  #h(4pt) s(P) = limits(inf)_(xi_P)sigma(P,xi_P)$
++ $forall P #h(4pt) forall epsilon >0 #h(4pt) exists xi_P #h(4pt) 0<=S(P)-sigma(P,xi_p)<epsilon #h(4pt) (0<=sigma(P,xi_p)-s(P)<epsilon)$ \ *Сл-е:* $forall P #h(4pt) S(P) = limits(sup)_(xi_P)sigma(P,xi_P),  #h(4pt) s(P) = limits(inf)_(xi_P)sigma(P,xi_P)$
 *Опр.* $overline(I):=limits(inf)_P S(P)$ --- верхний, $underline(I) :=limits(sup)_P S(P)$ --- нижний инт-ы Дарбу от $f$.\
 *Лемма*: $P = P_([a,b]), d= d(P), P^*$ получается из $P$ добавлением $l$ точек. $M = limits(sup)_(x in [a,b])f(x), m=limits(inf)_(x in [a,b])$. Тогда $S(P)-S(P^*)<=(M-m)l d, #h(4pt) s(P^*)-s(P)<=(M-m)l d$.\
 *Док-во*: Пусть $P^* = P union x^*$, где $x^* in (x_(k_1);x_k)$.\
