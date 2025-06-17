@@ -7,6 +7,6 @@
 4) криволин. интег. второго рода от ф. $P$ и $Q$ в обл. $D$ не зависит от пути интегр-я.\
 *Док-во.* 
 1) $=>$ 2): Пусть $P(x,y) d x + Q(x,y) d y = d F(x,y)$. Тогда: $(diff F(x,y)) /( diff x) = P(x,y) $, $(diff F(x,y)) / (diff y) = Q(x,y) $. След-но: $(diff P(x,y)) / (diff y) = (diff^2 F(x,y)) / (diff y diff x) $, $(diff Q(x,y)) / (diff x) = (diff^2 F(x,y)) / (diff x diff y) $. В силу непр. част. произ. правые части равны, значит равны и левые.\
-2) $=>$ 3): Пусть $L$ - произвол. кусочно глад. контур в $D$. По формуле Грина: $limits(#sym.integral.cont)_L P d x + Q d y = integral integral_D ((diff Q) / (diff x) - (diff P) / (diff y)) d x d y = 0 $, т. к. подынтегр. ф-ция тожд. равна нулю. \
+2) $=>$ 3): Пусть $L$ - произвол. кусочно глад. контур в $D$. По формуле Грина: $limits(#sym.integral.cont)_L P d x + Q d y = integral.double_D ((diff Q) / (diff x) - (diff P) / (diff y)) d x d y = 0 $, т. к. подынтегр. ф-ция тожд. равна нулю. \
 3) $<=>$ 4): Следует из Т., которая говорит, что чтобы криволин. интег. в обл. $D$ не зависел от пути интег. необ. и дост. чтобы $forall$ кусоч. конт. $L$ в $D$ вып.: $limits(#sym.integral.cont)_L P(x,y) d x + Q(x,y) d y = 0 $ \
 4) $=>$ 1): Ф. $F(x,y) = limits(integral)_(x_0,y_0)^(x,y) P d x + Q d y$ имеет непр. част. произ.: $(diff F(x,y)) / (diff x) = P(x,y) $, $(diff F(x,y)) / (diff y) = Q(x,y) $. Следовательно: $d F(x,y) = P(x,y) d x + Q(x,y) d y $, т.е. первое условие вып. 
