@@ -1,7 +1,7 @@
 = №2. Верхние и нижние суммы Дарбу, их св-ва. Верхний и нижний интегралы. Осн. лемма Дарбу
 
-*Опр.* $f$ опр. и огр. на $[a,b]$, $M_k = limits(sup)_(x in Delta k_n)f(x), m_k = limits(inf)_(x in Delta k_n)f(x), k = overline(1\, n)$.\
-$S(P) = limits(sum)^n_(k=1)M_k Delta x_x$ --- верхняя, $s(P) = limits(sum)^n_(k=1)m_k Delta x_x$ --- нижняя суммы Дарбу ф-ии $f$ для разбиения $P$. \
+*Опр.* $f$ опр. и огр. на $[a,b]$, $M_k = limits(sup)_(x in Delta k)f(x), m_k = limits(inf)_(x in Delta k)f(x), k = overline(1\, n)$.\
+$S(P) = limits(sum)^n_(k=1)M_k Delta x_k$ --- верхняя, $s(P) = limits(sum)^n_(k=1)m_k Delta x_k$ --- нижняя суммы Дарбу ф-ии $f$ для разбиения $P$. \
 *Св-ва сумм Дарбу:*
 + $forall P #h(4pt) forall xi_p #h(4pt) s(P)<= sigma(P,xi_P) <=S(P)$
 + $P subset P_1 ==> s(P)<=s(P_1), #h(4pt) S(P)>=S(P_1)$ 
