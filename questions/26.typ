@@ -1,5 +1,3 @@
-//Непрерывность, дифференцируемость и интегрируемость суммы функционального ряда
-
 = №26. Непр., дифф-ть и инт-ть суммы функ. ряда
 
 *Т. (о непр. суммы ряда)*: Пусть $forall n in NN$ $f_n$ непр. в т. $x_0 in X$ и ряд $sum f_n$ равн. сх. 
@@ -9,7 +7,7 @@
 
 *Т. (об инт-ти суммы ряда)*: Пусть $X = [a,b]$, $forall n in NN$ $f_n$ непр. на $[a, b]$ и ряд $sum f_n$ равн. сх.
 Тогда сумма ряда $S = limits(sum)_(n=1)^(infinity) f_n$ инт-ма и 
-$limits(integral)_(a)^(b) (limits(sum)_(n=1)^(infinity) f_n (x)) d x = limits(sum)_(n=1)^(infinity) f_n (x) limits(integral)_(a)^(b) f_n (x) d x$
+$limits(integral)_(a)^(b) (limits(sum)_(n=1)^(infinity) f_n (x)) d x = limits(sum)_(n=1)^(infinity) limits(integral)_(a)^(b) f_n (x) d x$
 
 *Док-во*: Следует из т. об инт-ти пред. функ. послед.
 
