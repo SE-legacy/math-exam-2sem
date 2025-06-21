@@ -1,26 +1,120 @@
-*Т. (линейность интеграла):* $f, g in Re[a, b], c in RR ==> f + g, c f in Re[a, b]$ и $limits(integral)_(a)^(b) (f(x) + g(x)) d x = limits(integral)_(a)^(b) f(x) d x + limits(integral)_(a)^(b) g(x) d x$, $limits(integral)_(a)^(b) c f(x) d x = c limits(integral)_(a)^(b) f(x) d x$.\
-*Док-во:* $sigma(f + g, P, xi_(P)) = sigma(f, P, xi_(P)) + sigma(g, P, xi_(P)), sigma(c f, P, xi_(P)) = c dot sigma(f, P, xi_(P))$\
+#import "../conf.typ": theorem, block_base, consequence
 
-*Т. (аддитивность интеграла):* Пусть $a < c < b$, тогда $f in Re[a, b] <==> f in Re[a, c]$ и $f in Re[c, b]$, $limits(integral)_(a)^(b) f(x) d x = limits(integral)_(a)^(c) f(x) d x + limits(integral)_(c)^(b) f (x) d x$.\
-*Док-во:* $arrow.r.double.long.bar f in Re[a, b], epsilon > 0 stretch(=>)_("крит. инт-сти") exists P_([a, b]): S(P) - s(P) < epsilon$. Пусть $P^(*) = P union {c}$, тогда $S(P^(*)) - s(P^(*)) <= S(P) - s(P) < epsilon$. $P^(*) = P'_([a, c]) union P''_([c, b]) = P' union P''$, $(S(P') - s(P') <= S(P^(*)) - s(P^(*)) < epsilon, (S(P'') - s(P'') <= S(P^(*)) - s(P^(*)) < epsilon stretch(=>)_("крит. инт-сти") f in Re[a, c]$ и $f in Re[c, b]$.\
-$arrow.l.double.long.bar f in Re[a, c]$ и $f in Re[c, b], epsilon > 0$. $exists P' = P'_([a, c])$ и $exists P'' = P''_([c, b]): S(P') - s(P') < (epsilon)/(2), S(P'') - s(P'') < (epsilon)/(2)$. Тогда для $P = P_([a, b]) = P' union P''$ $S(P) - s(P) < (epsilon)/(2) + (epsilon)/(2) < epsilon$ т.е. $f in Re[a, b]$. 
+#theorem(
+  name: "Теорема (линейность интеграла)",
+  breakline: true
+)[
+  $f, g in Re[a, b], #h(4pt) c in RR$. Тогда $f + g, #h(4pt) c f in Re[a, b]$, и
 
-*Т. (монотонность интеграла):* $f, g in Re[a, b], forall x in[a, b] f(x) <= g(x) ==> limits(integral)_(a)^(b) f(x) d x <= limits(integral)_(a)^(b) g(x) d x$.\ 
-*Док-во:* $forall P, forall xi_(P)$ $sigma(f, P, xi_(P)) <= sigma(g, P, xi_(P))$. Переходя к пределу при $d(P) -> 0$: $limits(integral)_(a)^(b) f(x) d x <= limits(integral)_(a)^(b) g(x) d x$.\
-*След-е 1:* $f in Re[a, b], forall x f(x) >= 0 ==> limits(integral)_(a)^(b) f(x) d x >= 0$.\
-*След-е 2:* $f in Re[a, b] ==> |limits(integral)_(a)^(b) f(x) d x| <= limits(integral)_(a)^(b) |f(x)| d x <= limits(sup)_(x in[a, b]) |f(x)| (b - a)$. 
+  $ limits(integral)_a^b (f(x) + g(x)) d x = limits(integral)_a^b f(x) d x + limits(integral)_a^b g(x) d x, quad limits(integral)_a^b c f(x) d x = c limits(integral)_a^b f(x) d x $
+][ 
+  $sigma(f + g, P, xi_(P)) = sigma(f, P, xi_(P)) + sigma(g, P, xi_(P))$.
 
-*Т. (первая теорема о среднем):* $f, g in Re[a, b], forall x in [a, b] " " g(x) >= 0 " " (g(x) <= 0), " " M = limits(sup)_(x in[a, b]) f(x), m = limits(inf)_(x in[a, b]) f(x) ==> exists mu in [m, M]: limits(integral)_(a)^(b) f(x) g(x) d x = mu limits(integral)_(a)^(b) g(x) d x$.\
-*Док-во:* $forall x in [a, b] g(x) >= 0, m <= f(x) <= M ==> m g(x) <= f(x) g(x) <= M g(x) ==> m limits(integral)_(a)^(b) g(x) d x <= limits(integral)_(a)^(b) f(x) g(x) d x <= M limits(integral)_(a)^(b) g(x) d x$. 
-1) Если $limits(integral)_(a)^(b) g(x) d x = 0 ==> 0 = 0$, 
-2) $limits(integral)_(a)^(b) g(x) d x > 0 ==> m <= (limits(integral)_(a)^(b) f(x) g(x) d x)/(limits(integral)_(a)^(b) g(x) d x) <= M$, $(limits(integral)_(a)^(b) f(x) g(x) d x)/(limits(integral)_(a)^(b) g(x) d x) = mu$.\
-*Замеч-е:* $f$ непр. на $[a, b] stretch(=>)^("Т. Коши о")_("промеж. знач-ях") exists xi in [a, b], f(xi) = mu, limits(integral)_(a)^(b) f(x) g(x) d x = f(xi) limits(integral)_(a)^(b) g(x) d x$.\
-*След-е:* Если $g(x) equiv 1$, то $limits(integral)_(a)^(b) f(x) d x = f(xi) limits(integral)_(a)^(b) 1 d x = f(xi)(b - a)$
+  $sigma(c f, P, xi_(P)) = c dot sigma(f, P, xi_(P))$.
+] 
 
-*Т. (операции над интегрируемыми функциями):* $f, g in Re[a, b] ==> |f|, f dot g in Re[a, b], (f)/(g) in Re[a, b]$ при усл. $exists c > 0 forall x in [a, b] |g(x)| >= c$.\
-*Док-во:* Пусть $epsilon > 0, S(f, P) - s(f, P) < epsilon$.\ 
-1) Докажем, что $|f|$ инт.: $forall xi, eta in Delta_(k) |f(xi)| - |f(eta)| <= |f(xi) - f(eta)| <= M_(k)(f) - m_(k)(f), M_(k)(f) = limits(sup)_(x in Delta k) f(x), m_(k)(f) = limits(inf)_(x in Delta k) f(x)$. Тогда $M_(k)(|f|) - m_(k)(|f|) <= M_(k)(f) - m_(k)(f) ==> S(|f|, P) - s(|f|, P) <= S(f, P) - s(f, P) < epsilon stretch(=>)_("крит. инт-сти") |f| in Re[a, b]$.\ 
-2) Докажем, что $f^(2)$ инт.:$f$ инт. $==> f$ огр. $exists A > 0 forall x in [a, b] |f(x)| <= A$. Пусть $xi, eta in Delta_(k)$, тогда $f^(2)(xi) - f^(2)(eta) = (f(xi) + f(eta))(f(xi) - f(eta)) <= 2A(f(xi) - f(eta)) <= 2A(M_(k)(f) - m_(k)(f)) ==> S(f^(2), P) - s(f^(2), P) <= 2A(S(f, P) - s(f, P)) < 2A epsilon stretch(=>)_("крит. инт-сти") f^(2) in Re[a, b]$. Т.к. $f dot g = (1)/(4)((f + g)^(2) - (f - g)^(2)) ==> f dot g in Re[a, b]$.\ 
-3) Докажем, что $(1)/(f)$ инт.: $(1)/(f(xi)) - (1)/(f(eta)) = (f(eta) - f(xi))/(f(xi)f(eta)) <= (1)/(C^(2))(M_(k)(f) - m_(k)(f)) ==> M_(k)((1)/(f)) - m_(k)((1)/(f)) <= (1)/(C^(2))(M_(k)(f) - m_(k)(f)), S((1)/(f), P) - s((1)/(f), P) <= (1)/(C^(2))(S(f, P) - s(f, P)) < (1)/(C^(2)) epsilon stretch(=>)_("крит. инт-сти") (1)/(f) in Re[a, b] ==> (f)/(g) in Re[a, b]$. 
-Замеч-е: Из инт-сти $|f|$ не следует инт-сть $f$.
+#theorem(
+  name: "Теорема (аддитивность интеграла)",
+  breakline: true
+)[
+  Пусть $a < c < b$, тогда $f in Re[a, b] <==> f in Re[a, c]$ и $f in Re[c, b]$, причем
 
+  $ limits(integral)_a^b f(x) d x = limits(integral)_(a)^(c) f(x) d x + limits(integral)_(c)^(b) f (x) d x. $
+][
+Достаточность. $f in Re[a, b], #h(4pt) epsilon > 0$. По критерию интегрируемости $exists P_([a, b]) #h(4pt) S(P) - s(P) < epsilon$. 
+
+Пусть $P^(*) = P union {c}$. Тогда
+$S(P^(*)) - s(P^(*)) <= S(P) - s(P) < epsilon, #h(4pt) P^(*) = P'_([a, c]) union P''_([c, b]) = P' union P''$.
+
+$ S(P') - s(P') <= S(P^(*)) - s(P^(*)) < epsilon, \ 
+  S(P'') - s(P'') <= S(P^(*)) - s(P^(*)) < epsilon $
+
+Тогда по критерию интегрируемости $f in Re[a, c]$ и $f in Re[c, b]$.
+
+Необходимость. $f in Re[a, c]$ и $f in Re[c, b], #h(4pt) epsilon > 0. #h(4pt) exists P' = P'_([a, c])$ и $exists P'' = P''_([c, b]):$
+
+$S(P') - s(P') < (epsilon)/(2), #h(4pt) S(P'') - s(P'') < (epsilon)/(2)$.
+
+Тогда для $P = P_([a, b]) = P' union P'' quad S(P) - s(P) < (epsilon)/(2) + (epsilon)/(2) < epsilon$, т.е. $f in Re[a, b]$. 
+]
+
+#theorem(
+  name: "Теорема (монотонность интеграла)",
+  breakline: true
+)[
+  $ f, g in Re[a, b], forall x in [a, b] #h(4pt) f(x) <= g(x) ==>  limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x. $
+][
+  $forall P #h(4pt) forall xi_(P) #h(4pt)  sigma(f, P, xi_(P)) <= sigma(g, P, xi_(P)).$ Переходя к пределу при $d(P) -> 0$, получим
+  $ limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x. $ 
+]
+
+#consequence(name: "Следствие 1")[
+  $f in Re[a, b], forall x #h(4pt) f(x) >= 0 ==> limits(integral)_a^b f(x) d x >= 0$.
+][]
+
+#consequence(name: "Следствие 2")[
+  $ f in Re[a, b] ==> abs(limits(integral)_a^b f(x) d x) <= limits(integral)_a^b abs(f(x)) d x <= limits(sup)_(x in[a, b]) abs(f(x)) (b - a). $ 
+][]
+
+#theorem(
+  name: "Теорема (первая теорема о среднем)",
+  breakline: true
+)[
+  $f, g in Re[a, b], forall x in [a, b] #h(4pt) g(x) >= 0 #h(4pt) lr((g(x) <= 0), size: #125%)$,
+
+  $M = limits(sup)_(x in[a, b]) f(x), m = limits(inf)_(x in[a, b]) f(x) ==>$
+  $ exists mu in [m, M] limits(integral)_a^b f(x) g(x) d x = mu limits(integral)_a^b g(x) d x. $
+
+  При дополнительном условии, что $f$ непрерывна на $[a, b]$ 
+  $ exists xi in [a, b] quad f(xi) = mu, limits(integral)_a^b f(x) g(x) d x = f(xi) limits(integral)_a^b g(x) d x. $
+][
+  $forall x in [a, b] #h(4pt) g(x) >= 0, #h(4pt) m <= f(x) <= M ==> m g(x) <= f(x) g(x) <= M g(x) ==>$
+  $ m limits(integral)_a^b g(x) d x <= limits(integral)_a^b f(x) g(x) d x <= M limits(integral)_a^b g(x) d x. \
+  limits(integral)_a^b g(x) d x = 0 ==> 0 = 0. \
+  limits(integral)_a^b g(x) d x > 0 ==> m <= (limits(integral)_a^b f(x) g(x) d x)/(limits(integral)_a^b g(x) d x) <= M (limits(integral)_a^b f(x) g(x) d x)/(limits(integral)_a^b g(x) d x) = mu. $
+]
+
+#consequence(breakline: true)[ 
+$g(x) equiv 1 ==> limits(integral)_a^b f(x) d x  = f(xi)(b - a)$.
+
+$f$ непр. на $[a, b] ==> exists xi in [a, b] quad limits(integral)_a^b f(x) d x = f(xi) (b - a)$.
+][]
+
+#theorem(
+  name: "Теорема (операции над интегрируемыми функциями)",
+  breakline: true
+)[ 
+  $f, g in Re[a, b]$. Тогда $abs(f), #h(4pt) f dot g, и 1/f$ интегрируемы на $[a,b]$, при условии $exists c > 0 #h(4pt) forall x in [a, b] #h(4pt) abs(f(x)) >= c$.
+][
+  Пусть $epsilon > 0, #h(4pt) S(f, P) - s(f, P) < epsilon$.
+
+  + #[
+    Докажем, что $abs(f)$ интегрируема:
+
+    $forall xi, eta in Delta_k quad abs(f(xi)) - abs(f(eta)) <= abs(f(xi) - f(eta)) <= M_(k)(f) - m_(k)(f)$,
+    
+    $M_(k)(f) = limits(sup)_(x in Delta_k) f(x), quad m_(k)(f) = limits(inf)_(x in Delta_k) f(x) ==> M_(k)(abs(f)) - m_(k)(abs(f)) <= M_(k)(f) - m_(k)(f) ==> S(abs(f), P) - s(abs(f), P) <= S(f, P) - s(f, P) < epsilon$
+    
+    Тогда по критерию интегрируемости $abs(f) in Re[a, b]$.
+  ] 
+  + #[
+    Докажем, что $f^(2)$ интегрируема:
+    
+    $f$ интегрируема, тогда  $f$ ограничена, т.е. $exists A > 0 #h(4pt) forall x in [a, b] #h(4pt) abs(f(x)) <= A$.
+    
+    Пусть $xi, eta in Delta_(k)$, тогда $f^(2)(xi) - f^(2)(eta) = lr((f(xi) + f(eta)), size: #125%) lr((f(xi) - f(eta)), size: #125%) <= 2A lr((f(xi) - f(eta)), size: #125%) <= 2A lr((M_(k)(f) - m_(k)(f)), size: #125%) ==> S(f^(2), P) - s(f^(2), P) <= 2A lr((S(f, P) - s(f, P)), size: #125%) < 2A epsilon$
+    
+    Тогда по критерию интегрируемости $f^(2) in Re[a, b]$. Т.к. $f dot g = (1)/(4)((f + g)^(2) - (f - g)^(2)) ==> f dot g in Re[a, b]$.
+  ]
+  + #[
+    Докажем, что $(1)/(f)$ интегрируема:
+    $ (1)/(f(xi)) - (1)/(f(eta)) = (f(eta) - f(xi))/(f(xi)f(eta)) <= (1)/(C^(2)) lr((M_(k)(f) - m_(k)(f)), size: #125%) ==> \ 
+    M_(k)((1)/(f)) - m_(k)((1)/(f)) <= (1)/(C^(2)) lr((M_(k)(f) - m_(k)(f)), size: #125%), \ 
+    S((1)/(f), P) - s((1)/(f), P) <= (1)/(C^(2))(S(f, P) - s(f, P)) < (1)/(C^(2)) epsilon $
+    
+    Тогда по критерию интегрируемости $(1)/(f) in Re[a, b]$.
+  ]
+]
+
+*Замечание*:
+Из интегрируемости $abs(f)$ не следует интегрируемость $f$.
