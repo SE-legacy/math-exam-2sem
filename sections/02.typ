@@ -1,6 +1,6 @@
 #import "../conf.typ": definition, theorem, property, consequence, lemma
 
-#definition(breakline: true)[
+#definition()[
   Функция $f$ определена и ограничена на $[a,b], #h(6pt) M_k = limits(sup)_(x in Delta_k)f(x) , #h(6pt) m_k = limits(inf)_(x in Delta_k)f(x), #h(6pt) k = overline(1\, n)$. Суммы 
   $ S(P) = sum^n_(k=1)M_k Delta x_k, quad s(P) = sum^n_(k=1)m_k Delta x_k $
   называются верхней и нижней суммами Дарбу соответсвенно функции $f$ для разбиения $P$.
@@ -54,7 +54,7 @@
   $overline(I) colon.eq limits(inf)_P S(P)$ --- верхний, $underline(I) colon.eq limits(sup)_P S(P)$ --- нижний интегралы Дарбу от $f$.
 ]
 
-#lemma(breakline: true)[
+#lemma()[
   $P = P_([a,b]), #h(6pt) d= d(P), #h(6pt) P^*$ получается из $P$ добавлением $l$ точек.
 
   $M = limits(sup)_(x in [a,b])f(x), m=limits(inf)_(x in [a,b]) ==> S(P)-S(P^*)<=(M-m)l d, quad s(P^*)-s(P)<=(M-m)l d$.

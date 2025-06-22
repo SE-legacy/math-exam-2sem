@@ -4,10 +4,7 @@
   Функция, имеющая на отрезке непрерывную производную, называется непрерывно дифференцируемой или гладкой.
 ]
 
-#theorem(
-  name: "Теорема (формула интегрирования по частям)",
-  breakline: true
-)[
+#theorem(name: "Теорема (формула интегрирования по частям)")[
   Функции $u(x)$ и $v(x)$ непрерывно дифференцируемы на $[a, b] ==>$
   $ limits(integral)_a^b u(x)v'(x) d x = u(x)v(x)|_a^b - limits(integral)_a^b v(x) u'(x) d x. $
 ][
@@ -16,10 +13,7 @@
   $ u(x)v(x)|_a^b = limits(integral)_a^b (u(x)v(x))' d x = limits(integral)_a^b u'(x)v(x) d x + limits(integral)_a^b u(x)v'(x) d x. $
 ]
 
-#theorem(
-  name: "Теорема (формула замены переменной)",
-  breakline: true
-)[
+#theorem(name: "Теорема (формула замены переменной)")[
   Функция $f$ непрерывна на $[a, b]$, функция $g$ непрерывно дифференцируема на $[alpha, beta]$ и $limits(min)_(t in [alpha, beta]) g(t) = g(alpha) = a, quad limits(max)_(t in [alpha, beta]) g(t) = g(beta) = b$. Тогда
   $ limits(integral)_a^b f(x) d x = limits(integral)_(alpha)^(beta) f(g(t))g'(t) d t. $
 ][

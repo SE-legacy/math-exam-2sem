@@ -1,27 +1,24 @@
 #import "../conf.typ": definition, theorem
 
-#definition(breakline: true)[ 
+#definition()[ 
   Пусть функция $f$ определена на $[a, +infinity)$, $forall b in [a, +infinity) #h(6pt) f in Re[a, b]$. Предел
   $ limits(integral)_(a)^(+infinity) f(x) d x colon.eq  limits(lim)_(b -> +infinity) limits(integral)_a^b f(x) d x $
   называется несобственным интегралом 1–го рода, если предел существует и конечен.
   Тогда говорят, что несобственный интеграл сходится. Аналогично определяют $limits(integral)_(-infinity)^(b) f(x) d x$.
 ]
 
-#definition(breakline: true)[ 
+#definition()[ 
   Пусть функция $f$ определена на $[a, B)$, неограничена в $O(B)$ и $forall b in [a, B) #h(6pt) f in Re[a, b]$. Предел
   $ limits(integral)_a^b f(x) d x colon.eq limits(lim)_(b -> B-0) limits(integral)_a^b f(x) d x $
   называется несобственным интегралом 2–го рода, если предел существует и конечен. Тогда говорят, что несобственный интеграл сходится.
 ]
 
-#definition(breakline: true)[ 
+#definition()[ 
   Пусть функция $f$ определена на $[a, omega)$ и $forall [a, b] subset [a, omega) #h(6pt) f in Re[a, b]$
   $ limits(integral)_(a)^(omega) f(x) d x colon.eq limits(lim)_(b -> omega) limits(integral)_a^b f(x) d x. $ 
 ]
 
-#theorem(
-  name: "Теорема (свойства несобственного интеграла Римана)",
-  breakline: true
-)[
+#theorem(name: "Теорема (свойства несобственного интеграла Римана)")[
   Пусть несобственные интергалы $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ сходятся, тогда:
 
   + $omega in RR, #h(4pt) f in Re [a, omega] ==>$ значения $limits(integral)_(a)^(omega) f(x) d x$ в несобственном и собственном смысле равны.

@@ -1,9 +1,6 @@
 #import "../conf.typ": theorem
 
-#theorem(
-  name: "Теорема (критерий интегрируемости)",
-  breakline: true
-)[
+#theorem(name: "Теорема (критерий интегрируемости)")[
   Фукнция $f$ определена и ограничена на $[a,b]$. Тогда следующие условия эквивалентны:
 
   #enum(number-align: horizon, 

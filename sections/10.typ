@@ -1,10 +1,13 @@
 #import "../conf.typ": definition, theorem
 
-#definition()[
+#definition(breakline: true)[
   Несобсвенный интеграл $limits(integral)_(a)^(omega) f(x) d x$ сходится абсолютно, если сходится $limits(integral)_(a)^(omega) abs(f(x)) d x$.
 ]
 
-#theorem(name: "Теорема (о сходимости абсолютно сходящегося интеграла)")[ 
+#theorem(
+  name: "Теорема (о сходимости абсолютно сходящегося интеграла)",
+  breakline: true
+)[ 
   Несобсвенный интеграл $limits(integral)_(a)^(omega) f(x) d x$ абсолютно сходится $==>$ он сходится
 ][
   По свойствам несобственного интеграла 
@@ -12,7 +15,7 @@
   По критерию Коши сходимости несобственного интеграла интеграл сходится.
 ]
 
-#theorem(breakline: true)[
+#theorem()[
   Пусть $forall x in [a, omega) #h(6pt) f(x) >= 0$. Несобсвенный интеграл $limits(integral)_(a)^(omega) f(x) d x$ сходится тогда и только тогда, когда функция 
   $ F(b) = limits(integral)_a^b f(x) d x, #h(6pt) b in [a,omega) $ ограничена
 ][
@@ -28,9 +31,7 @@
   Тогда функция $F$ ограничена. Тогда по предыдущей теореме $limits(integral)_(a)^(omega) f(x) d x$ сходится.
 ]
 
-#theorem(name: "Теорема (признак сравнения)",
-  breakline: true
-)[
+#theorem(name: "Теорема (признак сравнения)")[
   $forall x in [a, omega) #h(6pt) f(x) >= 0, #h(6pt) g(x) >= 0, #h(6pt) 0 < A < +infinity$ и 
   $ lim_(x -> omega) f(x)/g(x) = A ==> $
   несобсвенные интегралы $limits(integral)_(a)^(omega) f(x) d x$ и $limits(integral)_(a)^(omega) g(x) d x$ одновременно сходятся или расходятся.
