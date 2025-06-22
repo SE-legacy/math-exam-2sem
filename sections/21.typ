@@ -1,5 +1,5 @@
 *Опр.* Числ. ряд $sum c_n$, где $c_n = a_n dot  limits(sum)^(n-1)_(k=1) b_k + b_n dot  limits(sum)^(n-1)_(k=1) a_k + a_n b_n$, наз. произведением рядов $sum a_n$ и $sum b_n$, согл. с произведением частных сум. \
-Если $A_n = limits(sum)^(n)_(k=1) a_k, #h(4pt) B_n = limits(sum)^(n)_(k=1) b_k, #h(4pt) C_n = limits(sum)^(n)_(k=1) c_k$, то $C_n = A_n dot B_n$.
+Если $A_n = limits(sum)^(n)_(k=1) a_k, #h(6pt) B_n = limits(sum)^(n)_(k=1) b_k, #h(6pt) C_n = limits(sum)^(n)_(k=1) c_k$, то $C_n = A_n dot B_n$.
 
 *Т. (о пр-ии абс. сх-ся рядов)*: Пусть $sum a_n$ и $sum b_n$ абс. сх-ся, тогда при любой нумерации эл-тов матрицы $C = mat(
   a_1 b_1, a_1 b_2, dots;

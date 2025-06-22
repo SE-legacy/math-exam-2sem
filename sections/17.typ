@@ -1,6 +1,6 @@
 *Опр.* $a^+ = (abs(a)+a)/2$ --- полож. часть числа,  $a^- = (abs(a)-a)/2$  --- отриц. часть числа
 
-$sum a_n = sum a_n^+ - sum a_n^-, #h(4pt) sum abs(a_n) = sum a_n^+ + sum a_n^-$
+$sum a_n = sum a_n^+ - sum a_n^-, #h(6pt) sum abs(a_n) = sum a_n^+ + sum a_n^-$
 
 *Т. (необх. и дост. условие абс. сх-ти ряда)*: $sum a_n$ абс. сх-ся $<==>$ сх-ся  $sum a_n^+$ и $sum a_n^-$.
 

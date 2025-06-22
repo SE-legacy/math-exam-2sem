@@ -29,8 +29,8 @@ $limits(sum)_(n=0)^(infinity) a_n (x - x_0)^n$
 
 *Опр.*: Пусть функ. $f$ беск. дифф. в т. $x = x_0$. Ряд $limits(sum)_(n=0)^(infinity) f^((n)) (x_0)/n! (x-x_0)^n$ называют рядом Тейлора функ. $f$
 
-*Опр.*: Функцию $e^x := limits(sum)_(n=0)^(infinity) x^n/n!$, $x in RR$ называют показательной функ. или экспонентой
+*Опр.*: Функцию $e^x colon.eq limits(sum)_(n=0)^(infinity) x^n/n!$, $x in RR$ называют показательной функ. или экспонентой
 
-*Опр.*: $sin(x) := limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n+1))/(2n+1)!$, $cos(x) :=  limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n))/(2n)!$, $forall x in RR$
+*Опр.*: $sin(x) colon.eq limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n+1))/(2n+1)!$, $cos(x) colon.eq  limits(sum)_(n=0)^(infinity) ((-1)^n x^(2n))/(2n)!$, $forall x in RR$
 
 *Опр.*: Сумма степ. ряда $1 + limits(sum)_(n=1)^(infinity) (alpha(alpha - 1) dots (alpha - n + 1))/n! x^n$ называется биноминальной функ. и обозначается как $(1+x)^alpha$

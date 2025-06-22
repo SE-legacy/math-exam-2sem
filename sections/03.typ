@@ -4,14 +4,14 @@
   name: "Теорема (критерий интегрируемости)",
   breakline: true
 )[
-  $f$ определена и ограничена на $[a,b]$. Тогда следующие условия эквивалентны:
+  Фукнция $f$ определена и ограничена на $[a,b]$. Тогда следующие условия эквивалентны:
 
   #enum(number-align: horizon, 
     [
     $f$ интегрируема;
     ],
     [
-    $forall epsilon > 0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$;
+    $forall epsilon > 0 #h(6pt) exists P #h(6pt) S(P) - s(P)<epsilon$;
     ],
     [
       $underline(I) = overline(I)$, при этом $underline(I) = overline(I) = limits(integral)^b_a f(x) d x$.
@@ -20,19 +20,17 @@
 ][ 
   $1==>2$.
   
-  $f$ интегрируема $==>$
+  $f$ интегрируема $==> forall epsilon>0 #h(6pt) exists delta > 0 #h(6pt) forall(P, xi_p) #h(6pt) (d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4)$
 
-  $forall epsilon>0 #h(4pt) exists delta > 0 #h(4pt) forall(P, xi_p) #h(4pt) (d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4)$
-
-  По свойству 4 сумм Дарбу для $P #h(4pt) exists xi'_P, xi''_P:$
+  По свойству 4 сумм Дарбу для $P #h(6pt) exists xi'_P, xi''_P:$
 
   $S(P)-sigma(P,xi'_P) < epsilon/4, quad sigma(P,xi''_P) - s(P) < epsilon/4$, но $abs(sigma(P,xi'_P)- I) < epsilon/4, quad abs(I-sigma(P,xi''_P)) <epsilon/4 ==>$
 
-  $abs(S(P)-s(P)) = abs((S(P)-sigma(P,xi'_P))) + (sigma(P,xi'_P) - I) + (I-sigma(P,xi''_P)) + (sigma(P,xi''_P) - s(P))) < 4 dot epsilon/4 = epsilon.$
+  $abs(S(P)-s(P)) = abs(lr((S(P)-sigma(P,xi'_P)), size: #125%) + lr((sigma(P,xi'_P) - I), size: #125%) + lr((I-sigma(P,xi''_P)), size: #125%) + lr((sigma(P,xi''_P) - s(P)), size: #125%)) <= abs(S(P)-sigma(P,xi'_P)) + abs(sigma(P,xi'_P) - I) + abs(I - sigma(P,xi''_P)) + abs(sigma(P,xi''_P) - s(P)) < 4 dot epsilon/4 = epsilon.$
 
   $2==>3$. 
   
-  $forall epsilon > 0 #h(4pt) exists P #h(4pt) S(P) - s(P)<epsilon$. При этом $s(P)<=underline(I) <= overline(I) <= S(P)$, тогда
+  $forall epsilon > 0 #h(6pt) exists P #h(6pt) S(P) - s(P)<epsilon$. При этом $s(P)<=underline(I) <= overline(I) <= S(P)$, тогда
 
   $0 <=  overline(I) - underline(I) <= S(P) - s(P) < epsilon. $
   Т.к. $epsilon$ --- произвольное, то $overline(I) - underline(I) = 0 <==> underline(I) = overline(I)$
@@ -41,7 +39,7 @@
   
   Пусть $underline(I) = overline(I) = A$. По основной лемме Дарбу 
 
-  $forall epsilon>0 #h(4pt) exists delta>0 #h(4pt) forall P #h(4pt) (d(P)< delta => (S(P)-A < epsilon and A-s(P) < epsilon))$
+  $forall epsilon>0 #h(6pt) exists delta>0 #h(6pt) forall P #h(6pt) (d(P)< delta => (S(P)-A < epsilon and A-s(P) < epsilon))$
 
   По свойству 1 сумм Дарбу $A-epsilon<s(P)<= sigma(P,xi_P)<= S(P) < A + epsilon ==> abs(sigma(P, xi_P)-A) < epsilon,$
 

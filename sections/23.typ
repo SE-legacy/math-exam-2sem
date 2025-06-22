@@ -17,7 +17,7 @@ limits(integral)_(a)^(b) abs(f_n (x) - f(x)) d x <= norm(f_n - f)(b - a) = o(1)"
 
 *Док-во*: Ф-ла Ньют.-Лейб.: $f_n (x) = f_n (x_0) + limits(integral)_(x_0)^(x) f_n^(prime) (t) d t$.
 Пусть $A = limits(lim)_(n->infinity) f_n (x_0)$, $F_n (x) = limits(integral)_(x_0)^(x) f_n^(prime) (t) d t$, $Phi(x) = limits(integral)_(x_0)^(x) phi(t) d t$, $x in [a, b]$.
-В силу сл-ия т. об инт-ти пред. $F_n arrows Phi$. Тогда послед. $(f_n)$ на этом отр. равн. сх. к $f(x) := A + limits(integral)_(x_0)^(x) phi(t) d t$, $x in [a, b]$.
+В силу сл-ия т. об инт-ти пред. $F_n arrows Phi$. Тогда послед. $(f_n)$ на этом отр. равн. сх. к $f(x) colon.eq A + limits(integral)_(x_0)^(x) phi(t) d t$, $x in [a, b]$.
 Дифф-уя по верх. пред. инт.: $f^(prime) (x) = phi(x)$ $forall x in [a, b]$
 
 
