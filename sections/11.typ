@@ -20,5 +20,5 @@ $ limits(integral)_a^omega f(x)g(x) d x = B - g(a)F(a) - A. $
 #theorem(name: "Теорема (признак Абеля)")[ 
   Пусть функции $f$, $g$, $g'$ непрерывны на $[a, omega)$, несобсвенный интеграл $limits(integral)_a^omega f(x) d x$ сходится, $g$ монотонна и ограничена на $[a, omega) ==>$  несобсвенный интеграл $limits(integral)_a^omega f(x)g(x) d x$ сходится.
 ][
-  Д О К А З А Т Ь $quad$ С А М О С Т О Я Т Е Л Ь Н О #emoji.skull.
+  Д О К А З А Т Ь #h(8pt) С А М О С Т О Я Т Е Л Ь Н О #emoji.skull.
 ]
