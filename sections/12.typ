@@ -1,11 +1,48 @@
-*Опр.:* Числовой ряд $Sigma a_(n)$ --- это посл–ть $(S_(n))$, $a_(n)$ --- $n$–ый член ряда, $S_(n)$ --- $n$–ая частичная сумма ряда, $S_(n) = limits(Sigma)_(k = 1)^(n) a_(k), n in NN$.\ 
-*Опр.:* Если в $overline(RR)$ сущ. предел $limits(lim)_(n -> infinity) S_(n) = S$, то $S in overline(RR)$ наз. суммой ряда и обозн. $S = limits(Sigma)_(n = 1)^(infinity) a_(n)$. 
-Если $S$ конечное, то ряд наз. сходящимся. Если $S = plus.minus infinity$, или $limits(lim)_(n -> infinity) S_(n)$ не сущ. то ряд расход.
+#import "../conf.typ": definition, theorem
 
-*Т.(необх. усл. сход–ти ряда):* $Sigma a_(n)$ сход. $==> limits(lim)_(n -> infinity) a_(n) = 0$, т.е. $a_(n) = overline(o)(1)$.
-*Док-во:* Пусть ряд $Sigma a_(n)$ сход. и его сумма $S in RR$. Тогда $limits(lim)_(n -> infinity) a_(n) = limits(lim)_(n -> infinity) (S_(n) - S_(n - 1)) = S - S = 0$. 
+#definition(breakline: true)[
+  Числовой ряд $sum a_n$ --- это последовательность $(S_n)$, $S_n = limits(sum)_(k = 1)^n a_k, n in NN$
+  
+  $a_n$ --- $n$–ый член ряда, $S_n$ --- $n$–ая частичная сумма ряда.
+]
 
-*Опр.:* Ряд $Sigma a_(n)$ удовл. усл. Коши, если $forall epsilon > 0 exists n_(epsilon) in NN forall n >= n_(epsilon) forall p in NN |limits(Sigma)_(k = n + 1)^(n + p) a_(k)| < epsilon$.
+#definition(breakline: true)[
+  Если в $overline(RR)$ существует предел $limits(lim)_(n -> infinity) S_n = S$, то $S in overline(RR)$ называют суммой ряда и обозначают 
 
-*Т. (крит. Коши сход–ти числ. ряда.):* $Sigma a_(n)$ сход. $<==>$ ряд удовл. усл. Коши.\ 
-*Док-во:* Используя крит. Коши сход-ти последовательности: $Sigma a_(n)$ сход. $<==> (S_(n))$ сход. $<==> (S_(n))$ фундаментальна, т.е. $forall epsilon > 0 exists n_(epsilon) in NN forall n >= n_(epsilon) forall p in NN |S_(n + p) - S_(n)| < epsilon$. При этом $S_(n + p) - S_(n) = limits(Sigma)_(k = 1)^(n + p) a_(k) - limits(Sigma)_(k = 1)^(n) a_(k) = limits(Sigma)_(k = n + 1)^(n + p) a_(k)$. 
+  $ S = sum_(n = 1)^infinity a_n. $
+
+  Если $S$ конечное, то ряд называют сходящимся. Если $S = plus.minus infinity$, или $limits(lim)_(n -> infinity) S_n$ не существует то ряд называют расходящимся.
+]
+
+#theorem(
+  name: "Теорема (необходимое условие сходимости ряда)",
+  breakline: true
+)[ 
+  Ряд $sum a_n$ сходится $==> limits(lim)_(n -> infinity) a_n = 0$, т.е. $a_n = overline(o)(1)$.
+][
+  Пусть ряд $sum a_n$ сходится и его сумма $S in RR$. Тогда 
+  
+  $ lim_(n -> infinity) a_n = lim_(n -> infinity) (S_n - S_(n - 1)) = S - S = 0. $
+]
+
+#definition()[
+  Ряд $sum a_n$ удовлетворяет условию Коши, если 
+  
+  $ forall epsilon > 0 #h(6pt) exists n_epsilon in NN #h(6pt) forall n >= n_epsilon #h(6pt) forall p in NN #h(6pt) abs(sum_(k = n + 1)^(n + p) a_k) < epsilon. $
+]
+
+
+#theorem(
+  name: "Теорема (критерия Коши сходимости числового ряда)",
+  breakline: true 
+)[ 
+  Ряд $sum a_n$ сходится $<==>$ ряд $sum a_n$ удовлетворяет условию Коши.
+][
+  Используя критерий Коши сходимости последовательности: $sum a_n$ сходится по определению, когда $(S_n)$ сходится, т.е тогда и только тогда, когда $(S_n)$ фундаментальна, т.е. 
+
+  $ forall epsilon > 0 #h(6pt) exists n_epsilon in NN #h(6pt) forall n >= n_epsilon #h(6pt) forall p in NN #h(6pt) abs(S_(n + p) - S_n) < epsilon. $
+
+  При этом 
+
+  $ S_(n + p) - S_n = sum_(k = 1)^(n + p) a_k - sum_(k = 1)^n a_k = sum_(k = n + 1)^(n + p) a_k. $
+]
