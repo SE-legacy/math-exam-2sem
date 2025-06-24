@@ -1,17 +1,55 @@
-*Т. (пр. Коши)*: $forall n in NN #h(6pt) a_n >= 0, #h(6pt) overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*:
-+ $alpha < q < 1 stretch(=>)^"опр."_"верх. пред." exists n_0 #h(6pt) forall n >= n_0 #h(6pt) root(n, a_n) <= limits(sup)_(n>= n_0) root(n, a_n) < q ==> a_n < q_n$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"пр."_"маж." sum a_n$ сх-ся.
-+ $alpha > 1 ==>$ для беск. числа значений $n$ $root(n, a_n) >= 1 ==> a_n != o(1)$, ряд рас-ся. \
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
+#import "../conf.typ": theorem
 
-*Т. (пр. Даламбера)*: $forall n in NN #h(6pt) a_n > 0, #h(6pt) limits(lim)_(n-> infinity) (a_(n+1))/(a_n) = alpha$.
-+ $alpha < 1 ==> sum a_n$ сх-ся;
-+ $alpha > 1 ==> sum a_n$ рас-ся;
-+ $alpha = 1 ==>$ вопрос о сх-ти открытый.
-*Док-во*: 
-+ $alpha < q < 1 stretch(=>)^"порядк."_"св-ва пред." exists n_0 #h(6pt) forall n >= n_0 #h(6pt) (a_(n+1))/(a_n) < q = (q^(n+1))/(q^n)$. $sum q^n$ при $0< q<1$ сх-ся $stretch(=>)^"сл-е 1 из"_"пр. маж."sum a_n$ сх-ся. \
-+ $alpha > 1 ==> exists n_0 #h(6pt) forall n>= n_0 #h(6pt) a_(n+1)/(a_n) > 1$, т. е. при $n >= n_0 #h(6pt) a_(n+1) > a_n ==> a_n != o(1)$, ряд рас-ся. \
-+ Для $sum 1/n$ (рас-ся) и $sum 1/(n^2)$ (сх-ся) $alpha = 1$.
+#theorem(name: "Теорема (признак Коши)")[
+  $forall n in NN #h(6pt) a_n >= 0$,
+
+  $ overline(limits(lim)_(n-> infinity)) root(n, a_n) = alpha. $
+
+  + $alpha < 1 ==>$ ряд $sum a_n$ сходится;
+
+  + $alpha > 1 ==>$ ряд $sum a_n$ расходится;
+
+  + $alpha = 1 ==>$ вопрос о сходимости остается открытым.
+][
+  + #[
+    Если $alpha < q < 1$, то по определению верхнего предела 
+  
+    $exists n_0 #h(6pt) forall n >= n_0 #h(6pt) root(n, a_n) <= limits(sup)_(n>= n_0) root(n, a_n) < q ==> a_n < q_n$.
+    
+    Ряд $sum q^n$ при $0< q<1$ сходится. Тогда по признаку мажорации $sum a_n$ сходится.
+  ]
+
+  + Если $alpha > 1$, то для бесконечного числа значений $n$ $root(n, a_n) >= 1$. Тогда $a_n != o(1)$, т.е ряд расходится.
+
+  + $alpha = 1$ для расходящегося ряда $sum 1/n$ и сходящегося ряда $sum 1/(n^2)$.
+]
+
+#theorem(name: "Теорема (признак Даламбера)")[
+  $forall n in NN #h(6pt) a_n > 0$,
+
+  $ lim_(n-> infinity) a_(n+1)/a_n = alpha. $
+
+  + $alpha < 1 ==>$ ряд $sum a_n$ сходится;
+
+  + $alpha > 1 ==>$ ряд $sum a_n$ расходится;
+
+  + $alpha = 1 ==>$ вопрос о сходимости остается открытым.
+][
+  + #[
+    Если $alpha < q < 1$, то по порядковым свойствам предела 
+    
+    $exists n_0 #h(6pt) forall n >= n_0 #h(6pt) (a_(n+1))/(a_n) < q = (q^(n+1))/(q^n)$. 
+  
+    Ряд $sum q^n$ при $0< q<1$ сходится. Тогда по следсnвию 1 из признака мажорации ряд $sum a_n$ сходится.
+  ]
+
+  + #[
+    Если $alpha > 1$, то 
+
+    $exists n_0 #h(6pt) forall n>= n_0 #h(6pt) a_(n+1)/(a_n) > 1$, 
+    
+    т.е. при $n >= n_0 #h(6pt) a_(n+1) > a_n$. Тогда $a_n != o(1)$, ряд расходится.
+  ]
+
+  + $alpha = 1$ для расходящегося ряда $sum 1/n$ и сходящегося ряда $sum 1/(n^2)$.
+]
