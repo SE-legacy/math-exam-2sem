@@ -41,8 +41,8 @@
 ][
   $forall k = 1, dots, k #h(6pt) exists xi_k in Delta_k:$
   $ 0<= M_k - f(xi_k) < (epsilon)/(b-a) ==>
-  0<= S(P) - sigma(P, xi_P) = $
-  $ sum^n_(k=1) (M_k - f(xi_P)) Delta x_k < (epsilon)/(b-a) sum^n_(k=1) Delta x_k = (epsilon)/(b-a) (b-a) = epsilon. $ 
+  0<= S(P) - sigma(P, xi_P) = \
+  = sum^n_(k=1) (M_k - f(xi_P)) Delta x_k < (epsilon)/(b-a) sum^n_(k=1) Delta x_k = (epsilon)/(b-a) (b-a) = epsilon. $ 
   Для $s(P)$ аналогично.
 ]
 
@@ -62,7 +62,7 @@
   Пусть $P^* = P union x^*$, где $x^* in (x_(k_1);x_k)$.
 
   $ S(P) - S(P^*) = & M_k Delta x_k - lr([M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*)], size: #125%) <= \ 
-  & M_k Delta x_k - m lr([(x^* - x_(k-1)) + (x_k - x^*)], size: #125%) <= (M-m) Delta x_k <= (M-m) d. $
+  & <= M_k Delta x_k - m lr([(x^* - x_(k-1)) + (x_k - x^*)], size: #125%) <= (M-m) Delta x_k <= (M-m) d. $
 
   Если проделать это с $l$ точками, к правой части добавится множитель $l$. Для $s(P)$ аналогично.
 ]
