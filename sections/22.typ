@@ -52,7 +52,8 @@
   
   $ exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall x in X #h(6pt) abs(f_n (x) - f(x)) < epsilon/2. $
   
-  Тогда $forall x in X #h(6pt) forall m >= n_(epsilon) #h(6pt) abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon $, 
+  Тогда $forall x in X #h(6pt) forall m >= n_(epsilon) $
+  $ abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon, $
   
   т.е. выполняется условие критерия Коши.
 

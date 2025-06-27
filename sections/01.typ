@@ -34,6 +34,6 @@
   От противного. Пусть $f$ не ограничена на $[a,b], #h(6pt) P$ --- произвольное разбиение. Тогда существует такое $delta_i$, что $f$ не ограничена на нем.
   $ sigma(P) = f(xi_i)Delta x_i + A, "где" A = sum^(i_n)_(k=1, i!= k) f(xi_k)Delta x_k. \
   abs(sigma(P)) = abs(f(xi_i)Delta x_i + A) >= abs(f(xi_i)) Delta x_i - A. \
-  forall M>0 #h(6pt) exists xi_i in Delta_i: abs(f(xi_i)) > (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M ==> $
-  интегральная сумма не имеет предела ($f$ не интегрируема --- противоречие). 
+  forall M>0 #h(6pt) exists xi_i in Delta_i: abs(f(xi_i)) > (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M. $
+  Тогда интегральная сумма не имеет предела ($f$ не интегрируема --- противоречие). 
 ]

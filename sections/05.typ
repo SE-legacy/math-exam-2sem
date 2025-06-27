@@ -33,7 +33,8 @@ $S(P') - s(P') < (epsilon)/(2), #h(6pt) S(P'') - s(P'') < (epsilon)/(2)$.
 ]
 
 #theorem(name: "Теорема (монотонность интеграла)")[
-  $ f, g in Re[a, b], quad forall x in [a, b] #h(6pt) f(x) <= g(x) ==>  limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x. $
+  $f, g in Re[a, b], quad forall x in [a, b] #h(6pt) f(x) <= g(x) ==>$
+  $ limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x. $
 ][
   $forall P #h(6pt) forall xi_(P) #h(6pt)  sigma(f, P, xi_(P)) <= sigma(g, P, xi_(P)).$ Переходя к пределу при $d(P) -> 0$, получим
   $ limits(integral)_a^b f(x) d x <= limits(integral)_a^b g(x) d x. $ 

@@ -10,7 +10,7 @@
 ]
 
 #definition(breakline: true)[
-  Пусть фукнция $f$ 2-дифференцируема в точке $overline(x)_0$. $forall overline(h) in RR^m$ определим в $O(overline(x)_0)$ функцию $d_overline(h) f: RR^m -> RR$, 
+  Пусть фукнция $f$ 2-дифференцируема в точке $overline(x)_0$. $forall overline(h) in RR^m$ определим в $O(overline(x)_0)$ функцию $d_overline(h) f: RR^m -> RR$: 
   $ forall overline(x) in O(overline(x)_0) quad d_overline(h)f(overline(x)) = d f(overline(x))(overline(h)) $
 
   Дифференциалом 2-го порядка функции $f$ в точке $overline(x)_0$ называется функция $d^2f(overline(x)_0): RR^m -> RR$ такая, что 

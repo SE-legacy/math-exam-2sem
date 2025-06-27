@@ -25,7 +25,7 @@
 
   $ abs(S(P)-s(P)) = \
   = abs(lr((S(P)-sigma(P,xi'_P)), size: #125%) + lr((sigma(P,xi'_P) - I), size: #125%) + lr((I-sigma(P,xi''_P)), size: #125%) + lr((sigma(P,xi''_P) - s(P)), size: #125%)) <= \
-  abs(S(P)-sigma(P,xi'_P)) + abs(sigma(P,xi'_P) - I) + abs(I - sigma(P,xi''_P)) + abs(sigma(P,xi''_P) - s(P)) < 4 dot epsilon/4 = epsilon. $
+  <= abs(S(P)-sigma(P,xi'_P)) + abs(sigma(P,xi'_P) - I) + abs(I - sigma(P,xi''_P)) + abs(sigma(P,xi''_P) - s(P)) < 4 dot epsilon/4 = epsilon. $
 
   $2==>3$. 
   
