@@ -1,23 +1,61 @@
-*Т. (о непр-ти пред.)*: Пусть $forall n in NN$ $f_n$ непр. в т. $x_0 in X$ и $f_n arrows f$. Тогда $f$ непр. в т. $x_0$
+#import "../conf.typ": theorem, consequence
 
-*Док-во*: $abs(f(x) - f(x_0)) <= abs(f(x) - f_n (x)) + abs(f_n (x) - f_n (x_0)) + abs(f_n (x_0) - f(x_0)) <= 2norm(f - f_n) + abs(f_n (x) - f_n (x_0))$. 
-Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то $exists n_1$: $norm(f - f_(n_1)) < epsilon/3$. 
-Т.к. $f_(n_1)$ непр. в т. $x_0$, то $exists delta > 0$: $forall x in X (abs(x-x_0)<delta => abs(f_(n_1) (x) - f_(n_1) (x_0)) < epsilon/3)$.
-Тогда $forall x in X$ $(abs(x-x_0) < delta => abs(f(x) - f(x_0)) < 2epsilon/3 + epsilon/3 = epsilon)$, т.е. $f$ непр. в. т. $x_0$.
+#theorem(name: "Теорема (о непрерывности предела)")[
+  Пусть $forall n in NN$ функция $f_n$ непрерывна в точке $x_0 in X$ и $f_n arrows f$. Тогда функция $f$ непрерывна в точке $x_0$.
+][
+  $forall n in NN$ справедливо следующее:
+  $ abs(f(x) - f(x_0)) <= abs(f(x) - f_n (x)) + abs(f_n (x) - f_n (x_0)) + abs(f_n (x_0) - f(x_0)) <= \
+  2norm(f - f_n) + abs(f_n (x) - f_n (x_0)). $
 
-*Т. (об инт-ти пред.)*: Пусть $forall n in NN$ $f_n$ непр. на $[a, b]$ и $f_n arrows f$. 
-Тогда $f$ инт-ма и $limits(integral)_(a)^(b) f(x) d x = limits(lim)_(n -> infinity) limits(integral)_(a)^(b) f_n (x) d x$
+  Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то $exists n_1 #h(6pt) norm(f - f_(n_1)) < epsilon/3$.
 
-*Док-во*: В силу т. о непр-ти пред. $f$ непр. на $[a, b]$, и, след-но, инт-ма. 
-$abs(limits(integral)_(a)^(b) f_n (x) d x - limits(integral)_(a)^(b) f(x) d x) = abs(limits(integral)_(a)^(b) (f_n (x) - f(x)) d x) <=
-limits(integral)_(a)^(b) abs(f_n (x) - f(x)) d x <= norm(f_n - f)(b - a) = o(1)", т.е." limits(integral)_(a)^(b) f(x) d x = limits(lim)_(n -> infinity) limits(integral)_(a)^(b) f_n (x) d x$
+  Т.к. функция $f_(n_1)$ непрерывна в точке $x_0$, то 
+  
+  $ exists delta > 0 #h(6pt) forall x in X #h(6pt) (abs(x-x_0)<delta => abs(f_(n_1) (x) - f_(n_1) (x_0)) < epsilon/3). $
+  Тогда $forall x in X$ при $abs(x - x_0) < delta$
+  $ abs(f(x) - f(x_0)) <= 2norm(f - f_n) + abs(f_n (x) - f_n (x_0)) < 2epsilon/3 + epsilon/3 = epsilon, $
+  
+  т.е. функция $f$ непрерывна в. точке $x_0$.
+]
 
-*Т. (о дифф-ти пред.)*: Пусть $forall n in NN$ $f_n$ непр. дифф. на отр. $[a, b]$, послед. $(f_n^(prime))$ равн. сх. на отр. к ф-ции $phi$, послед. $(f_n)$ сх. в т. $x_0 in X$.
-Тогда послед. $(f_n)$ равн. сх. на этом отр. к ф-ции $f$ и $forall x in [a, b]$ $f^(prime) (x) = phi(x)$
+#theorem(name: "Теорема (об интегрируемости предела)")[
+  Пусть $forall n in NN$ функция $f_n$ непрерывна на $[a, b]$ и $f_n arrows f$. 
+  Тогда функция $f$ интегрируема и 
+  $ limits(integral)_a^b f(x) d x = lim_(n -> infinity) limits(integral)_a^b f_n (x) d x. $
+][
+  В силу теоремы о непрерывности предела функция $f$ непрерывна на $[a, b]$, и, следовательно, интегрируема. 
 
-*Док-во*: Ф-ла Ньют.-Лейб.: $f_n (x) = f_n (x_0) + limits(integral)_(x_0)^(x) f_n^(prime) (t) d t$.
-Пусть $A = limits(lim)_(n->infinity) f_n (x_0)$, $F_n (x) = limits(integral)_(x_0)^(x) f_n^(prime) (t) d t$, $Phi(x) = limits(integral)_(x_0)^(x) phi(t) d t$, $x in [a, b]$.
-В силу сл-ия т. об инт-ти пред. $F_n arrows Phi$. Тогда послед. $(f_n)$ на этом отр. равн. сх. к $f(x) colon.eq A + limits(integral)_(x_0)^(x) phi(t) d t$, $x in [a, b]$.
-Дифф-уя по верх. пред. инт.: $f^(prime) (x) = phi(x)$ $forall x in [a, b]$
+  $ abs(limits(integral)_a^b f_n (x) d x - limits(integral)_a^b f(x) d x) = abs(limits(integral)_a^b (f_n (x) - f(x)) d x) <= \
+  <= limits(integral)_a^b abs(f_n (x) - f(x)) d x <= norm(f_n - f)(b - a) = o(1) ==> \
+  limits(integral)_a^b f(x) d x = limits(lim)_(n -> infinity) limits(integral)_a^b f_n (x) d x. $
+]
 
+#consequence()[
+  Пусть $forall n in NN$ функция $f_n$ непрерывна на $[a, b]$ и $f_n arrows f$. Тогда $forall x_0 in [a, b]$ последовательность
 
+  $ F_n (x) = limits(integral)_(x_0)^x f_n (t) d t, quad x in [a, b] $
+
+  равномерно сходится на $[a, b]$ к функции
+
+  $ F(x) = limits(integral)_(x_0)^x f (t) d t, quad x in [a, b]. $
+][]
+
+#theorem(name: "Теорема (о дифференцируемости предела)")[
+  Пусть $forall n in NN$ функция $f_n$ непрерывно дифференцируема на $[a, b]$, последовательность $(f'_n)$ равномерно сходится на $[a, b]$ к фукнции $phi$, последовательность $(f_n)$ сходится в точке $x_0 in X$.
+  Тогда последовательность $(f_n)$ равномерно сходится на $[a, b]$ к функции $f$ и $forall x in [a, b] #h(6pt) f' (x) = phi(x)$.
+][
+  По формуле Ньютона--Лейбница
+
+  $ f_n (x) = f_n (x_0) + limits(integral)_(x_0)^x f'_n (t) d t. $
+  Пусть 
+  
+  $ A = limits(lim)_(n->infinity) f_n (x_0), quad F_n (x) = limits(integral)_(x_0)^x f'_n (t) d t, quad Phi(x) = limits(integral)_(x_0)^x phi(t) d t, quad x in [a, b]. $
+
+  В силу следствия теоремы об интегрируемости предела $F_n arrows Phi$. Тогда последовательность $(f_n)$ на $[a, b]$ равномерно сходится к функции $f$ такой, что 
+  
+  $ f(x) colon.eq A + limits(integral)_(x_0)^x phi(t) d t, quad x in [a, b]. $
+
+  Дифференцируя по верхнему пределу интегрирования, получим 
+  
+  $ f'(x) = phi(x) #h(6pt) forall x in [a, b]. $
+]
