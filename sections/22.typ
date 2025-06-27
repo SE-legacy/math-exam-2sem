@@ -1,24 +1,70 @@
-*Опр.*: Пусть функ. $f$ опр. на множ. $X$. Равном. норм. обознач. символом $norm(f) = limits(sup)_(x in X) |f(x)|$
+#import "../conf.typ": definition, theorem
 
-Свойства: 
-1) $forall x in X$ $abs(f(x)) <= norm(f)$ 
-2) $norm(f) < +infinity <==> f$ огр. 
-3) $norm(f) >=0$ и $norm(f) = 0$ $<==>$ $forall x in X$ $f(x) = 0$
-4) $forall lambda in RR norm(lambda f) = abs(lambda) dot norm(f)$
-5) $norm(f+g) <= norm(f) + norm(g)$
-6) $norm(f dot g) <= norm(f) dot norm(g)$
+#definition()[
+  Отображение $NN$ во множество функций, определенных на множестве $X$ называется функциональной последовательностью $(f_n)$, где $forall n in NN #h(6pt) f_n$ --- функция, определенная на $X$.
+]
 
-*Опр.*: Послед. $(f_n)$ сх. в т. $x_0 in X$, если сх. числ. посл. $f_n (x)$
+#definition()[
+  Последовательность $(f_n)$ сходится в точке $x_0 in X$, если сходится числовая последовательность $f_n (x)$.
+]
 
-*Опр.*: Послед. $(f_n)$ поточ. сх. на мн. $M subset X, $ если послед. $(f_n)$ сх. во всех т. мн. $M$
+#definition()[
+  Последовательность $(f_n)$ поточечно сходится на множестве $M subset X, $ если последовательность $(f_n)$ сходится во всех точках множества $M$.
+]
 
-*Опр.*: Послед. $(f_n)$ равн. сх. к ф-ции $f$, если $limits(lim)_(n -> infinity) norm(f_n - f) = 0$, обозн. как $f_n arrows f$
+#definition()[
+  Пусть функция $f$ определена на множестве $X$. Равномерная норма обозначается символом $norm(f)$, и справедливо равенство
+  
+  $ norm(f) = sup_(x in X) |f(x)|. $
+]
 
-*Т. (Крит. Коши равн. сх.)*: послед. $(f_n)$ равн. сх. $<==> forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $norm(f_n - f_m) < epsilon$
+*Свойства равномерной нормы:*
 
-*Док-во*: $==>$ : Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f_n (x) - f(x)) < epsilon/2$, то $forall x in X$ $forall m >= n_(epsilon)$ $abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon $, т.е. выполн. услов. крит. Коши
++ $forall x in X #h(6pt) abs(f(x)) <= norm(f)$.
 
-$<==$: Услов. крит. Коши равносильно $forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall m >= n_(epsilon)$ $forall x in X$ $abs(f_m (x) - f_n (x)) < epsilon$, т.е. $forall x in X$ послед. $(f_n (x))$ фунд. $<==>$ $(f_n (x))$ сход. Пусть $f$ --- поточ. пред. послед. $(f_n (x))$. Переходя к пред. при $m -> infinity$ в пред. условии:
-$forall epsilon > 0$ $exists n_(epsilon) in NN$ $forall n >= n_(epsilon)$ $forall x in X$ $abs(f(x) - f_n (x)) <= epsilon$, т.е. $f_n arrows f$
++ $norm(f) < +infinity <==> f "ограничена".$
 
++ $norm(f) >=0$, причем $norm(f) = 0 <==> forall x in X #h(6pt) f(x) = 0$.
 
++ $forall lambda in RR  #h(6pt) norm(lambda f) = abs(lambda) dot norm(f)$.
+
++ $norm(f+g) <= norm(f) + norm(g)$.
+
++ $norm(f dot g) <= norm(f) dot norm(g)$.
+
+#definition()[
+  Последовательность $(f_n)$ равномерно сходится к функции $f$, если
+
+  $ lim_(n -> infinity) norm(f_n - f) = 0, $
+  
+  и обозначается как $f_n arrows f$.
+]
+
+#theorem(
+  name: "Теорема (критерий Коши равномерной сходимости)",
+  breakline: true
+)[
+  Последовательность $(f_n)$ равномерно сходится к функции $f$ тогда и только тогда, когда
+  
+  $ forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall m >= n_(epsilon) #h(6pt) norm(f_n - f_m) < epsilon $
+][
+  Необходимость. Пусть $epsilon > 0$. Т.к. $f_n arrows f$, то
+  
+  $ exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall x in X #h(6pt) abs(f_n (x) - f(x)) < epsilon/2. $
+  
+  Тогда $forall x in X #h(6pt) forall m >= n_(epsilon) #h(6pt) abs(f_n (x) - f_m (x)) = abs(f_m (x) - f(x) + f(x) - f_n (x)) <= abs(f_m (x) - f(x)) + abs(f_n (x) - f(x)) < epsilon/2 + epsilon/2 = epsilon $, 
+  
+  т.е. выполняется условие критерия Коши.
+
+  Достаточность. Условие критерия Коши равносильно
+  
+  $ forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall m >= n_(epsilon) #h(6pt) forall x in X #h(6pt) abs(f_m (x) - f_n (x)) < epsilon, $
+  
+  т.е. $forall x in X$ последовательность $lr((f_n (x)), size: #125%)$ фундаментальна, что эквивалентно её сходимости. 
+  
+  Пусть $f$ --- поточечный предел последовательности $lr((f_n (x)), size: #125%)$. Переходя к пределу при $m -> infinity$ в предыдущем условии, получим
+
+  $ forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall x in X #h(6pt) abs(f(x) - f_n (x)) <= epsilon, $
+  
+  т.е. $f_n arrows f$.
+]

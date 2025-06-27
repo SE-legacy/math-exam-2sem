@@ -1,9 +1,42 @@
-*Т. (коммут. закон для знакопол. ряда)*: $forall k in NN #h(6pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется: $limits(sum)^infinity_(k=1) a_(n_k) = limits(sum)^infinity_(k=1) a_k$ \
-*Док-во*: Пусть $m_p = max(n_1, n_2, dots, n_p), #h(6pt) p in NN ==>$\
-$forall p #h(6pt) limits(sum)^p_(k=1) a_(n_k) <= limits(sum)^(m_p)_(k=1) a_k <= limits(sum)^infinity_(k=1) a_k ==> limits(sum)^infinity_(k=1) a_(n_k) <= limits(sum)^infinity_(k=1) a_k$.  $sum a_k$ можно также считать перестановкой $sum a_(n_k) ==> limits(sum)^infinity_(k=1) a_k <= limits(sum)^infinity_(k=1) a_(n_k)$. Cл-но, равенство верно.
+#import "../conf.typ": definition, theorem
 
+#definition()[
+  Пусть $phi: NN -> NN$ --- взаимно однозначное отображение. Ряд $sum a_phi(k)$ называют перестановкой ряда $sum a_n$.
 
-*Т. (коммут. закон для абс. сх-ся ряда)*: Ряд абс. сх-ся $==>$ любая его перестановка абс. сх-ся и их суммы равны. \
-*Док-во*: Применим пред. теорему для рядов $sum a^+_n$ и $sum a^-_n$.
+  Обозначив $phi(k) = n_k$, перестановку можно записать, как $sum a_n_k$.
+]
 
-*Т. (Римана)*: $sum a_n$ сх-ся усл. $==> forall A in overline(RR) #h(6pt) exists "перестановка": limits(sum)^infinity_(k=1) a_(n_k) = A$
+#theorem(
+  name: "Теорема (коммутативный закон для знакоположительного ряда)",
+  breakline: true
+)[
+  $forall k in NN #h(6pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется:
+
+  $ sum^infinity_(k=1) a_n_k = sum^infinity_(k=1) a_k $
+][
+  Пусть $m_p = max(n_1, n_2, dots, n_p), #h(6pt) p in NN$. Тогда $forall p$
+
+  $ sum^p_(k=1) a_n_k <= sum^(m_p)_(k=1) a_k <= sum^infinity_(k=1) a_k ==> \
+  sum^infinity_(k=1) a_n_k <= sum^infinity_(k=1) a_k. $
+
+  С другой стороны, ряд $sum a_k$ можно также считать перестановкой ряда $sum a_n_k$. Тогда 
+  
+  $ sum^infinity_(k=1) a_k <= sum^infinity_(k=1) a_(n_k). $
+  
+  Cледовательно, равенство верно.
+]
+
+#theorem(
+  name: "Теорема (коммутативный закон для абсолютно сходящегося ряда)",
+  breakline: true
+)[
+  Ряд абсолютно сходится $==>$ любая его перестановка абсолютно сходится, и их суммы равны.
+][
+  Применим предыдущую теорему для рядов $sum a^+_n$ и $sum a^-_n$.
+]
+
+#theorem(name: "Теорема (Римана)")[
+  Ряд $sum a_n$ сходится условно $==> forall A in overline(RR) #h(6pt)$ существует такая перестановка, что
+  
+  $ sum^infinity_(k=1) a_n_k = A. $
+][]
