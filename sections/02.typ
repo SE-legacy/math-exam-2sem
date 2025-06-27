@@ -9,21 +9,22 @@
 #property(name: "Свойство 1")[
   $forall P #h(6pt) forall xi_P #h(6pt) s(P)<= sigma(P,xi_P) <=S(P)$.
 ][
-  $ forall xi_k in Delta_k #h(6pt) m_k <= f(xi_k) <= M_k ==> sum^n_(k=1) m_k Delta x_k <= sigma(P, xi_P) <= sum^n_(k=1) M_k Delta x_k. $
+  $ forall xi_k in Delta_k #h(6pt) m_k <= f(xi_k) <= M_k ==> \
+  sum^n_(k=1) m_k Delta x_k <= sigma(P, xi_P) <= sum^n_(k=1) M_k Delta x_k. $
 ]
 
 #property(name: "Свойство 2")[
   $P subset P_1 ==> s(P)<=s(P_1), #h(6pt) S(P)>=S(P_1)$.
 ][
-  Пусть $P_1 = P union {x^*}, #h(6pt) x^* in (x_(k-1), x_k)$; 
+  Пусть $P_1 = P union {x^*}, #h(6pt) x^* in (x_(k-1), x_k); M'_k = limits(sup)_(x in [x_(k-1), x^*])f(x), #h(6pt) M''_k = limits(sup)_(x in Delta [x^*, x_k])f(x)$. 
   
-  $M'_k = limits(sup)_(x in [x_(k-1), x^*])f(x), #h(6pt) M''_k = limits(sup)_(x in Delta [x^*, x_k])f(x)$. Тогда для $S(P_1)$ слагаемое $M_k Delta x_k$ заменится на $M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*)$.
+  Тогда для $S(P_1)$ слагаемое $M_k Delta x_k$ заменится на $M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*)$.
 
   По монотонности верхней грани
 
-  $M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*) <= M_k lr(((x^* - x_(k-1)) + (x_k - x^*)), size: #125%) = M_k Delta x_k ==> S(P_1) <= S(P)$.
+  $ M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*) <= M_k lr(((x^* - x_(k-1)) + (x_k - x^*)), size: #125%) = M_k Delta x_k. $
 
-  Для $s(P)$ аналогично
+  Тогда $S(P_1) <= S(P)$. Для $s(P)$ аналогично
 ]
 
 #property(name: "Свойство 3")[
@@ -55,9 +56,11 @@
 ]
 
 #lemma()[
-  $P = P_([a,b]), #h(6pt) d= d(P), #h(6pt) P^*$ получается из $P$ добавлением $l$ точек.
+  $P = P_([a,b]), #h(6pt) d= d(P), #h(6pt) P^*$ получается из $P$ добавлением $l$ точек. 
 
-  $M = limits(sup)_(x in [a,b])f(x), m=limits(inf)_(x in [a,b]) ==> S(P)-S(P^*)<=(M-m)l d, quad s(P^*)-s(P)<=(M-m)l d$.
+  $M = limits(sup)_(x in [a,b])f(x), m=limits(inf)_(x in [a,b])$. 
+  
+  Тогда $S(P)-S(P^*)<=(M-m)l d, quad s(P^*)-s(P)<=(M-m)l d$.
 ][
   Пусть $P^* = P union x^*$, где $x^* in (x_(k_1);x_k)$.
 
@@ -78,11 +81,14 @@
   $l$ --- число точек $P^*$, не совпадающих с $a$ и $b, #h(6pt) P$ --- произвольное такое, что $d(P)<delta=epsilon/(2l(M-m)), #h(6pt) P'= P union P^* ==>$.
 
   По предыдущей лемме 
-  $0<=S(P)-S(P')<=(M-m)l d < e/2, #h(6pt) P^* subset P' ==>$
+  $ 0<=S(P)-S(P')<=(M-m)l d < e/2. $
 
-  $overline(I) <= S(P') <= S(P^*) ==> 0 <= S(P') - overline(I) <= S(P^*) - overline(I) < epsilon/2.$
+  Если $P^* subset P'$, то 
+  
+  $ overline(I) <= S(P') <= S(P^*) ==> \
+  0 <= S(P') - overline(I) <= S(P^*) - overline(I) < epsilon/2. $
 
-  $forall P #h(6pt) d(P) < delta quad 0<= S(P) - overline(I) = lr((S(P)-S(P')), size: #125%) + (S(P')-overline(I))< 2 dot epsilon/2 = epsilon ==> overline(I) = limits(lim)_(d->0)S(P). $
-  Для $underline(I)$ аналогично.
+  $ forall P #h(6pt) d(P) < delta quad 0<= S(P) - overline(I) = lr((S(P)-S(P')), size: #125%) + (S(P')-overline(I))< 2 dot epsilon/2 = epsilon. $
+  Тогда $overline(I) = limits(lim)_(d->0)S(P)$. Для $underline(I)$ аналогично.
 ]
 

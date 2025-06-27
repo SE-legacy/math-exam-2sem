@@ -35,11 +35,8 @@
 
   Т.к. $(a_n)$ монотонна, то
   
-  $ sum^(n+p)_(k=n+1) abs(a_(k+1) - a_k) = abs(sum^(n+p)_(k=n+1) a_(k+1) - a_k) = abs(a_(n+p+1) - a_(n+1)) <= abs(a_(n+p+1)) + abs(a_(n+1)) < 2 epsilon, $
-  
-  т. е.
-
-  $ forall n>= n_0 #h(6pt) forall p>=1 #h(6pt) abs(sum^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) < 2 M epsilon $
+  $ sum^(n+p)_(k=n+1) abs(a_(k+1) - a_k) = abs(sum^(n+p)_(k=n+1) a_(k+1) - a_k) = abs(a_(n+p+1) - a_(n+1)) <= abs(a_(n+p+1)) + abs(a_(n+1)) < 2 epsilon ==> \
+  forall n>= n_0 #h(6pt) forall p>=1 #h(6pt) abs(sum^(n+p)_(k=n+1) (a_(k+1) - a_k)B_k) < 2 M epsilon $
   
   Тогд по критерию Коши ряд $sum B_n (a_(n+1) - a_n)$ сходится.
 ]

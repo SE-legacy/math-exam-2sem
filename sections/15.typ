@@ -11,7 +11,7 @@
 
   $ 0 <= sum^n_(k=1) a_k <= C sum^n_(k=1) b_k. $
 
-  Переходя к пределу при $n -> infinity$
+  Переходя к пределу при $n -> infinity$,
 
   $ 0<= sum^infinity_(n=1) a_n <= C sum^infinity_(n=1) b_n < + infinity. $
 ]

@@ -76,9 +76,12 @@ $S(P') - s(P') < (epsilon)/(2), #h(6pt) S(P'') - s(P'') < (epsilon)/(2)$.
   + #[
     Докажем, что $abs(f)$ интегрируема:
 
-    $forall xi, eta in Delta_k quad abs(f(xi)) - abs(f(eta)) <= abs(f(xi) - f(eta)) <= M_(k)(f) - m_(k)(f)$,
+    $ forall xi, eta in Delta_k quad abs(f(xi)) - abs(f(eta)) <= abs(f(xi) - f(eta)) <= M_(k)(f) - m_(k)(f), $
     
-    $M_(k)(f) = limits(sup)_(x in Delta_k) f(x), quad m_(k)(f) = limits(inf)_(x in Delta_k) f(x) ==> M_(k)(abs(f)) - m_(k)(abs(f)) <= M_(k)(f) - m_(k)(f) ==> S(abs(f), P) - s(abs(f), P) <= S(f, P) - s(f, P) < epsilon$
+    $M_(k)(f) = limits(sup)_(x in Delta_k) f(x), quad m_(k)(f) = limits(inf)_(x in Delta_k) f(x)$. Тогда, 
+
+    $ M_(k)(abs(f)) - m_(k)(abs(f)) <= M_(k)(f) - m_(k)(f) ==> \
+    S(abs(f), P) - s(abs(f), P) <= S(f, P) - s(f, P) < epsilon $
     
     Тогда по критерию интегрируемости $abs(f) in Re[a, b]$.
   ] 
@@ -87,7 +90,10 @@ $S(P') - s(P') < (epsilon)/(2), #h(6pt) S(P'') - s(P'') < (epsilon)/(2)$.
     
     $f$ интегрируема, тогда  $f$ ограничена, т.е. $exists A > 0 #h(6pt) forall x in [a, b] #h(6pt) abs(f(x)) <= A$.
     
-    Пусть $xi, eta in Delta_(k)$, тогда $f^(2)(xi) - f^(2)(eta) = lr((f(xi) + f(eta)), size: #125%) lr((f(xi) - f(eta)), size: #125%) <= 2A lr((f(xi) - f(eta)), size: #125%) <= 2A lr((M_(k)(f) - m_(k)(f)), size: #125%) ==> S(f^(2), P) - s(f^(2), P) <= 2A lr((S(f, P) - s(f, P)), size: #125%) < 2A epsilon$
+    Пусть $xi, eta in Delta_(k)$, тогда 
+    
+    $ f^(2)(xi) - f^(2)(eta) = lr((f(xi) + f(eta)), size: #125%) lr((f(xi) - f(eta)), size: #125%) <= 2A lr((f(xi) - f(eta)), size: #125%) <= 2A lr((M_(k)(f) - m_(k)(f)), size: #125%) ==> \
+    S(f^(2), P) - s(f^(2), P) <= 2A lr((S(f, P) - s(f, P)), size: #125%) < 2A epsilon. $
     
     Тогда по критерию интегрируемости $f^(2) in Re[a, b]$. Т.к. $f dot g = (1)/(4)((f + g)^(2) - (f - g)^(2)) ==> f dot g in Re[a, b]$.
   ]
