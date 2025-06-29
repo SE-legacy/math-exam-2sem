@@ -1,4 +1,4 @@
-#import "../conf.typ": definition, theorem
+#import "../conf.typ": definition, theorem, block_base
 
 #definition()[
   Несобственный интеграл $limits(integral)_a^omega f(x) d x$ называют условно сходящимся, если он сходится, а $limits(integral)_a^omega |f(x)| d x$ расходится.
@@ -7,8 +7,10 @@
 Пусть функции $f$, $g$, $g'$ непрерывны на $[a, omega)$, $F(b) = limits(integral)_a^b f(x) d x$. Тогда по формуле интегрирования по частям: 
 $ limits(integral)_a^b f(x)g(x) d x = g(b)F(b) - g(a)F(a) - limits(integral)_a^b g'(x)F(x) d x. $
 
-*Утверждение:* Если существует несобственный интеграл $limits(integral)_a^omega g'(x)F(x) d x = A$ и существует конечный предел $limits(lim)_(b -> omega) g(b)F(b) = B$, то существует несобственный интеграл 
-$ limits(integral)_a^omega f(x)g(x) d x = B - g(a)F(a) - A. $
+#block_base("Утверждение", false, [
+  Если существует несобственный интеграл $limits(integral)_a^omega g'(x)F(x) d x = A$ и существует конечный предел $limits(lim)_(b -> omega) g(b)F(b) = B$, то существует несобственный интеграл 
+  $ limits(integral)_a^omega f(x)g(x) d x = B - g(a)F(a) - A. $
+])
 
 #theorem(name: "Теорема (признак Дирихле)")[ 
   Пусть фукнции $f$, $g$, $g'$ непрерывны на $[a, omega)$, функция $F(b) = limits(integral)_a^b f(x) d x$ ограничена на $[a, omega)$, $g(x) -> 0$, монотонно убывая, при $x -> omega ==>$ несобственный интеграл $limits(integral)_a^omega f(x)g(x) d x$ сходится.
