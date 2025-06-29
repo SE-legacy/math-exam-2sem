@@ -31,7 +31,3 @@
   Пусть сначала $x = a$, а потом $x = b$. Тогда 
   $ Phi(a) = limits(integral)_a^a f(t) d t + C = 0 + C = C, quad Phi(b) = limits(integral)_a^b f(t) d t + C ==> limits(integral)_a^b f(x) d x = Phi(b) - Phi(a). $
 ]
-
-*Замечание*:
-Формулулу Ньютона--Лейбница часто записывают 
-$limits(integral)_a^b f(x) d x = Phi(x)|_a^b$, где $Phi(x) |_a^b = Phi(b) - Phi(a)$.
