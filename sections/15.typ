@@ -20,7 +20,7 @@
   $forall n in NN #h(6pt) a_n >= 0, #h(6pt) b_n >= 0, #h(6pt) (a_n/b_n)$ сх-ся, #h(6pt) $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$.
 ][]
 
-#consequence(name: "Следствие 1")[
+#consequence(name: "Следствие 2")[
   $forall n in NN #h(6pt) a_n > 0, #h(6pt) b_n > 0, #h(6pt) a_(n+1)/a_n <= b_(n+1)/b_n$ сх-ся, #h(6pt) $limits(sum)^infinity_(n=1) b_n < + infinity ==> limits(sum)^infinity_(n=1) a_n < + infinity$.
 ][]
 
