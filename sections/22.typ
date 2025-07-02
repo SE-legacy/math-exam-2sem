@@ -1,4 +1,4 @@
-#import "../conf.typ": definition, theorem
+#import "../conf.typ": definition, theorem, block_base
 
 #definition()[
   Отображение $NN$ во множество функций, определенных на множестве $X$ называется функциональной последовательностью $(f_n)$, где $forall n in NN #h(6pt) f_n$ --- функция, определенная на $X$.
@@ -18,19 +18,19 @@
   $ norm(f) = sup_(x in X) |f(x)|. $
 ]
 
-*Свойства равномерной нормы:*
+#block_base("Свойства равномерной нормы", true, [
+  + $forall x in X #h(6pt) abs(f(x)) <= norm(f)$.
 
-+ $forall x in X #h(6pt) abs(f(x)) <= norm(f)$.
+  + $norm(f) < +infinity <==> f "ограничена".$
 
-+ $norm(f) < +infinity <==> f "ограничена".$
+  + $norm(f) >=0$, причем $norm(f) = 0 <==> forall x in X #h(6pt) f(x) = 0$.
 
-+ $norm(f) >=0$, причем $norm(f) = 0 <==> forall x in X #h(6pt) f(x) = 0$.
+  + $forall lambda in RR  #h(6pt) norm(lambda f) = abs(lambda) dot norm(f)$.
 
-+ $forall lambda in RR  #h(6pt) norm(lambda f) = abs(lambda) dot norm(f)$.
+  + $norm(f+g) <= norm(f) + norm(g)$.
 
-+ $norm(f+g) <= norm(f) + norm(g)$.
-
-+ $norm(f dot g) <= norm(f) dot norm(g)$.
+  + $norm(f dot g) <= norm(f) dot norm(g)$.
+])
 
 #definition()[
   Последовательность $(f_n)$ равномерно сходится к функции $f$, если
