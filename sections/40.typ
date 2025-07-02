@@ -19,7 +19,7 @@
 
 #definition()[
   Пусть функция $f$ $n$-дифференцируема в точке $overline(x)_0$. Её $n$-дифференциалом в этой точке называется функция $d^n f(overline(x)_0): RR^m -> RR$ такая, что для любого $overline(h) in RR^m$
-  $ d^n f(overline(x)_0)(overline(h)) = d(d^(n-1)_overline(h) f)(overline(x)_0)(overline(h)) $
+  $ d^n f(overline(x)_0)(overline(h)) = d(d^(n-1)_overline(h) f)(overline(x)_0)(overline(h)). $
 ]
 
 По индукции можно установить:

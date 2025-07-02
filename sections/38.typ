@@ -29,7 +29,7 @@
   $ "grad" f(overline(x)_0) = ((diff f) / (diff x_1)(overline(x)_0), (diff f) / (diff x_2)(overline(x)_0),..., (diff f) / (diff x_m)(overline(x)_0)). $
 ]
 
-#block_base("Замечание", true, [
+#block_base("Замечание", false, [
   $ (diff f)/(diff overline(a))(overline(x)_0) = "grad" f(overline(x)_0) dot overline(a), $
 
   и при $m = 2,3$
