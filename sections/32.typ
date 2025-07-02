@@ -15,10 +15,10 @@
 ][]
 
 #consequence(name: "Следствие 1")[
-  Если функции $overline(f)$ и $overline(g)$ дифференцируемы в точке $x_0$, то их сумма, разность, произведение на число и скалярное произведение дифференцируемы в точке $overline(x)_0$, причём
+  Если функции $overline(f)$ и $overline(g)$ дифференцируемы в точке $t_0$, то их сумма, разность, произведение на число и скалярное произведение дифференцируемы в точке $overline(x)_0$, причём
 
-  $ (overline(f) plus.minus overline(g))' (x_0) = overline(f)' (x_0) plus.minus overline(g)' (x_0); quad (overline(lambda f)') (x_0) = lambda overline(f)' (x_0), #h(6pt) lambda in RR; \
-  (overline(f) dot overline(g))' (x_0) = overline(f)' (x_0) dot overline(g) (x_0) + overline(f) (x_0) dot overline(g)' (x_0). $
+  $ (overline(f) plus.minus overline(g))' (t_0) = overline(f)' (t_0) plus.minus overline(g)' (t_0); quad (overline(lambda f)') (t_0) = lambda overline(f)' (t_0), #h(6pt) lambda in RR; \
+  (overline(f) dot overline(g))' (t_0) = overline(f)' (t_0) dot overline(g) (t_0) + overline(f) (t_0) dot overline(g)' (t_0). $
 ][]
 
 #consequence(name: "Следствие 2")[
