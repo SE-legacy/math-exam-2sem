@@ -17,7 +17,7 @@
   
   + $F'_y (overline(x)_0, y_0) != 0$.
   
-  То найдутся окрестности $O(overline(x)_0), O(y_0)$ такие, что на множестве $O(overline(x)_0) times O(y_0)$ уравнение $(#ref(<eq_iplicit_func>))$ определяет непрерывно дифференцируемую функцию $f: O(overline(x)_0) -> O(y_0)$. Причем $forall overline(x) in O(overline(x)_0) #h(6pt) forall k = 1,..., m$
+  То найдутся окрестности $O(overline(x)_0), O(y_0)$ такие, что на множестве $O(overline(x)_0) times O(y_0)$ уравнение $(#ref(<eq_iplicit_func>))$ определяет непрерывно дифференцируемую функцию $f: O(overline(x)_0) -> O(y_0)$. Причем $forall overline(x) in O(overline(x)_0) #h(6pt) forall k = 1, dots, m$
   
   $ f'_x_k (overline(x)) = - (F'_x_k lr((overline(x), f(overline(x))), size: #125%))/(F'_y lr((overline(x), f(overline(x))), size: #125%)). $
 ][]

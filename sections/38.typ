@@ -26,7 +26,7 @@
 #definition()[
   Пусть функция $f$ дифференцируема в точке $overline(x)_0$. Градиентом функции $f$ в точке $overline(x)_0$ называют вектор
 
-  $ "grad" f(overline(x)_0) = ((diff f) / (diff x_1)(overline(x)_0), (diff f) / (diff x_2)(overline(x)_0),..., (diff f) / (diff x_m)(overline(x)_0)). $
+  $ "grad" f(overline(x)_0) = ((diff f) / (diff x_1)(overline(x)_0), (diff f) / (diff x_2)(overline(x)_0), dots, (diff f) / (diff x_m)(overline(x)_0)). $
 ]
 
 #block_base("Замечание", false, [

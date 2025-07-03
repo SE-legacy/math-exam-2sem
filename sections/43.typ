@@ -1,7 +1,7 @@
 #import "../conf.typ": definition
 
 #definition()[
-  Вектор-функцию $overline(f) = (f_1, ..., f_n) : RR^m → RR^n$ назовем дифференцируемой в точке $overline(x)_0$, если все функции $f_k, #h(6pt) k = 1, ..., n$, дифференцируемы в точке $overline(x)_0$.
+  Вектор-функцию $overline(f) = (f_1, dots, f_n) : RR^m → RR^n$ назовем дифференцируемой в точке $overline(x)_0$, если все функции $f_k, #h(6pt) k = 1, dots, n$, дифференцируемы в точке $overline(x)_0$.
 
   Дифференциалом функции $overline(f)$ назовем вектор-столбец 
   $ d overline(f)(overline(x)_0) = mat(
@@ -32,7 +32,7 @@
 
   Если $n = m$, то определитель матрицы Якоби называют якобианом и обозначают через 
   
-  $ D(f_1, ..., f_m)/D(x_1, ..., x_m) (overline(x)_0). $
+  $ D(f_1, dots, f_m)/D(x_1, dots, x_m) (overline(x)_0). $
 ]
 
 #definition()[

@@ -13,7 +13,7 @@ $ sum^infinity_(n=1) a_n < + infinity. $
 #theorem(name: "Теорема (интегральный признак сходимости)")[
   Функция $f$ неотрицательна и неворзрастает на $[1,+infinity)$. Тогда несобственный интеграл $limits(integral)^(+infinity)_1 f(x) d x$ и ряд $sum f(x)$ сходятся или расходятся одновременно.
 ][
-  $S_n = limits(sum)^infinity_(n=1) f(x), #h(6pt) F(b) = limits(integral)^b_1 f(x) d x$. При $k = 1, 2,dots$
+  $S_n = limits(sum)^infinity_(n=1) f(x), #h(6pt) F(b) = limits(integral)^b_1 f(x) d x$. При $k = 1, 2, dots$
   
   $ f(k+1) <= limits(integral)^(k+1)_1 f(x) d x <= f(k) ==> \
   sum^n_(k=1) f(k+1) <= limits(integral)^(n+1)_1 f(x) d x <= sum^n_(k=1) f(k) ==> \
