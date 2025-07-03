@@ -4,7 +4,7 @@
 #definition(breakline: true)[
   $[a,b] subset RR, quad P = P_([a,b]) = {x_k}^n_(k=0)$ называется разбиением отрезка $[a,b]$.
 
-  $Delta k = [x_k, x_(k-1)], quad Delta x_k = x_k - x_(k-1), #h(6pt) k = overline(1\, n)$.
+  $Delta k = [x_k, x_(k-1)], quad Delta x_k = x_k - x_(k-1), #h(6pt) k = 1, dots, n$.
 
   $d = d(P) = limits(max)_(1<= k <= n)(Delta x_k)$ называется диаметром разбиения.
 
