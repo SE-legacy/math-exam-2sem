@@ -15,13 +15,13 @@
 #definition()[
   Пусть функция $f$ определена на множестве $X$. Равномерная норма обозначается символом $norm(f)$, и справедливо равенство
   
-  $ norm(f) = sup_(x in X) |f(x)|. $
+  $ norm(f) = sup_(x in X) abs(f(x)). $
 ]
 
 #block_base("Свойства равномерной нормы", true, [
   + $forall x in X #h(6pt) abs(f(x)) <= norm(f)$.
 
-  + $norm(f) < +infinity <==> f "ограничена".$
+  + $norm(f) < +infinity <==> f$ ограничена.
 
   + $norm(f) >=0$, причем $norm(f) = 0 <==> forall x in X #h(6pt) f(x) = 0$.
 

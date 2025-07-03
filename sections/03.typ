@@ -5,10 +5,10 @@
 
   #enum(number-align: horizon, 
     [
-    $f$ интегрируема;
+      $f$ интегрируема;
     ],
     [
-    $forall epsilon > 0 #h(6pt) exists P #h(6pt) S(P) - s(P)<epsilon$;
+      $forall epsilon > 0 #h(6pt) exists P #h(6pt) S(P) - s(P)<epsilon$;
     ],
     [
       $underline(I) = overline(I)$, при этом $underline(I) = overline(I) = limits(integral)^b_a f(x) d x$.
@@ -17,11 +17,15 @@
 ][ 
   $1==>2$.
   
-  $f$ интегрируема $==> forall epsilon>0 #h(6pt) exists delta > 0 #h(6pt) forall(P, xi_p) #h(6pt) (d(P)< delta ==> abs(sigma(P, xi_P) -I) < epsilon/4)$
+  Пусть $f$ интегрируема. Тогда 
+  
+  $ forall epsilon>0 #h(6pt) exists delta > 0 #h(6pt) forall(P, xi_p) #h(6pt) (d(P)< delta => abs(sigma(P, xi_P) -I) < epsilon/4). $
 
-  По свойству 4 сумм Дарбу для $P #h(6pt) exists xi'_P, xi''_P:$
+  По свойству 4 сумм Дарбу для $P$ найдутся $xi'_P, xi''_P$ такие, что
 
-  $S(P)-sigma(P,xi'_P) < epsilon/4, quad sigma(P,xi''_P) - s(P) < epsilon/4$, но $abs(sigma(P,xi'_P)- I) < epsilon/4, quad abs(I-sigma(P,xi''_P)) <epsilon/4.$ Тогда
+  $ S(P)-sigma(P,xi'_P) < epsilon/4, quad sigma(P,xi''_P) - s(P) < epsilon/4, #h(6pt) "но" abs(sigma(P,xi'_P)- I) < epsilon/4, quad abs(I-sigma(P,xi''_P)) <epsilon/4. $ 
+  
+  Тогда
 
   $ abs(S(P)-s(P)) = \
   = abs(lr((S(P)-sigma(P,xi'_P)), size: #125%) + lr((sigma(P,xi'_P) - I), size: #125%) + lr((I-sigma(P,xi''_P)), size: #125%) + lr((sigma(P,xi''_P) - s(P)), size: #125%)) <= \

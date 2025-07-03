@@ -21,7 +21,7 @@
   name: "Теорема (критерий Коши равномерной сходимости)",
   breakline: true
 )[
-  Ряд $sum f_n$ равномерно сходится $<==>$ 
+  Ряд $sum f_n$ равномерно сходится тогда и только тогда, когда 
   
   $ forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall p in NN #h(6pt) norm(limits(sum)_(k = n+1)^(n+p) f_k) < epsilon. $
 ][]

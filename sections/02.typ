@@ -2,7 +2,9 @@
 
 #definition()[
   Функция $f$ определена и ограничена на $[a,b], #h(6pt) M_k = limits(sup)_(x in Delta_k)f(x) , #h(6pt) m_k = limits(inf)_(x in Delta_k)f(x), #h(6pt) k = 1, dots, n$. Суммы 
+
   $ S(P) = sum^n_(k=1)M_k Delta x_k, quad s(P) = sum^n_(k=1)m_k Delta x_k $
+
   называются верхней и нижней суммами Дарбу соответсвенно функции $f$ для разбиения $P$.
 ]
 
@@ -24,7 +26,7 @@
 
   $ M'_k (x^* - x_(k-1)) + M''_k (x_k - x^*) <= M_k lr(((x^* - x_(k-1)) + (x_k - x^*)), size: #125%) = M_k Delta x_k. $
 
-  Тогда $S(P_1) <= S(P)$. Для $s(P)$ аналогично
+  Тогда $S(P_1) <= S(P)$. Для $s(P)$ аналогично.
 ]
 
 #property(name: "Свойство 3")[
@@ -40,10 +42,12 @@
 #property(name: "Свойство 4")[
   $forall P #h(6pt) forall epsilon > 0 #h(6pt) exists xi_P quad 0<=S(P)-sigma(P,xi_P) < epsilon quad (0<=sigma(P,xi_P)-s(P)<epsilon)$.
 ][
-  $forall k = 1, dots, k #h(6pt) exists xi_k in Delta_k:$
-  $ 0<= M_k - f(xi_k) < (epsilon)/(b-a) ==>
+  Для любого $k = 1, dots, k$ найдутся такие $ xi_k in Delta_k$, что
+
+  $ 0<= M_k - f(xi_k) < (epsilon)/(b-a) ==> \
   0<= S(P) - sigma(P, xi_P) = \
-  = sum^n_(k=1) (M_k - f(xi_P)) Delta x_k < (epsilon)/(b-a) sum^n_(k=1) Delta x_k = (epsilon)/(b-a) (b-a) = epsilon. $ 
+  = sum^n_(k=1) (M_k - f(xi_P)) Delta x_k < (epsilon)/(b-a) sum^n_(k=1) Delta x_k = (epsilon)/(b-a) (b-a) = epsilon. $
+
   Для $s(P)$ аналогично.
 ]
 
@@ -70,15 +74,13 @@
 
 
 #lemma(name: "Лемма (основная лемма Дарбу)")[
-  $overline(I)=limits(lim)_(d->0) S(P), quad underline(I)=limits(lim)_(d->0)s(P)$ 
+  $overline(I)=limits(lim)_(d->0) S(P), quad underline(I)=limits(lim)_(d->0)s(P)$.
 ][
-  $f equiv c = "const" ==> forall P quad S(P)=c(b-a) = overline(I)$.
+  Если $f equiv c = "const"$, то $forall P quad S(P)=c(b-a) = overline(I)$.
 
-  Пусть $f equiv.not "const" ==> M = limits(sup)_(x in [a,b])f(x) > m=limits(inf)_(x in [a,b]) f(x), #h(6pt) epsilon > 0 ==> exists P^* #h(6pt) S(P)-overline(I) < epsilon/2$.
+  Пусть $f equiv.not "const"$, тогда $M = limits(sup)_(x in [a,b])f(x) > m=limits(inf)_(x in [a,b]) f(x), #h(6pt) epsilon > 0$. Тогда найдется такое разбиение $P^*$, что $S(P)-overline(I) < epsilon/2$.
 
-  $l$ --- число точек $P^*$, не совпадающих с $a$ и $b, #h(6pt) P$ --- произвольное такое, что $d(P)<delta=epsilon/(2l(M-m)), #h(6pt) P'= P union P^* ==>$.
-
-  По предыдущей лемме 
+  $l$ --- число точек $P^*$, не совпадающих с $a$ и $b, #h(6pt) P$ --- произвольное такое, что $d(P)<delta=epsilon/(2l(M-m)), #h(6pt) P'= P union P^*$. Тогда по предыдущей лемме 
   $ 0<=S(P)-S(P')<=(M-m)l d < e/2. $
 
   Если $P^* subset P'$, то 
@@ -87,6 +89,7 @@
   0 <= S(P') - overline(I) <= S(P^*) - overline(I) < epsilon/2. $
 
   $ forall P #h(6pt) d(P) < delta quad 0<= S(P) - overline(I) = lr((S(P)-S(P')), size: #125%) + (S(P')-overline(I))< 2 dot epsilon/2 = epsilon. $
+  
   Тогда $overline(I) = limits(lim)_(d->0)S(P)$. Для $underline(I)$ аналогично.
 ]
 

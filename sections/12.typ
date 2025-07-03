@@ -1,12 +1,12 @@
 #import "../conf.typ": definition, theorem
 
-#definition(breakline: true)[
+#definition()[
   Числовой ряд $sum a_n$ --- это последовательность $(S_n)$, $S_n = limits(sum)_(k = 1)^n a_k, n in NN$
   
   $a_n$ --- $n$–ый член ряда, $S_n$ --- $n$–ая частичная сумма ряда.
 ]
 
-#definition(breakline: true)[
+#definition()[
   Если в $overline(RR)$ существует предел $limits(lim)_(n -> infinity) S_n = S$, то $S in overline(RR)$ называют суммой ряда и обозначают 
 
   $ S = sum_(n = 1)^infinity a_n. $
@@ -18,7 +18,7 @@
   name: "Теорема (необходимое условие сходимости ряда)",
   breakline: true
 )[ 
-  Ряд $sum a_n$ сходится $==> limits(lim)_(n -> infinity) a_n = 0$, т.е. $a_n = overline(o)(1)$.
+  Ряд $sum a_n$ сходится. Тогда $limits(lim)_(n -> infinity) a_n = 0$, т.е. $a_n = overline(o)(1)$.
 ][
   Пусть ряд $sum a_n$ сходится и его сумма $S in RR$. Тогда 
   

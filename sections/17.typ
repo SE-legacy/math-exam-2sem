@@ -6,7 +6,7 @@
   $a^- = (abs(a)-a)/2$  --- отрицательная часть числа.
 ]
 
-Тогда $sum a_n = sum a_n^+ - sum a_n^-, quad sum abs(a_n) = sum a_n^+ + sum a_n^-$
+Тогда $sum a_n = sum a_n^+ - sum a_n^-, quad sum abs(a_n) = sum a_n^+ + sum a_n^-$.
 
 
 #theorem(
@@ -21,7 +21,7 @@
 ]
 
 #theorem(name: "Теорема (об условно сходящихся рядах)",)[
-  Ряд $sum a_n$ сходится условно $==>$ ряды $sum a_n^+$ и $sum a_n^-$ расходятся.
+  Если ряд $sum a_n$ сходится условно, то ряды $sum a_n^+$ и $sum a_n^-$ расходятся.
 ][
   Пусть ряды $sum a_n^+$ и $sum a_n^-$ сходятся. Тогда ряд $sum abs(a_n) = sum a_n^+ + sum a_n^-$ сходится, т.е. ряд $sum a_n$ сходится абсолютно.
 

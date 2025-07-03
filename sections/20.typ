@@ -10,9 +10,9 @@
   name: "Теорема (коммутативный закон для знакоположительного ряда)",
   breakline: true
 )[
-  $forall k in NN #h(6pt) a_k >= 0 ==>$ для любой перестановки ряда выполняется:
+  $forall k in NN #h(6pt) a_k >= 0$. Тогда для любой перестановки ряда выполняется:
 
-  $ sum^infinity_(k=1) a_n_k = sum^infinity_(k=1) a_k $
+  $ sum^infinity_(k=1) a_n_k = sum^infinity_(k=1) a_k. $
 ][
   Пусть $m_p = max(n_1, n_2, dots, n_p), #h(6pt) p in NN$. Тогда $forall p$
 
@@ -36,7 +36,7 @@
 ]
 
 #theorem(name: "Теорема (Римана)")[
-  Ряд $sum a_n$ сходится условно $==> forall A in overline(RR) #h(6pt)$ существует такая перестановка, что
+  Если ряд $sum a_n$ сходится условно, то для любого $A in overline(RR)$ существует такая перестановка, что
   
   $ sum^infinity_(k=1) a_n_k = A. $
 ][]

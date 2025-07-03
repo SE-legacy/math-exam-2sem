@@ -19,21 +19,26 @@
 ]
 
 #definition(breakline: true)[
-  $I in RR$, предел $I = limits(lim)_(d(P) -> 0)sigma(P)$ называется пределом интегральных сумм Римана $<==>$
+  $I in RR$, предел $I = limits(lim)_(d(P) -> 0)sigma(P)$ называется пределом интегральных сумм Римана, если
 
   $ forall epsilon > 0 #h(6pt) exists delta > 0 #h(6pt) forall(P, xi_P) #h(6pt) (d(P)<delta => abs(sigma(P, xi_p)-I) < epsilon) $
-  $I$ обозначается, как $limits(integral)^a_b f(x)d x$, фукнцию $f$ называют интегрируемой по Риману на $[a,b]$
+
+  В таком случае фукнцию $f$ называют интегрируемой по Риману на $[a,b]$, число $I$ обозначается, как 
+  
+  $ limits(integral)^a_b f(x)d x. $
 ]
 
 #theorem(
   name: "Теорема (Необходимое условие интегрируемости)",
   breakline: true
 )[
-  Функция $f$ интегрируема на $[a,b] ==> f$ ограничена
+  Функция $f$ интегрируема на $[a,b] ==> f$ ограничена.
 ][
   От противного. Пусть $f$ не ограничена на $[a,b], #h(6pt) P$ --- произвольное разбиение. Тогда существует такое $delta_i$, что $f$ не ограничена на нем.
+
   $ sigma(P) = f(xi_i)Delta x_i + A, "где" A = sum^(i_n)_(k=1, i!= k) f(xi_k)Delta x_k. \
   abs(sigma(P)) = abs(f(xi_i)Delta x_i + A) >= abs(f(xi_i)) Delta x_i - A. \
   forall M>0 #h(6pt) exists xi_i in Delta_i: abs(f(xi_i)) > (abs(A) + M)/(Delta x_i) ==> abs(sigma(P))>M. $
+  
   Тогда интегральная сумма не имеет предела ($f$ не интегрируема --- противоречие). 
 ]

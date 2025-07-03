@@ -1,7 +1,7 @@
 #import "../conf.typ": definition, theorem
 
 #definition()[
-  Числ. ряд $sum c_n$, где 
+  Числовой ряд $sum c_n$, где 
 
   $ c_n = a_n dot sum^(n-1)_(k=1) b_k + b_n dot sum^(n-1)_(k=1) a_k + a_n b_n, $
   
