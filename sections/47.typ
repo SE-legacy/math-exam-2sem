@@ -30,7 +30,7 @@
   
   Умножим все части последнего неравенства на $Delta x_k$, просуммируем полученные нераванества по всем $l = 1, dots, p$, а затем по всем $k = 1, dots, n$. Получим
   
-  $ s = limits(sum)_(k=1)^n limits(sum)_(l=1)^p m_(k l) Delta x_k Delta y_l <= limits(sum)_(k=1)^n I(xi_k) Delta x_k <= limits(sum)_(k=1)^n limits(sum)_(l=1)^p M_(k l) Delta x_k Delta y_l = S. $
+  $ s = sum_(k=1)^n sum_(l=1)^p m_(k l) Delta x_k Delta y_l <= sum_(k=1)^n I(xi_k) Delta x_k <= sum_(k=1)^n sum_(l=1)^p M_(k l) Delta x_k Delta y_l = S. $
   
   Пусть $Delta -> 0$. При этом $s$ и $S$ стремятся к двойному интегралу, тогда существует предел среднего члена неравенства, равный тому же двойному интегралу 
   
