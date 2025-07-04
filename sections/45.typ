@@ -1,5 +1,38 @@
-*Опр.* Пусть функ. $f$, $g_i$ $i = 1, ..., r$ отображения из $RR^m$ в $RR$, опр. в нек. окр. т. $overline(x)_0$ и $g_i (overline(x)_0) = 0$. Значение $f(overline(x)_0)$ наз. условным макс. (мин.) $f$ при условиях связи $g_i (overline(x)) = 0$ $i = 1, ..., r$, если $exists O(overline(x)_0)$, что $f(overline(x)_0)$ является наибол. (наимен.) знач. сужения функ. на мн.: $O(overline(x)_0) inter {overline(x) in RR^m : g_i (overline(x)) = 0, i = 1, ..., r\}$
+#import "../conf.typ": definition, theorem
 
-*Т. (Лагранжа)*: Пусть функ. $f$ и $g$ непр. дифф. в нек. окр. т. $overline(x)_0$, $g(overline(x)_0) = 0$ и вектор-градиент $g r a d g(overline(x)_0) != 0$. Если функ. $f$ имеет усл. экст. в т. $overline(x)_0$ с усл. $g(overline(x)) = 0$, то $exists lambda in RR$, что $g r a d (f - lambda g)(overline(x)_0) = 0$ \
-*Док-во*: Не огранич. общности, будем считать, что $(diff g(overline(x)_0))/(diff x_m) != 0$. Выберем число $lambda in RR$, что $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$. Осталось док-ать равенство $forall i = 1,...,m-1$. По Т. о неяв. функ. $exists O(x_1^0,..., x_(m-1)^0), O(x_m^0)$, что ур-ие $g(overline(x) = 0$ опр. неяв. дифф. функ. $phi: O(x_1^0,..., x_(m-1)^0) -> O(x_m^0)$. В окр. $O(x_1^0,..., x_(m-1)^0)$ рассмот. функ. $F(x_1,...,x_(m-1)) = f(x_1,...,x_(m-1), phi(x_1,...,x_(m-1)))$
-Из опр. усл. экс. следует, что $F$ имеет лок. экс. в т. $(x_1^0,..., x_(m-1)^0)$. По Т. Ферма $forall i = 1,...,m-1$ имеем равенства $0 = (diff F(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + (diff f(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i)$. По Т. О неяв. функ. $forall i = 1,...,m-1$: $lambda (diff g(overline(x)_0))/(diff x_i) (diff phi(x_1^0,..., x_(m-1)^0))/(diff x_i) = (diff g(overline(x)_0))/(diff x_i)$. Значит $(diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0$ $forall i = 1,...,m-1$
+#definition()[
+  Пусть функции $f, #h(6pt) g_i, #h(6pt) i = 1, dots, r$ являются отображениями из $RR^m$ в $RR$, определёнными в некотрой окрестности точки $overline(x)_0$ и $g_i (overline(x)_0) = 0$. Значение $f(overline(x)_0)$ называется условным максимумом (минимумом) функции $f$ при условиях связи $g_i (overline(x)) = 0 #h(6pt) i = 1, dots, r$, если существует такая окрестность $O(overline(x)_0)$, что $f(overline(x)_0)$ является наибольшим (наименьшим) значением сужения функции на множество
+   
+  $ O(overline(x)_0) inter {overline(x) in RR^m : g_i (overline(x)) = 0, #h(6pt) i = 1, dots, r}. $
+]
+
+#theorem(name: "Теорема (Лагранжа)")[
+  Пусть функции $f$ и $g$ непрерывно дифференцируемы в некоторой окрестности точки $overline(x)_0$, $g(overline(x)_0) = 0$ и вектор-градиент $"grad" g(overline(x)_0) != 0$. Если функция $f$ имеет условный экстремум в точке $overline(x)_0$ с условием $g(overline(x)) = 0$, то существует такое число $lambda in RR$, что 
+  
+  $ "grad" (f - lambda g)(overline(x)_0) = 0. $
+][
+  Не ограничивая общности, будем считать, что 
+  
+  $ (diff g(overline(x)_0))/(diff x_m) != 0. $
+  
+  Выберем такое число $lambda in RR$, что 
+  
+  $ (diff f(overline(x)_0))/(diff x_m) - lambda (diff g(overline(x)_0))/(diff x_m) = 0. $
+  
+  Осталось доказать это равенство $forall i = 1, dots,m-1$. По теореме о неявной функции существуют такие окрестности $O(x_1^0, dots, x_(m-1)^0), #h(6pt) O(x_m^0)$, что уравнение $g(overline(x) = 0$ определяет неявную дифференцируемую функцию $phi: O(x_1^0, dots, x_(m-1)^0) -> O(x_m^0)$. В окрестности $O(x_1^0, dots, x_(m-1)^0)$ рассмотрим функцию 
+  
+  $ F(x_1, dots,x_(m-1)) = f(x_1, dots, x_(m-1), phi(x_1, dots,x_(m-1))). $
+
+  Из определения условного экстремума следует, что функция $F$ имеет локальный экстремум в точке $(x_1^0, dots, x_(m-1)^0)$. По теореме Ферма $forall i = 1, dots, m-1$ имеем равенства 
+  
+  $ 0 = (diff F(x_1^0, dots, x_(m-1)^0))/(diff x_i) = (diff f(overline(x)_0))/(diff x_i) + (diff f(overline(x)_0))/(diff x_i) dot (diff phi(x_1^0, dots, x_(m-1)^0))/(diff x_i) = \
+  = (diff f(overline(x)_0))/(diff x_i) + lambda (diff g(overline(x)_0))/(diff x_i) dot (diff phi(x_1^0, dots, x_(m-1)^0))/(diff x_i). $
+  
+  По теорме о неявной функции $forall i = 1, dots,m-1$
+  
+  $ (diff g(overline(x)_0))/(diff x_i) dot (diff phi(x_1^0, dots, x_(m-1)^0))/(diff x_i) = - (diff g(overline(x)_0))/(diff x_i). $
+  
+  Значит $forall i = 1, dots,m-1$
+  
+  $ (diff f(overline(x)_0))/(diff x_i) - lambda (diff g(overline(x)_0))/(diff x_i) = 0. $
+]
