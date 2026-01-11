@@ -1,6 +1,6 @@
 #import "../conf.typ": theorem
 
-#theorem(name: "Теорема (о дифф. слож. функ.)")[
+#theorem(name: "Теорема (о дифференцируемости сложной функции)")[
   Пусть $f: RR^m -> RR, #h(6pt) overline(g): RR^k -> RR^m$, т.е.
 
   $
