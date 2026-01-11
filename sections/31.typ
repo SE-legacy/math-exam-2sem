@@ -1,4 +1,4 @@
-#import "../conf.typ": theorem, consequence
+#import "../conf.typ": consequence, theorem
 
 #theorem(name: "Теорема (о непрерывном образе компакта)")[
   Пусть функция $overline(f)$ непрерывна на множестве $X$ и множество $X$ --- компакт. Тогда множество $Y = overline(f) (X)$ тоже компакт.

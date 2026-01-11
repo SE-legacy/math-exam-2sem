@@ -1,4 +1,4 @@
-#import "../conf.typ": definition, theorem, consequence
+#import "../conf.typ": consequence, definition, theorem
 
 #definition()[
   $a_n = O(b_n) <==> exists C>0 #h(6pt) forall n in NN #h(6pt) abs(a_n) = C abs(b_n).$
@@ -25,15 +25,15 @@
 ][]
 
 #theorem(name: "Теорема (признак сравнения)")[
-  $forall n in NN #h(6pt) a_n > 0, #h(6pt) b_n > 0$ и существует конечный предел 
-  
+  $forall n in NN #h(6pt) a_n > 0, #h(6pt) b_n > 0$ и существует конечный предел
+
   $ lim_(n -> infinity) a_n/b_n = k != 0. $
 
   Тогда ряды $sum a_n$ и $sum b_n$ ведут себя одинаково.
 ][
-  По следствию 1 из признака мажорации, из сходимости $sum b_n$ вытекает сходимость $sum a_n$. 
-  
-  $ lim_(n->infinity) b_n/a_n = 1/k. $ 
-  
+  По следствию 1 из признака мажорации, из сходимости $sum b_n$ вытекает сходимость $sum a_n$.
+
+  $ lim_(n->infinity) b_n/a_n = 1/k. $
+
   Тогда по этому же следствию из сходимости $sum a_n$ вытекает сходимость $sum b_n$.
 ]

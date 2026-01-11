@@ -25,7 +25,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
     id: <eq:indep-from-the-path2>,
   )
 ][
-  Взяв достаточо малое приращение $Delta x$, имеем
+  Взяв достаточно малое приращение $Delta x$, имеем
 
   $ F(x + Delta x, y) - F(x, y) = limits(integral)^((x + Delta x, y))_((x, y)) P(x,y) d x + Q(x, y) d y, $
 

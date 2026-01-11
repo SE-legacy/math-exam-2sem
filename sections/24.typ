@@ -1,11 +1,11 @@
 #import "../conf.typ": definition, theorem
 
 #definition()[
-  Пусть $(f_n)$ --- функциональная последовательность и $forall n in NN$ функция $f_n$ определана на множестве $X$.
-  Функциональным рядом называется последовательность $(S_n)$, где 
-  
+  Пусть $(f_n)$ --- функциональная последовательность и $forall n in NN$ функция $f_n$ определена на множестве $X$.
+  Функциональным рядом называется последовательность $(S_n)$, где
+
   $ S_n = sum_(k=1)^n f_k, #h(6pt) n in NN $
-  
+
   и обозначается, как $sum f_n$.
 ]
 
@@ -19,16 +19,18 @@
 
 #theorem(
   name: "Теорема (критерий Коши равномерной сходимости)",
-  breakline: true
+  breakline: true,
 )[
-  Ряд $sum f_n$ равномерно сходится тогда и только тогда, когда 
-  
-  $ forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall p in NN #h(6pt) norm(limits(sum)_(k = n+1)^(n+p) f_k) < epsilon. $
+  Ряд $sum f_n$ равномерно сходится тогда и только тогда, когда
+
+  $
+    forall epsilon > 0 #h(6pt) exists n_(epsilon) in NN #h(6pt) forall n >= n_(epsilon) #h(6pt) forall p in NN #h(6pt) norm(limits(sum)_(k = n+1)^(n+p) f_k) < epsilon.
+  $
 ][]
 
 #theorem(
   name: "Теорема (о равномерной сходимости нормально сходящегося ряда)",
-  breakline: true
+  breakline: true,
 )[
   Ряд $sum f_n$ нормально сходится $==>$ ряд $sum f_n$ равномерно сходится.
 ][
@@ -40,5 +42,5 @@
 #theorem(name: "Теорема (признак Вейерштрасса)")[
   Пусть $forall n in NN #h(6pt) norm(f_n) <= a_n$, $limits(sum)_(n=1)^(infinity) a_n < + infinity$. Тогда ряд $sum f_n$ равномерно сходится.
 ][
-  $sum norm(f_n)$ сходится по признаку мажораци, т.е. ряд $sum f_n$ нормально сходится. Тогда по предыдущей теореме ряд $sum f_n$ сходится равномерно.
+  $sum norm(f_n)$ сходится по признаку мажорации, т.е. ряд $sum f_n$ нормально сходится. Тогда по предыдущей теореме ряд $sum f_n$ сходится равномерно.
 ]

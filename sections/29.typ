@@ -30,7 +30,7 @@
     $ abs(overline(x)) = sqrt(x_1^2 + dots + x_m^2). $
 ]
 
-#theorem(name: [Теорема (неравенство Коши--Буняковского--Шварца])[
+#theorem(name: [Теорема (неравенство Коши--Буняковского--Шварца)])[
   $abs(overline(x) dot overline(y)) <= abs(overline(x)) dot abs(overline(y))$.
 ][
   Пусть

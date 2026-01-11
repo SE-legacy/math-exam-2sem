@@ -10,11 +10,11 @@
 ]
 
 #definition()[
-  Пусть фукнция $f$ 2-дифференцируема в точке $overline(x)_0$. Для любого $ overline(h) in RR^m$ определим в $O(overline(x)_0)$ функцию $d_overline(h) f: RR^m -> RR$: 
+  Пусть функция $f$ 2-дифференцируема в точке $overline(x)_0$. Для любого $overline(h) in RR^m$ определим в $O(overline(x)_0)$ функцию $d_overline(h) f: RR^m -> RR$:
   $ forall overline(x) in O(overline(x)_0) quad d_overline(h)f(overline(x)) = d f(overline(x))(overline(h)) $
 
   Дифференциалом 2-го порядка функции $f$ в точке $overline(x)_0$ называется функция $d^2f(overline(x)_0): RR^m -> RR$ такая, что для любого $overline(h) in RR^m$
-  $ d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h)). $ 
+  $ d^2f(overline(x)_0)(overline(h)) = d(d_overline(h)f)(overline(x)_0)(overline(h)). $
 ]
 
 #definition()[
@@ -24,15 +24,23 @@
 
 По индукции можно установить:
 
-$ d^n f(overline(x)_0)(overline(h)) = sum^m_(i_1, dots, i_n = 1) (partial^n f)/(partial x_i_1 dots partial x_i_n)(overline(x)_0) h_i_1 dots h_i_n. $
+$
+  d^n f(overline(x)_0)(overline(h)) = sum^m_(i_1, dots, i_n = 1) (partial^n f)/(partial x_i_1 dots partial x_i_n)(overline(x)_0) h_i_1 dots h_i_n.
+$
 
-$ d^n f(overline(x)_0) = sum^m_(i_1, dots, i_n = 1) (partial^n f)/(partial x_i_1 dots partial x_i_n)(overline(x)_0) d x_i_1 dots d x_i_n. $
+$
+  d^n f(overline(x)_0) = sum^m_(i_1, dots, i_n = 1) (partial^n f)/(partial x_i_1 dots partial x_i_n)(overline(x)_0) d x_i_1 dots d x_i_n.
+$
 
 В силу независимости смешанных производных от порядка дифференцирования, приведем к виду:
 
-$ d^n f(overline(x)_0)(overline(h)) = sum_(alpha_1 + dots + alpha_m = n) (n!)/(alpha_1 ! dots alpha_m !) (partial^n f)/(partial x_1^alpha_1 dots partial x_1^alpha_m)(overline(x)_0) h_1^alpha_1 dots h_1^alpha_m. $
+$
+  d^n f(overline(x)_0)(overline(h)) = sum_(alpha_1 + dots + alpha_m = n) (n!)/(alpha_1 ! dots alpha_m !) (partial^n f)/(partial x_1^alpha_1 dots partial x_1^alpha_m)(overline(x)_0) h_1^alpha_1 dots h_1^alpha_m.
+$
 
-$ d^n f(overline(x)_0) = sum_(alpha_1 + dots + alpha_m = n) (n!)/(alpha_1 ! dots alpha_m !) (partial^n f)/(partial x_1^alpha_1 dots partial x_1^alpha_m)(overline(x)_0) d x_1^alpha_1 dots d x_1^alpha_m. $
+$
+  d^n f(overline(x)_0) = sum_(alpha_1 + dots + alpha_m = n) (n!)/(alpha_1 ! dots alpha_m !) (partial^n f)/(partial x_1^alpha_1 dots partial x_1^alpha_m)(overline(x)_0) d x_1^alpha_1 dots d x_1^alpha_m.
+$
 
 Что символически можно записать:
 

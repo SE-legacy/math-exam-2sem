@@ -48,9 +48,9 @@
 
   Определим число $R$:
 
-  - $R = 1/L$, если $0 < L < +infinity$
-  - $R = +infinity$, если $L = 0$
-  - $R = 0$, если $L = +infinity$
+  - $R = 1/L$, если $0 < L < +infinity$;
+  - $R = +infinity$, если $L = 0$;
+  - $R = 0$, если $L = +infinity$.
 
   Число $R$ называют радиусом сходимости степенного ряда $limits(sum)_(n=0)^infinity a_n x^n$.
 
