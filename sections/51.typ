@@ -41,9 +41,9 @@
 ]
 
 #theorem(name: "Теорема (формула Грина для трапеции первого рода)")[
-  Пусть замкнутое множество $D$ является трапецией первого рода, $L$ --- положительно ориентированная граница $D$, а функция $P$ и её частная производная $(diff P) / (diff y)$ непрерывны на $D$. Тогда
+  Пусть замкнутое множество $D$ является трапецией первого рода, $L$ --- положительно ориентированная граница $D$, а функция $P$ и её частная производная $(partial P) / (partial y)$ непрерывны на $D$. Тогда
   
-  #equ($ limits(integral.cont)_L P(x,y) d x = - limits(integral.double)_D (diff P) / (diff y) (x,y) d x d y. $, id: <eq:greens-formula1>)
+  #equ($ limits(integral.cont)_L P(x,y) d x = - limits(integral.double)_D (partial P) / (partial y) (x,y) d x d y. $, id: <eq:greens-formula1>)
 ][
   #wrap-content(align: right)[#trapezoid][
     Пусть 
@@ -65,17 +65,17 @@
   
   С другой стороны, сводя двойной интеграл к повторному, используя формулу Ньютона--Лейбница,
   
-  $ limits(integral.double)_D (diff P) / (diff y) (x,y) d x d y = limits(integral)_a^b d x limits(integral)_(phi_1(x))^(phi_2(x)) (diff P) / (diff y) (x,y) d y = limits(integral)_a^b P lr((x,phi_2(x)), size: #125%) d x - limits(integral)_a^b P lr((x,phi_1(x)), size: #125%) d x. $
+  $ limits(integral.double)_D (partial P) / (partial y) (x,y) d x d y = limits(integral)_a^b d x limits(integral)_(phi_1(x))^(phi_2(x)) (partial P) / (partial y) (x,y) d y = limits(integral)_a^b P lr((x,phi_2(x)), size: #125%) d x - limits(integral)_a^b P lr((x,phi_1(x)), size: #125%) d x. $
   
   Таким образом,
   
-  $ limits(integral.cont)_L P(x,y) d x = - limits(integral.double)_D (diff P) / (diff y) (x,y) d x d y. $
+  $ limits(integral.cont)_L P(x,y) d x = - limits(integral.double)_D (partial P) / (partial y) (x,y) d x d y. $
 ]
 
 #theorem(name: "Теорема (формула Грина для трапеции второго рода)")[
-  Пусть замкнутое множество $D$ является трапенией второго рода, $L$ --- положительно ориентированная граница $D$, а функция $Q$ и её частная производная $(diff Q) / (diff x)$ непрерывны на $D$. Тогда
+  Пусть замкнутое множество $D$ является трапенией второго рода, $L$ --- положительно ориентированная граница $D$, а функция $Q$ и её частная производная $(partial Q) / (partial x)$ непрерывны на $D$. Тогда
   
-  #equ($ limits(integral.cont)_L Q(x,y) d y = limits(integral.double)_D (diff Q) / (diff x) (x,y) d x d y. $, id: <eq:greens-formula2>)
+  #equ($ limits(integral.cont)_L Q(x,y) d y = limits(integral.double)_D (partial Q) / (partial x) (x,y) d x d y. $, id: <eq:greens-formula2>)
 ][
   Аналогично доказательству формулы Грина для трапеции первого рода.
 ]
@@ -85,9 +85,9 @@
 ]
 
 #theorem(name: "Теорема (формула Грина)")[
-  Пусть замкнутое множество $D$ является элементарным замкнутым множеством и $L$ --- положительно ориентированная граница $D$, которая является простым контуром. Пусть функции $P$, $Q$ и их частные производные $(diff P) / (diff y)$ и $(diff Q) / (diff x)$ непрерывны на $D$. Тогда 
+  Пусть замкнутое множество $D$ является элементарным замкнутым множеством и $L$ --- положительно ориентированная граница $D$, которая является простым контуром. Пусть функции $P$, $Q$ и их частные производные $(partial P) / (partial y)$ и $(partial Q) / (partial x)$ непрерывны на $D$. Тогда 
   
-  $ limits(integral.cont)_L P d x + Q d y = limits(integral.double)_D ((diff Q) / (diff x) - (diff P) / (diff y)) d x d y. $
+  $ limits(integral.cont)_L P d x + Q d y = limits(integral.double)_D ((partial Q) / (partial x) - (partial P) / (partial y)) d x d y. $
 ][
   Пользуясь свойством аддитивности двойного интеграла, заменим интеграл по можеству $D$ суммой интегралов по частичным трапециям, на которых мы разобьём $D$.
 

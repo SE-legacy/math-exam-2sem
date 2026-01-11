@@ -21,7 +21,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
   Если функции $P$ и $Q$ непрерывны в области $D$, и криволинейный интеграл не зависит от пути интегрирования, то функция $F$, определённая равенством $(#ref(<eq:newton-leybnytz-line>))$ имеет в $D$ непрерывные частные производные, причем
 
   #equ(
-    $ (diff F(x,y)) / (diff x) = P(x, y), quad (diff F(x,y)) / (diff y) = Q(x, y), quad (x, y) in D. $,
+    $ (partial F(x,y)) / (partial x) = P(x, y), quad (partial F(x,y)) / (partial y) = Q(x, y), quad (x, y) in D. $,
     id: <eq:indep-from-the-path2>,
   )
 ][
@@ -39,7 +39,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
 
   $ lim_(Delta x -> 0) (1/(Delta x) limits(integral)^(x + Delta x)_x P(xi, y) d xi) = phi(x) = P(x, y), $
 
-  т.е. $(diff F(x,y)) / (diff x) = P(x, y)$. Второй равенство доказывается аналогично.
+  т.е. $(partial F(x,y)) / (partial x) = P(x, y)$. Второй равенство доказывается аналогично.
 ]
 
 #theorem()[
@@ -48,7 +48,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
   + Выражение $P(x,y) d x + Q(x,y) d y$ является в области $D$ дифференциалом некоторой функции $F(x,y)$.
   + Всюду в области $D$ верно равенство
 
-    $ (diff P(x,y)) / (diff y) = (diff Q(x,y)) / (diff x). $
+    $ (partial P(x,y)) / (partial y) = (partial Q(x,y)) / (partial x). $
   + Для любого кусочно гладкого контура $L$ в области $D$, верно равенство
 
     $ limits(integral.cont)_L P(x,y) d x + Q(x,y) d y = 0. $
@@ -58,8 +58,8 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
 
   $
     P(x,y) d x + Q(x,y) d y = d F(x,y) ==> \
-    (diff F(x,y)) /( diff x) = P(x,y), quad (diff F(x,y)) / (diff y) = Q(x,y) ==> \
-    (diff P(x,y)) / (diff y) = (diff^2 F(x,y)) / (diff y diff x), quad (diff Q(x,y)) / (diff x) = (diff^2 F(x,y)) / (diff x diff y).
+    (partial F(x,y)) /( partial x) = P(x,y), quad (partial F(x,y)) / (partial y) = Q(x,y) ==> \
+    (partial P(x,y)) / (partial y) = (partial^2 F(x,y)) / (partial y partial x), quad (partial Q(x,y)) / (partial x) = (partial^2 F(x,y)) / (partial x partial y).
   $
 
   В силу непрерывности частных производных правые части равны, значит равны и левые.
@@ -67,7 +67,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
   $2 ==> 3$. Пусть $L$ --- произвольный кусочно гладкий контур в $D$. По формуле Грина
 
   $
-    limits(integral.cont)_L P d x + Q d y = limits(integral.double)_D ((diff Q) / (diff x) - (diff P) / (diff y)) d x d y = 0,
+    limits(integral.cont)_L P d x + Q d y = limits(integral.double)_D ((partial Q) / (partial x) - (partial P) / (partial y)) d x d y = 0,
   $
 
   так как подынтегральная функция тождественно равна нулю.
@@ -76,7 +76,7 @@ $ limits(integral)^((x_2, y_2))_((x_1, y_1)) P(x,y) d x + Q(x, y) d y = F(x_2, y
 
   $4 ==> 1$. По теореме, задающей равенства $(#ref(<eq:indep-from-the-path2>))$, функция $F(x,y)$ имеет непрерывные частные производные
 
-  $ (diff F(x,y)) / (diff x) = P(x,y), quad (diff F(x,y)) / (diff y) = Q(x,y). $
+  $ (partial F(x,y)) / (partial x) = P(x,y), quad (partial F(x,y)) / (partial y) = Q(x,y). $
 
   Тогда эта функция дифференцируема, и
 

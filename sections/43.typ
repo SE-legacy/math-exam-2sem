@@ -13,9 +13,9 @@
   Матрицей Якоби отображения $overline(f)$ называют матрицу 
   
   $ D overline(f)(overline(x)_0) = mat(
-    (diff f_1(overline(x)_0))/(diff x_1), dots, (diff f_1(overline(x)_0))/(diff x_m);
+    (partial f_1(overline(x)_0))/(partial x_1), dots, (partial f_1(overline(x)_0))/(partial x_m);
     dots, dots, dots;
-    (diff f_n(overline(x)_0))/(diff x_1), dots, (diff f_n(overline(x)_0))/(diff x_m)
+    (partial f_n(overline(x)_0))/(partial x_1), dots, (partial f_n(overline(x)_0))/(partial x_m)
   ). $
 
   Введем вектор-столбец 
@@ -38,4 +38,3 @@
 #definition()[
   Матрица Якоби называтся производной отображения $overline(f)$ в точке $overline(x)_0$ и обозначается через $overline(f)'(overline(x)_0)$.
 ]
-
