@@ -14,10 +14,12 @@ $ sum^infinity_(n=1) a_n < + infinity. $
   Функция $f$ неотрицательна и неворзрастает на $[1,+infinity)$. Тогда несобственный интеграл $limits(integral)^(+infinity)_1 f(x) d x$ и ряд $sum f(x)$ сходятся или расходятся одновременно.
 ][
   $S_n = limits(sum)^infinity_(n=1) f(x), #h(6pt) F(b) = limits(integral)^b_1 f(x) d x$. При $k = 1, 2, dots$
-  
-  $ f(k+1) <= limits(integral)^(k+1)_1 f(x) d x <= f(k) ==> \
-  sum^n_(k=1) f(k+1) <= limits(integral)^(n+1)_1 f(x) d x <= sum^n_(k=1) f(k) ==> \
-  S_(n+1) - f(1) <= F(n+1) <= S_n $
-  
+
+  $
+    f(k+1) <= limits(integral)^(k+1)_1 f(x) d x <= f(k) ==> \
+    sum^n_(k=1) f(k+1) <= limits(integral)^(n+1)_1 f(x) d x <= sum^n_(k=1) f(k) ==> \
+    S_(n+1) - f(1) <= F(n+1) <= S_n
+  $
+
   Т.к. $F$ и $(S_n)$ неубывают, то из последнего двойного неравенства вытекает, что ограниченность функции $F$ равносильна ограниченности $(S_n)$. Тогда сходимость несобственного интеграла $limits(integral)^(+infinity)_1 f(x) d x$ эквивалентна сходимости ряда $sum f(x)$.
 ]

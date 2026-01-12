@@ -1,7 +1,7 @@
-#import "../conf.typ": definition, theorem, consequence
+#import "../conf.typ": consequence, definition, theorem
 
 #definition()[
-  Пусть функция $overline(f) : RR -> RR^k, #h(6pt) k > 1$, и точка $t_0$ --- внутренняя точка области определения функции $overline(f)$. Функция $overline(f)$ называется дифференцируемой в точке $t_0$, если существует непрерывная в точке $t_0$ функция $overline(A)$ такая, что 
+  Пусть функция $overline(f) : RR -> RR^k, #h(6pt) k > 1$, и точка $t_0$ --- внутренняя точка области определения функции $overline(f)$. Функция $overline(f)$ называется дифференцируемой в точке $t_0$, если существует непрерывная в точке $t_0$ функция $overline(A)$ такая, что
 
   $ overline(f) (t) - overline(f) (t_0) = overline(A) (t) dot (t - t_0). $
 ]
@@ -17,14 +17,16 @@
 #consequence(name: "Следствие 1")[
   Если функции $overline(f)$ и $overline(g)$ дифференцируемы в точке $t_0$, то их сумма, разность, произведение на число и скалярное произведение дифференцируемы в точке $overline(x)_0$, причём
 
-  $ (overline(f) plus.minus overline(g))' (t_0) = overline(f)' (t_0) plus.minus overline(g)' (t_0); quad (overline(lambda f)') (t_0) = lambda overline(f)' (t_0), #h(6pt) lambda in RR; \
-  (overline(f) dot overline(g))' (t_0) = overline(f)' (t_0) dot overline(g) (t_0) + overline(f) (t_0) dot overline(g)' (t_0). $
+  $
+    (overline(f) plus.minus overline(g))' (t_0) = overline(f)' (t_0) plus.minus overline(g)' (t_0); quad (overline(lambda f)') (t_0) = lambda overline(f)' (t_0), #h(6pt) lambda in RR; \
+    (overline(f) dot overline(g))' (t_0) = overline(f)' (t_0) dot overline(g) (t_0) + overline(f) (t_0) dot overline(g)' (t_0).
+  $
 ][]
 
 #consequence(name: "Следствие 2")[
   Если функция $overline(f)$ дифференцируема в точке $t_0$, а скалярная функция $g$ дифференцируема в точке $u_0$ и $g(u_0) = t_0$, то композиция $overline(f) compose g$ дифференцируема
-  в точке $u_0$ и 
-  
+  в точке $u_0$ и
+
   $ (overline(f) compose g)' (u_0) = overline(f)' (t_0) dot g' (u_0). $
 ][]
 
@@ -43,13 +45,15 @@
 ][
   Если $overline(f) (a) = overline(f) (b)$, неравенство очевидно.
 
-  Пусть $overline(f) (a) != overline(f) (b)$ и 
-  
+  Пусть $overline(f) (a) != overline(f) (b)$ и
+
   $ overline(e) = (overline(f) (b) - overline(f) (a))/abs(overline(f) (b) - overline(f) (a)). $
 
-  Тогда $abs(overline(e)) = 1$ и 
-  
-  $ abs(overline(f) (b) - overline(f) (a)) = (overline(f) (b) - overline(f) (a), overline(e)) = (overline(f) (b), overline(e)) - (overline(f) (a), overline(e)). $
+  Тогда $abs(overline(e)) = 1$ и
+
+  $
+    abs(overline(f) (b) - overline(f) (a)) = (overline(f) (b) - overline(f) (a), overline(e)) = (overline(f) (b), overline(e)) - (overline(f) (a), overline(e)).
+  $
 
   Введём скалярную функцию $g(t) = (overline(f) (t), overline(e))$. Для неё выполняется условие теоремы Лагранжа, значит найдется точка $xi in (a, b)$ такая, что
 
